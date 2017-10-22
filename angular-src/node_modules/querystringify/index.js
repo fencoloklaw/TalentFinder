@@ -10,21 +10,21 @@ var has = Object.prototype.hasOwnProperty;
  * @api public
  */
 function querystring(query) {
-  var parser = /([^=?&]+)=?([^&]*)/g
-    , result = {}
-    , part;
+    var parser = /([^=?&]+)=?([^&]*)/g
+        , result = {}
+        , part;
 
-  //
-  // Little nifty parsing hack, leverage the fact that RegExp.exec increments
-  // the lastIndex property so we can continue executing this loop until we've
-  // parsed all results.
-  //
-  for (;
-    part = parser.exec(query);
-    result[decodeURIComponent(part[1])] = decodeURIComponent(part[2])
-  );
+    //
+    // Little nifty parsing hack, leverage the fact that RegExp.exec increments
+    // the lastIndex property so we can continue executing this loop until we've
+    // parsed all results.
+    //
+    for (;
+        part = parser.exec(query);
+        result[decodeURIComponent(part[1])] = decodeURIComponent(part[2])
+    ) ;
 
-  return result;
+    return result;
 }
 
 /**
@@ -36,22 +36,22 @@ function querystring(query) {
  * @api public
  */
 function querystringify(obj, prefix) {
-  prefix = prefix || '';
+    prefix = prefix || '';
 
-  var pairs = [];
+    var pairs = [];
 
-  //
-  // Optionally prefix with a '?' if needed
-  //
-  if ('string' !== typeof prefix) prefix = '?';
+    //
+    // Optionally prefix with a '?' if needed
+    //
+    if ('string' !== typeof prefix) prefix = '?';
 
-  for (var key in obj) {
-    if (has.call(obj, key)) {
-      pairs.push(encodeURIComponent(key) +'='+ encodeURIComponent(obj[key]));
+    for (var key in obj) {
+        if (has.call(obj, key)) {
+            pairs.push(encodeURIComponent(key) + '=' + encodeURIComponent(obj[key]));
+        }
     }
-  }
 
-  return pairs.length ? prefix + pairs.join('&') : '';
+    return pairs.length ? prefix + pairs.join('&') : '';
 }
 
 //
