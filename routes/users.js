@@ -15,9 +15,9 @@ router.post('/register', (req, res, next) => {
         email: req.body.email,
         username: req.body.username,
         password: req.body.password,
-        experience: "empty",
-        skill: "empty",
-        volunteer: "empty"
+        experience: "",
+        skill: "",
+        volunteer: ""
     });
 
     User.addUser(newUser, (err, user) => {
