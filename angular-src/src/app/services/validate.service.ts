@@ -19,8 +19,8 @@ export class ValidateService {
         return re.test(email);
     }
 
-    validateWhere(searchFunction) {
-        if (searchFunction.hpWhereInputBox == undefined) {
+    validateNotNull(value) {
+        if (value == undefined || value == "") {
             return false;
         }
         else {

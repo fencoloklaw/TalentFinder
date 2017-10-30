@@ -107,7 +107,7 @@ router.post('/search', (req, res, next) => {
         }
         res.json({
             success: true,
-            "docs": data
+            documents: data
         });
     });
     // res.send(username);
