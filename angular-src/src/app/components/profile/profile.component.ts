@@ -63,6 +63,5 @@ export class ProfileComponent implements OnInit {
             this.experience = data.user.experience;
             this.volunteer = data.user.volunteer;
         });
-
     }
 }

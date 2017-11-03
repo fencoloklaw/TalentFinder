@@ -23,5 +23,6 @@
     "passport-jwt": "*"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {}
 }

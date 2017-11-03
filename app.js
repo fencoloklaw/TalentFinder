@@ -11,7 +11,7 @@ mongoose.connect(config.database);
 
 //On Connection
 mongoose.connection.on('connected', () => {
-    console.log('Connected to database' + config.database);
+    //console.log('Connected to database' + config.database);
 });
 
 //On Error
@@ -24,7 +24,7 @@ const app = express();
 const users = require('./routes/users');
 
 //Port Number
-//const port = process.env.PORT || 8080;
+// const port = process.env.PORT || 8080;
 const port = 3000;
 
 //CORS MW

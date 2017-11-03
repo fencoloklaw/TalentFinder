@@ -8,7 +8,7 @@ const User = require('../models/user');
 //APIS
 
 //Register
-router.post('/register', (req, res, next) => {
+router.post('/register', (req, res) => {
     //res.send('REGISTER');
     let newUser = new User({
         name: req.body.name,
@@ -20,7 +20,7 @@ router.post('/register', (req, res, next) => {
         volunteer: ""
     });
 
-    User.addUser(newUser, (err, user) => {
+    User.addUser(newUser, (err) => {
         if (err) {
             res.json({success: false, msg: 'Failed to register user'});
         } else {
@@ -30,7 +30,7 @@ router.post('/register', (req, res, next) => {
 });
 
 //Authenticate
-router.post('/authenticate', (req, res, next) => {
+router.post('/authenticate', (req, res) => {
     //res.send('AUTHENTICATE');
     const username = req.body.username;
     const password = req.body.password;
@@ -67,12 +67,12 @@ router.post('/authenticate', (req, res, next) => {
 });
 
 //Profile
-router.get('/profile', passport.authenticate('jwt', {session: false}), (req, res, next) => {
+router.get('/profile', passport.authenticate('jwt', {session: false}), (req, res) => {
     res.json({user: req.user});
 });
 
 //Update Profile
-router.put('/updateProfile', passport.authenticate('jwt', {session: false}), (req, res, next) => {
+router.put('/updateProfile', passport.authenticate('jwt', {session: false}), (req, res) => {
     // let userInfo = new User({
     //     _id : req.body._id,
     //     name : req.body.name,
