@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, HostListener, NgZone, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
 import {FlashMessagesService} from 'angular2-flash-messages';
 import {ValidateService} from '../../services/validate.service';
@@ -14,21 +14,25 @@ export class HomeComponent implements OnInit {
 
     hpSkillInputBox: String;
     hpWhereInputBox: String;
+    @HostListener('window:resize')
+    onResize(){
+        // console.log("resize :D");
+        
+
+    }
 
     constructor(private router: Router,
                 private flashMessage: FlashMessagesService,
                 private validateService: ValidateService,
                 private authService: AuthService,
                 private dataService: DataService) {
+
     }
 
     ngOnInit() {
         this.hpSkillInputBox = "";
         this.hpWhereInputBox = "";
     }
-
-    
-
     onSearchSubmit() {
         // const search = {
         //     hpSkillInputBox: this.hpSkillInputBox,

@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, HostListener, OnInit} from '@angular/core';
 import {ValidateService} from '../../services/validate.service';
 import {AuthService} from '../../services/auth.service';
 import {FlashMessagesService} from 'angular2-flash-messages';
@@ -15,7 +15,11 @@ export class SearchtalentComponent implements OnInit {
     hpSkillInputBox: String;
     hpWhereInputBox: String;
     user: Object;
-
+    myData : any;
+    dataArray : any;
+    dataArrayLength : Number;
+    numberOfPages: Number;
+    currentPage: any;
     constructor(private router: Router,
                 private flashMessage: FlashMessagesService,
                 private validateService: ValidateService,
@@ -23,7 +27,6 @@ export class SearchtalentComponent implements OnInit {
                 private searchService: SearchService,
                 private dataService: DataService) {
     }
-
     ngOnInit() {
         if((this.validateService.validateNotNull(this.dataService.skillData))&&(this.validateService.validateNotNull(this.dataService.whereData))){
             this.hpSkillInputBox = this.dataService.skillData;
@@ -49,7 +52,8 @@ export class SearchtalentComponent implements OnInit {
         const search = {
             hpSkillInputBox: this.hpSkillInputBox,
             hpWhereInputBox: this.hpWhereInputBox
-        }
+        };
+
         if (this.validateService.validateNotNull(this.hpWhereInputBox)) {
             //this.router.navigate(['searchtalent']);
             //find related information
@@ -58,32 +62,44 @@ export class SearchtalentComponent implements OnInit {
                 if (data.success) {
                     this.flashMessage.show('success', {
                         cssClass: 'alert-success',
-                        timeout: 3000
+                        timeout: 2000
                     });
-
-                    let docArray = data.documents;
-                    let element = document.getElementById("search-container");
-                    // document.write(docArray);
-                    // document.write("<br/>");
-                    let docArraySize = docArray.length;
-                    // document.write(docArraySize);
-                    for(let i = 0; i<docArraySize; i++ ){
-                        //load 10
-                        element.innerHTML += docArray[i].name + " " + docArray[i].email + "</br>";
-
-                    }
+                    this.myData = data;
+                    this.dataArrayLength = data.documents.length;
+                    this.numberOfPages = Math.ceil(data.documents.length/5);
+                    this.currentPage = 1;
+                    this.dataArray = data.documents.slice(this.currentPage*5 - 5, this.currentPage*5);
                 }
                 else {
                     this.flashMessage.show(data.msg, {
                         cssClass: 'alert-danger',
-                        timeout: 3000
+                        timeout: 2000
                     });
                 }
             });
-
         }
         else {
             this.flashMessage.show('Where has not been specified', {cssClass: 'alert-danger', timeout: 3000});
+        }
+    }
+
+    onChangePage() {
+        if (this.currentPage < this.numberOfPages) {
+            this.currentPage++;
+            this.dataArray = this.myData.documents.slice(this.currentPage * 5 - 5, this.currentPage * 5);
+        }
+        else{
+            //do not display next
+        }
+    }
+
+    onChangePageBack() {
+        if (this.currentPage > 1) {
+            this.currentPage--;
+            this.dataArray = this.myData.documents.slice(this.currentPage * 5 - 5, this.currentPage * 5);
+        }
+        else{
+            //do not display next
         }
     }
 }
