@@ -16,6 +16,7 @@ export class ProfileComponent implements OnInit {
     skill: String;
     experience : String;
     volunteer : String;
+    city : String;
 
     constructor(private authService: AuthService,
                 private router: Router,
@@ -32,6 +33,7 @@ export class ProfileComponent implements OnInit {
                 this.skill = profile.user.skill;
                 this.experience = profile.user.experience;
                 this.volunteer = profile.user.volunteer;
+                this.city = profile.user.city;
             },
             err => {
                 console.log(err);
@@ -47,7 +49,8 @@ export class ProfileComponent implements OnInit {
             email: this.email,
             skill: this.skill,
             experience: this.experience,
-            volunteer: this.volunteer
+            volunteer: this.volunteer,
+            city: this.city
         }
 
         this.authService.updateProfile(updateUser).subscribe(data => {
@@ -62,6 +65,7 @@ export class ProfileComponent implements OnInit {
             this.skill = data.user.skill;
             this.experience = data.user.experience;
             this.volunteer = data.user.volunteer;
+            this.city = data.user.city;
         });
     }
 }

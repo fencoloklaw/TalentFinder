@@ -17,7 +17,8 @@ router.post('/register', (req, res) => {
         password: req.body.password,
         experience: "",
         skill: "",
-        volunteer: ""
+        volunteer: "",
+        city: ""
     });
 
     User.addUser(newUser, (err) => {

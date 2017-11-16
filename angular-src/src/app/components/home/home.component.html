@@ -1,50 +1,46 @@
 <div class="jumbotron text-center">
-    <table role="Search" width="700" border="0" cellspacing="0" cellpadding="0" align="center" style="margin-top:1em">
+    <table role="Search" width="800" border="0" cellspacing="0" cellpadding="0" align="center" style="margin-top:1em">
         <tbody>
         <tr>
             <h1> Freelancer </h1>
         </tr>
         <tr>
             <form (submit)="onSearchSubmit()">
-                <table cellspacing="0" cellpadding="3" width="100%" allign="center">
+                <table cellspacing="0" cellpadding="3" width="100%" align="center">
                     <tr>
-                        <td class="hp sl">
+                        <td class="hp_sit" align="left">
                             <label id="hpskill_label" aria-hidden="true">Skill</label>
 
                         </td>
-                        <td class="hp wl" colspan="2">
+                        <td class="hp_wit" colspan="2" align="left">
                             <label  id="hpwhere_label" aria-hidden="true">Where</label>
                         </td>
                     </tr>
                     <tr>
-                        <td class="hp sit">
+                        <td class="hp_sit" align="left">
                             <span class="inwrap">
-                              <input type="text"
+                              <input class="form-control"
+                                     type="text"
                                      [(ngModel)]="hpSkillInputBox"
-                                     maxlength="512"
-                                     size="31"
                                      aria-labelledby="skill_label_top hidden_colon skill_label_bot"
                                      name="hpSkillInputBox"
                                      autocomplete="on"
                                      id="hpskill_box">
                             </span>
                         </td>
-                        <td class="hp wit">
+                        <td class="hp_wit">
                             <span class="inwrap">
-                              <input type="text"
+                              <input class="form-control"
+                                     type="text"
                                      [(ngModel)]="hpWhereInputBox"
-                                     maxlength="64"
-                                     size="31"
                                      aria-labelledby="where_label_top hidden_colon where_label_bot"
                                      name="hpWhereInputBox"
                                      autocomplete="on"
                                      id="hpwhere_box">
                             </span>
                         </td>
-                        <td class="hpinput_submit" style=width:1px>
-                            <span class="inwrapBorder style=width:100%;">
-                              <input id="hpfind_talent" type="submit" class="input_submit" value="Find Talents">
-                            </span>
+                        <td>
+                            <input id="hpfind_talent" type="submit" class="btn btn-primary" value="Find Talents">
                         </td>
                     </tr>
                 </table>

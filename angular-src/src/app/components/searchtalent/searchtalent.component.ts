@@ -12,6 +12,7 @@ import {DataService} from "../../services/data.service";
     styleUrls: ['./searchtalent.component.css']
 })
 export class SearchtalentComponent implements OnInit {
+    viewArrayProfile: boolean;
     hpSkillInputBox: String;
     hpWhereInputBox: String;
     user: Object;
@@ -20,6 +21,7 @@ export class SearchtalentComponent implements OnInit {
     dataArrayLength : Number;
     numberOfPages: Number;
     currentPage: any;
+    profile: any;
     constructor(private router: Router,
                 private flashMessage: FlashMessagesService,
                 private validateService: ValidateService,
@@ -46,6 +48,7 @@ export class SearchtalentComponent implements OnInit {
             this.hpSkillInputBox = "";
             this.hpWhereInputBox = "";
         }
+        this.viewArrayProfile = true;
     }
 
     onSearchSubmit() {
@@ -69,6 +72,7 @@ export class SearchtalentComponent implements OnInit {
                     this.numberOfPages = Math.ceil(data.documents.length/5);
                     this.currentPage = 1;
                     this.dataArray = data.documents.slice(this.currentPage*5 - 5, this.currentPage*5);
+                    this.viewArrayProfile = true;
                 }
                 else {
                     this.flashMessage.show(data.msg, {
@@ -101,5 +105,10 @@ export class SearchtalentComponent implements OnInit {
         else{
             //do not display next
         }
+    }
+
+    openProfile(data){
+        this.viewArrayProfile = false;
+        this.profile = data;
     }
 }

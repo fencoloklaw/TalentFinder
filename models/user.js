@@ -30,8 +30,11 @@ const UserSchema = mongoose.Schema({
     volunteer: {
         type: String,
         required: false
+    },
+    city: {
+        type: String,
+        required: false
     }
-
 });
 
 const User = module.exports = mongoose.model('User', UserSchema);
@@ -46,7 +49,9 @@ module.exports.getUserByUsername = function (username, callback) {
 }
 
 module.exports.getMatchingUsers = function (req, callback){
-    User.find({"skill": {"$regex": req.body.hpSkillInputBox}}, callback);
+    User.find({"skill": new RegExp(req.body.hpSkillInputBox, "i"),
+                "city": new RegExp(req.body.hpWhereInputBox, "i")},
+                callback);
 }
 
 module.exports.addUser = function (newUser, callback) {
@@ -75,6 +80,7 @@ module.exports.updateUser = function (req, callback){
             oldUser.skill = req.body.skill;
             oldUser.volunteer = req.body.volunteer;
             oldUser.experience = req.body.experience;
+            oldUser.city = req.body.city;
             oldUser.save(callback);
         }
     });
