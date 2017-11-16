@@ -52,18 +52,26 @@
                     <span>City: {{data.city}}</span>
                 </li>
             </ul>
-            <div>
-                <input *ngIf="currentPage>1"
-                       id="back_btn"
-                       type="button"
-                       value="Back"
-                       (click)="onChangePageBack()">
-                <input *ngIf="currentPage<numberOfPages"
-                       id="next_btn"
-                       type="button"
-                       value="Next"
-                       (click)="onChangePage()">
-            </div>
+            <!--<div>-->
+                <!--<input *ngIf="currentPage>1"-->
+                       <!--id="back_btn"-->
+                       <!--type="button"-->
+                       <!--value="Back"-->
+                       <!--(click)="onChangePageBack()">-->
+                <!--<input *ngIf="currentPage<numberOfPages"-->
+                       <!--id="next_btn"-->
+                       <!--type="button"-->
+                       <!--value="Next"-->
+                       <!--(click)="onChangePage()">-->
+            <!--</div>-->
+            <ul class="pager">
+                <li>
+                    <a *ngIf="currentPage>1" (click)="onChangePageBack()">Previous</a>
+                </li>
+                <li>
+                    <a *ngIf="currentPage<numberOfPages" (click)="onChangePage()">Next</a>
+                </li>
+            </ul>
             <div *ngIf="dataArrayLength==0">
                 <p>No users found.</p>
             </div>
@@ -80,6 +88,9 @@
             <span>Experience: {{profile.experience}}</span>
             <br>
             <span>Volunteer: {{profile.volunteer}}</span>
+            <br>
+            <button class="btn btn-default" (click)="returnSearch()">Return</button>
         </div>
+
     </div>
 </div>

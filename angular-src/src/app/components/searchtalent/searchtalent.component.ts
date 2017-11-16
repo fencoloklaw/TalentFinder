@@ -111,4 +111,10 @@ export class SearchtalentComponent implements OnInit {
         this.viewArrayProfile = false;
         this.profile = data;
     }
+
+    returnSearch(){
+        this.viewArrayProfile = true;
+        this.dataArray = this.myData.documents.slice(this.currentPage * 5 - 5, this.currentPage * 5);
+        this.profile = "";
+    }
 }
