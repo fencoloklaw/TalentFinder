@@ -22,7 +22,13 @@ describe('HomeComponent', () => {
         fixture.detectChanges();
     });
 
-    it('should create', () => {
-        expect(component).toBeTruthy();
+    // it('should create ', () => {
+    //     expect(component).toBeTruthy();
+    // });
+
+    it('hpskillcomponent should be ""', () => {
+        const fixture = TestBed.createComponent(HomeComponent);
+        const home = fixture.debugElement.componentInstance;
+        expect(home.skillInput).toBe(typeof String);
     });
 });

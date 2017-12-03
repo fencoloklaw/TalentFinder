@@ -54,18 +54,18 @@ export class ProfileComponent implements OnInit {
         }
 
         this.authService.updateProfile(updateUser).subscribe(data => {
-            this.flashMessage.show("Profile Updated", {
-                cssClass: 'alert-success',
-                timeout: 5000
-            });
-            this._id = data.user._id;
-            this.name = data.user.name;
-            this.username = data.user.username;
-            this.email = data.user.email;
-            this.skill = data.user.skill;
-            this.experience = data.user.experience;
-            this.volunteer = data.user.volunteer;
-            this.city = data.user.city;
+            // this.flashMessage.show("Profile Updated", {
+            //     cssClass: 'alert-success',
+            //     timeout: 5000
+            // });
+            // this._id = data.user._id;
+            // this.name = data.user.name;
+            // this.username = data.user.username;
+            // this.email = data.user.email;
+            // this.skill = data.user.skill;
+            // this.experience = data.user.experience;
+            // this.volunteer = data.user.volunteer;
+            // this.city = data.user.city;
         });
     }
 }

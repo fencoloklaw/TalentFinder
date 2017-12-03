@@ -13,10 +13,10 @@ import {DataService} from "../../services/data.service";
 })
 export class SearchtalentComponent implements OnInit {
     viewArrayProfile: boolean;
-    hpSkillInputBox: String;
-    hpWhereInputBox: String;
+    skillInput: String;
+    whereInput: String;
     user: Object;
-    myData : any;
+    searchData : any;
     dataArray : any;
     dataArrayLength : Number;
     numberOfPages: Number;
@@ -31,43 +31,40 @@ export class SearchtalentComponent implements OnInit {
     }
     ngOnInit() {
         if((this.validateService.validateNotNull(this.dataService.skillData))&&(this.validateService.validateNotNull(this.dataService.whereData))){
-            this.hpSkillInputBox = this.dataService.skillData;
-            this.hpWhereInputBox = this.dataService.whereData;
+            this.skillInput = this.dataService.skillData;
+            this.whereInput = this.dataService.whereData;
             this.onSearchSubmit();
         }
         else if(this.validateService.validateNotNull(this.dataService.whereData)) {
-            this.hpSkillInputBox = "";
-            this.hpWhereInputBox = this.dataService.whereData;
+            this.skillInput = "";
+            this.whereInput = this.dataService.whereData;
             this.onSearchSubmit();
         }
         else if(this.validateService.validateNotNull(this.dataService.skillData)) {
-            this.hpSkillInputBox = this.dataService.skillData;
-            this.hpWhereInputBox = "";
+            this.skillInput = this.dataService.skillData;
+            this.whereInput = "";
         }
         else {
-            this.hpSkillInputBox = "";
-            this.hpWhereInputBox = "";
+            this.skillInput = "";
+            this.whereInput = "";
         }
         this.viewArrayProfile = true;
     }
 
     onSearchSubmit() {
         const search = {
-            hpSkillInputBox: this.hpSkillInputBox,
-            hpWhereInputBox: this.hpWhereInputBox
+            skillInput: this.skillInput,
+            whereInput: this.whereInput
         };
 
-        if (this.validateService.validateNotNull(this.hpWhereInputBox)) {
-            //this.router.navigate(['searchtalent']);
-            //find related information
-            //display ordered list
+        if (this.validateService.validateNotNull(this.whereInput)) {
             this.searchService.searchUser(search).subscribe(data => {
                 if (data.success) {
                     this.flashMessage.show('success', {
                         cssClass: 'alert-success',
                         timeout: 2000
                     });
-                    this.myData = data;
+                    this.searchData = data;
                     this.dataArrayLength = data.documents.length;
                     this.numberOfPages = Math.ceil(data.documents.length/5);
                     this.currentPage = 1;
@@ -90,7 +87,7 @@ export class SearchtalentComponent implements OnInit {
     onChangePage() {
         if (this.currentPage < this.numberOfPages) {
             this.currentPage++;
-            this.dataArray = this.myData.documents.slice(this.currentPage * 5 - 5, this.currentPage * 5);
+            this.dataArray = this.searchData.documents.slice(this.currentPage * 5 - 5, this.currentPage * 5);
         }
         else{
             //do not display next
@@ -100,21 +97,21 @@ export class SearchtalentComponent implements OnInit {
     onChangePageBack() {
         if (this.currentPage > 1) {
             this.currentPage--;
-            this.dataArray = this.myData.documents.slice(this.currentPage * 5 - 5, this.currentPage * 5);
+            this.dataArray = this.searchData.documents.slice(this.currentPage * 5 - 5, this.currentPage * 5);
         }
         else{
             //do not display next
         }
     }
 
-    openProfile(data){
+    showProfile(data){
         this.viewArrayProfile = false;
         this.profile = data;
     }
 
     returnSearch(){
         this.viewArrayProfile = true;
-        this.dataArray = this.myData.documents.slice(this.currentPage * 5 - 5, this.currentPage * 5);
+        this.dataArray = this.searchData.documents.slice(this.currentPage * 5 - 5, this.currentPage * 5);
         this.profile = "";
     }
 }

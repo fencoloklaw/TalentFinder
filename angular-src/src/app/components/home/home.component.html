@@ -1,51 +1,39 @@
-<div class="jumbotron text-center">
-    <table role="Search" width="800" border="0" cellspacing="0" cellpadding="0" align="center" style="margin-top:1em">
-        <tbody>
-        <tr>
-            <h1> Freelancer </h1>
-        </tr>
-        <tr>
-            <form (submit)="onSearchSubmit()">
-                <table cellspacing="0" cellpadding="3" width="100%" align="center">
+<!DOCTYPE html>
+<html>
+<body>
+    <div class="jumbotron text-center">
+        <table role="Search" width="800" border="0" cellspacing="0" cellpadding="0" align="center" style="margin-top:1em">
+            <tbody>
+                <h1 class="display-3"> TalentFinder </h1>
+                <form (submit)="onSearchSubmit()">
+                    <table cellspacing="0" cellpadding="1" width="100%" align="center">
                     <tr>
-                        <td class="hp_sit" align="left">
-                            <label id="hpskill_label" aria-hidden="true">Skill</label>
-
+                        <td align="left">
+                            <label>Skill</label>
                         </td>
-                        <td class="hp_wit" colspan="2" align="left">
-                            <label  id="hpwhere_label" aria-hidden="true">Where</label>
+                        <td colspan="2" align="left">
+                            <label>Where</label>
                         </td>
                     </tr>
                     <tr>
-                        <td class="hp_sit" align="left">
-                            <span class="inwrap">
-                              <input class="form-control"
-                                     type="text"
-                                     [(ngModel)]="hpSkillInputBox"
-                                     aria-labelledby="skill_label_top hidden_colon skill_label_bot"
-                                     name="hpSkillInputBox"
-                                     autocomplete="on"
-                                     id="hpskill_box">
-                            </span>
+                        <td  align="left">
+                            <input class="form-control"
+                            type="text"
+                            [(ngModel)]="skillInput"
+                            name="hpSkillInputBox">
                         </td>
-                        <td class="hp_wit">
-                            <span class="inwrap">
-                              <input class="form-control"
-                                     type="text"
-                                     [(ngModel)]="hpWhereInputBox"
-                                     aria-labelledby="where_label_top hidden_colon where_label_bot"
-                                     name="hpWhereInputBox"
-                                     autocomplete="on"
-                                     id="hpwhere_box">
-                            </span>
+                        <td colspan="2" align="left">
+                            <input class="form-control"
+                            type="text"
+                            [(ngModel)]="whereInput"
+                            name="hpWhereInputBox">
                         </td>
-                        <td>
-                            <input id="hpfind_talent" type="submit" class="btn btn-primary" value="Find Talents">
-                        </td>
+                        <input type="submit" class="btn btn-primary" value="Find Talents">
                     </tr>
-                </table>
-            </form>
-        </tr>
-        </tbody>
-    </table>
-</div>
+                    </table>
+                </form>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

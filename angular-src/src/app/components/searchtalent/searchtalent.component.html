@@ -1,40 +1,27 @@
-<form (submit)="onSearchSubmit()">
-    <table cellspacing="0" cellpadding="3" width="100%" align="center">
+<form class="page-header" (submit)="onSearchSubmit()">
+    <table cellspacing="0" cellpadding="1" width="100%" align="center">
         <tr>
-            <td class="hp_sit" align="left">
-                <label id="hpskill_label" aria-hidden="true">Skill</label>
-
+            <td align="left">
+                <label>Skill</label>
             </td>
-            <td class="hp_wit" colspan="2" align="left">
-                <label  id="hpwhere_label" aria-hidden="true">Where</label>
+            <td colspan="2" align="left">
+                <label>Where</label>
             </td>
         </tr>
         <tr>
-            <td class="hp_sit" align="left">
-                <span class="inwrap">
-                  <input class="form-control"
-                         type="text"
-                         [(ngModel)]="hpSkillInputBox"
-                         aria-labelledby="skill_label_top hidden_colon skill_label_bot"
-                         name="hpSkillInputBox"
-                         autocomplete="on"
-                         id="hpskill_box">
-                </span>
+            <td  align="left">
+                <input class="form-control"
+                       type="text"
+                       [(ngModel)]="skillInput"
+                       name="hpSkillInputBox">
             </td>
-            <td class="hp_wit">
-                <span class="inwrap">
-                  <input class="form-control"
-                         type="text"
-                         [(ngModel)]="hpWhereInputBox"
-                         aria-labelledby="where_label_top hidden_colon where_label_bot"
-                         name="hpWhereInputBox"
-                         autocomplete="on"
-                         id="hpwhere_box">
-                </span>
+            <td colspan="2" align="left">
+                <input class="form-control"
+                       type="text"
+                       [(ngModel)]="whereInput"
+                       name="hpWhereInputBox">
             </td>
-            <td align="right">
-                <input id="hpfind_talent" type="submit" class="btn btn-primary" value="Find Talents">
-            </td>
+            <input type="submit" class="btn btn-primary" value="Find Talents">
         </tr>
     </table>
 </form>
@@ -42,7 +29,7 @@
     <div style="padding-top: 20px">
         <div *ngIf="viewArrayProfile==true" class="jumbotron">
             <ul class="list-group" *ngFor="let data of dataArray">
-                <li class="list-group-item" (click)="openProfile(data)">
+                <li class="list-group-item" (click)="showProfile(data)">
                     <span>Name: {{data.name}}</span>
                     <br>
                     <span>Email: {{data.email}}</span>
@@ -52,45 +39,36 @@
                     <span>City: {{data.city}}</span>
                 </li>
             </ul>
-            <!--<div>-->
-                <!--<input *ngIf="currentPage>1"-->
-                       <!--id="back_btn"-->
-                       <!--type="button"-->
-                       <!--value="Back"-->
-                       <!--(click)="onChangePageBack()">-->
-                <!--<input *ngIf="currentPage<numberOfPages"-->
-                       <!--id="next_btn"-->
-                       <!--type="button"-->
-                       <!--value="Next"-->
-                       <!--(click)="onChangePage()">-->
-            <!--</div>-->
-            <ul class="pager">
-                <li>
-                    <a *ngIf="currentPage>1" (click)="onChangePageBack()">Previous</a>
-                </li>
-                <li>
-                    <a *ngIf="currentPage<numberOfPages" (click)="onChangePage()">Next</a>
-                </li>
-            </ul>
+            <div>
+                <ul class="pagination pagination-lg">
+                    <li class="page-item left">
+                        <a class="page-link" *ngIf="currentPage>1" (click)="onChangePageBack()">Previous</a>
+                    </li>
+                    <li class="page-item right">
+                        <a class="page-link" *ngIf="currentPage<numberOfPages" (click)="onChangePage()">Next</a>
+                    </li>
+                </ul>
+            </div>
             <div *ngIf="dataArrayLength==0">
                 <p>No users found.</p>
             </div>
         </div>
-        <div *ngIf="viewArrayProfile==false">
-            <h2>{{profile.name}}</h2>
-            <br>
-            <span>Email: {{profile.email}}</span>
-            <br>
-            <span>Skill: {{profile.skill}}</span>
-            <br>
-            <span>City: {{profile.city}}</span>
-            <br>
-            <span>Experience: {{profile.experience}}</span>
-            <br>
-            <span>Volunteer: {{profile.volunteer}}</span>
-            <br>
-            <button class="btn btn-default" (click)="returnSearch()">Return</button>
+        <div *ngIf="viewArrayProfile==false" class="card border-primary">
+            <div class="card-body">
+                <h2>{{profile.name}}</h2>
+                <br>
+                <span>Email: {{profile.email}}</span>
+                <br>
+                <span>Skill: {{profile.skill}}</span>
+                <br>
+                <span>City: {{profile.city}}</span>
+                <br>
+                <span>Experience: {{profile.experience}}</span>
+                <br>
+                <span>Volunteer: {{profile.volunteer}}</span>
+                <br>
+                <button class="btn btn-secondary" (click)="returnSearch()">Return</button>
+            </div>
         </div>
-
     </div>
 </div>

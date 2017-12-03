@@ -4,6 +4,7 @@ import {FlashMessagesService} from 'angular2-flash-messages';
 import {ValidateService} from '../../services/validate.service';
 import {AuthService} from '../../services/auth.service';
 import {DataService} from "../../services/data.service";
+import {NgForm} from "@angular/forms";
 
 @Component({
     selector: 'app-home',
@@ -12,12 +13,10 @@ import {DataService} from "../../services/data.service";
 })
 export class HomeComponent implements OnInit {
 
-    hpSkillInputBox: String;
-    hpWhereInputBox: String;
+    skillInput: String;
+    whereInput: String;
     @HostListener('window:resize')
     onResize(){
-        // console.log("resize :D");
-        
 
     }
 
@@ -30,18 +29,13 @@ export class HomeComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.hpSkillInputBox = "";
-        this.hpWhereInputBox = "";
+        this.skillInput = "";
+        this.whereInput = "";
     }
     onSearchSubmit() {
-        // const search = {
-        //     hpSkillInputBox: this.hpSkillInputBox,
-        //     // hpWhereInputBox: this.hpWhereInputBox
-        // }
-
-        if (this.validateService.validateNotNull(this.hpWhereInputBox)) {
-            this.dataService.skillData = this.hpSkillInputBox;
-            this.dataService.whereData = this.hpWhereInputBox;
+        if (this.validateService.validateNotNull(this.whereInput)) {
+            this.dataService.skillData = this.skillInput;
+            this.dataService.whereData = this.whereInput;
             this.router.navigate(['searchtalent']);
         }
         else {
