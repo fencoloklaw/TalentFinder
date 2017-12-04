@@ -19,6 +19,18 @@ import {AuthService} from './services/auth.service';
 import {AuthGuard} from './guards/auth.guard';
 import {SearchService} from './services/search.service';
 import {DataService} from "./services/data.service";
+import {
+    MatAutocompleteModule,
+    MatButtonModule, MatCardActions, MatCardModule, MatDatepickerModule, MatDialogModule, MatFormFieldModule,
+    MatIconModule, MatInputModule,
+    MatListModule,
+    MatMenuModule,
+    MatPaginatorModule, MatRadioModule, MatSelectModule,
+    MatSnackBarModule, MatSortModule,
+    MatStepperModule,
+    MatToolbarModule
+} from "@angular/material";
+import {ScrollDispatchModule} from "@angular/cdk/scrolling";
 
 const appRoutes: Routes = [
     {path: '', component: HomeComponent},
@@ -45,7 +57,25 @@ const appRoutes: Routes = [
         FormsModule,
         HttpModule,
         RouterModule.forRoot(appRoutes),
-        FlashMessagesModule
+        FlashMessagesModule,
+        MatCardModule,
+        MatToolbarModule,
+        MatMenuModule,
+        MatIconModule,
+        MatButtonModule,
+        ScrollDispatchModule,
+        MatListModule,
+        MatStepperModule,
+        MatDialogModule,
+        MatSnackBarModule,
+        MatPaginatorModule,
+        MatAutocompleteModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatRadioModule,
+        MatSelectModule,
+        MatDatepickerModule
+
     ],
     providers: [ValidateService, AuthService, AuthGuard, SearchService, DataService],
     bootstrap: [AppComponent]
