@@ -2,306 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c07b5172-988e-4094-b77d-c889132298e2" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/.bin/tsickle" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/.bin/tsickle.cmd" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/@angular/tsc-wrapped/index.d.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/@angular/tsc-wrapped/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/@angular/tsc-wrapped/index.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/@angular/tsc-wrapped/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/@angular/tsc-wrapped/src/bundler.d.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/@angular/tsc-wrapped/src/bundler.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/@angular/tsc-wrapped/src/bundler.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/@angular/tsc-wrapped/src/cli_options.d.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/@angular/tsc-wrapped/src/cli_options.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/@angular/tsc-wrapped/src/cli_options.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/@angular/tsc-wrapped/src/collector.d.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/@angular/tsc-wrapped/src/collector.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/@angular/tsc-wrapped/src/collector.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/@angular/tsc-wrapped/src/compiler_host.d.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/@angular/tsc-wrapped/src/compiler_host.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/@angular/tsc-wrapped/src/compiler_host.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/@angular/tsc-wrapped/src/evaluator.d.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/@angular/tsc-wrapped/src/evaluator.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/@angular/tsc-wrapped/src/evaluator.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/@angular/tsc-wrapped/src/index_writer.d.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/@angular/tsc-wrapped/src/index_writer.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/@angular/tsc-wrapped/src/index_writer.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/@angular/tsc-wrapped/src/main.d.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/@angular/tsc-wrapped/src/main.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/@angular/tsc-wrapped/src/main.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/@angular/tsc-wrapped/src/options.d.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/@angular/tsc-wrapped/src/options.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/@angular/tsc-wrapped/src/options.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/@angular/tsc-wrapped/src/schema.d.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/@angular/tsc-wrapped/src/schema.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/@angular/tsc-wrapped/src/schema.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/@angular/tsc-wrapped/src/symbols.d.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/@angular/tsc-wrapped/src/symbols.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/@angular/tsc-wrapped/src/symbols.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/@angular/tsc-wrapped/src/tsc.d.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/@angular/tsc-wrapped/src/tsc.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/@angular/tsc-wrapped/src/tsc.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/@angular/tsc-wrapped/src/vinyl_file.d.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/@angular/tsc-wrapped/src/vinyl_file.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/@angular/tsc-wrapped/src/vinyl_file.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/@angular/tsc-wrapped/test/bundler_spec.d.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/@angular/tsc-wrapped/test/bundler_spec.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/@angular/tsc-wrapped/test/bundler_spec.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/@angular/tsc-wrapped/test/collector.spec.d.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/@angular/tsc-wrapped/test/collector.spec.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/@angular/tsc-wrapped/test/collector.spec.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/@angular/tsc-wrapped/test/evaluator.spec.d.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/@angular/tsc-wrapped/test/evaluator.spec.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/@angular/tsc-wrapped/test/evaluator.spec.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/@angular/tsc-wrapped/test/index_writer_spec.d.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/@angular/tsc-wrapped/test/index_writer_spec.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/@angular/tsc-wrapped/test/index_writer_spec.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/@angular/tsc-wrapped/test/main.spec.d.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/@angular/tsc-wrapped/test/main.spec.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/@angular/tsc-wrapped/test/main.spec.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/@angular/tsc-wrapped/test/symbols.spec.d.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/@angular/tsc-wrapped/test/symbols.spec.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/@angular/tsc-wrapped/test/symbols.spec.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/@angular/tsc-wrapped/test/test_support.d.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/@angular/tsc-wrapped/test/test_support.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/@angular/tsc-wrapped/test/test_support.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/@angular/tsc-wrapped/test/tsc.spec.d.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/@angular/tsc-wrapped/test/tsc.spec.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/@angular/tsc-wrapped/test/tsc.spec.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/@angular/tsc-wrapped/test/typescript.mocks.d.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/@angular/tsc-wrapped/test/typescript.mocks.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/@angular/tsc-wrapped/test/typescript.mocks.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/tsickle/.npmignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/tsickle/CONTRIBUTING.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/tsickle/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/tsickle/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/tsickle/build/definitions/cli_support.d.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/tsickle/build/definitions/decorator-annotator.d.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/tsickle/build/definitions/decorators.d.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/tsickle/build/definitions/es5processor.d.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/tsickle/build/definitions/jsdoc.d.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/tsickle/build/definitions/main.d.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/tsickle/build/definitions/modules_manifest.d.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/tsickle/build/definitions/rewriter.d.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/tsickle/build/definitions/source_map_utils.d.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/tsickle/build/definitions/tsickle.d.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/tsickle/build/definitions/tsickle_compiler_host.d.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/tsickle/build/definitions/type-translator.d.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/tsickle/build/definitions/util.d.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/tsickle/build/src/cli_support.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/tsickle/build/src/cli_support.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/tsickle/build/src/decorator-annotator.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/tsickle/build/src/decorator-annotator.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/tsickle/build/src/decorators.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/tsickle/build/src/decorators.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/tsickle/build/src/es5processor.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/tsickle/build/src/es5processor.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/tsickle/build/src/jsdoc.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/tsickle/build/src/jsdoc.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/tsickle/build/src/main.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/tsickle/build/src/main.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/tsickle/build/src/modules_manifest.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/tsickle/build/src/modules_manifest.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/tsickle/build/src/rewriter.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/tsickle/build/src/rewriter.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/tsickle/build/src/source_map_utils.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/tsickle/build/src/source_map_utils.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/tsickle/build/src/tsickle.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/tsickle/build/src/tsickle.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/tsickle/build/src/tsickle_compiler_host.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/tsickle/build/src/tsickle_compiler_host.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/tsickle/build/src/type-translator.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/tsickle/build/src/type-translator.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/tsickle/build/src/util.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/tsickle/build/src/util.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/tsickle/gulpfile.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/tsickle/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/tsickle/src/cli_support.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/tsickle/src/decorator-annotator.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/tsickle/src/decorators.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/tsickle/src/es5processor.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/tsickle/src/jsdoc.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/tsickle/src/main.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/tsickle/src/modules_manifest.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/tsickle/src/rewriter.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/tsickle/src/source_map_utils.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/tsickle/src/tsickle.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/tsickle/src/tsickle_compiler_host.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/tsickle/src/type-translator.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/tsickle/src/util.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/tsickle/third_party/typescript_helpers/LICENSE.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/tsickle/third_party/typescript_helpers/README.google" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/tsickle/third_party/typescript_helpers/helpers.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/tsickle/tsconfig.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/tsickle/tslint.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler-cli/node_modules/tsickle/yarn.lock" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/parse5/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/parse5/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/parse5/lib/common/doctype.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/parse5/lib/common/foreign_content.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/parse5/lib/common/html.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/parse5/lib/common/merge_options.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/parse5/lib/common/unicode.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/parse5/lib/index.d.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/parse5/lib/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/parse5/lib/location_info/parser_mixin.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/parse5/lib/location_info/tokenizer_mixin.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/parse5/lib/parser/formatting_element_list.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/parse5/lib/parser/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/parse5/lib/parser/open_element_stack.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/parse5/lib/parser/parser_stream.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/parse5/lib/parser/plain_text_conversion_stream.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/parse5/lib/sax/dev_null_stream.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/parse5/lib/sax/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/parse5/lib/sax/parser_feedback_simulator.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/parse5/lib/serializer/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/parse5/lib/serializer/serializer_stream.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/parse5/lib/tokenizer/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/parse5/lib/tokenizer/named_entity_data.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/parse5/lib/tokenizer/preprocessor.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/parse5/lib/tree_adapters/default.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/parse5/lib/tree_adapters/htmlparser2.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/parse5/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/reflect-metadata/.npmignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/reflect-metadata/.vscode/settings.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/reflect-metadata/AUTHORS.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/reflect-metadata/CopyrightNotice.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/reflect-metadata/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/reflect-metadata/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/reflect-metadata/Reflect.d.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/reflect-metadata/Reflect.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/reflect-metadata/Reflect.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/reflect-metadata/Reflect.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/reflect-metadata/bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/reflect-metadata/docs/ecmarkup.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/reflect-metadata/docs/ecmarkup.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/reflect-metadata/docs/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/reflect-metadata/docs/spec.biblio.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/reflect-metadata/gulpfile.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/reflect-metadata/index.d.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/reflect-metadata/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/reflect-metadata/reflect-metadata.d.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/reflect-metadata/spec.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/reflect-metadata/spec/metadata.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/reflect-metadata/standalone.d.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/reflect-metadata/test/Reflect.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/reflect-metadata/test/Reflect.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/reflect-metadata/test/reflect-decorate.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/reflect-metadata/test/reflect-decorate.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/reflect-metadata/test/reflect-decorate.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/reflect-metadata/test/reflect-definemetadata.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/reflect-metadata/test/reflect-definemetadata.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/reflect-metadata/test/reflect-definemetadata.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/reflect-metadata/test/reflect-deletemetadata.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/reflect-metadata/test/reflect-deletemetadata.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/reflect-metadata/test/reflect-deletemetadata.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/reflect-metadata/test/reflect-getmetadata.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/reflect-metadata/test/reflect-getmetadata.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/reflect-metadata/test/reflect-getmetadata.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/reflect-metadata/test/reflect-getmetadatakeys.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/reflect-metadata/test/reflect-getmetadatakeys.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/reflect-metadata/test/reflect-getmetadatakeys.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/reflect-metadata/test/reflect-getownmetadata.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/reflect-metadata/test/reflect-getownmetadata.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/reflect-metadata/test/reflect-getownmetadata.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/reflect-metadata/test/reflect-getownmetadatakeys.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/reflect-metadata/test/reflect-getownmetadatakeys.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/reflect-metadata/test/reflect-getownmetadatakeys.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/reflect-metadata/test/reflect-hasmetadata.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/reflect-metadata/test/reflect-hasmetadata.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/reflect-metadata/test/reflect-hasmetadata.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/reflect-metadata/test/reflect-hasownmetadata.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/reflect-metadata/test/reflect-hasownmetadata.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/reflect-metadata/test/reflect-hasownmetadata.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/reflect-metadata/test/reflect-metadata.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/reflect-metadata/test/reflect-metadata.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/reflect-metadata/test/reflect-metadata.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/reflect-metadata/test/tsconfig.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/reflect-metadata/tsconfig.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/reflect-metadata/typings.d.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/xhr2/.npmignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/xhr2/CONTRIBUTING.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/xhr2/Cakefile" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/xhr2/LICENSE.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/xhr2/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/xhr2/lib/browser.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/xhr2/lib/xhr2.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/xhr2/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/xhr2/src/000-xml_http_request_event_target.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/xhr2/src/001-xml_http_request.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/xhr2/src/errors.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/xhr2/src/progress_event.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/xhr2/src/xml_http_request_upload.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/xhr2/test/fixtures/hello.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/xhr2/test/fixtures/hello.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/xhr2/test/fixtures/xhr2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/xhr2/test/html/browser_test.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/xhr2/test/src/event_target_test.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/xhr2/test/src/events_test.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/xhr2/test/src/headers_test.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/xhr2/test/src/helpers/browser_mocha_runner.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/xhr2/test/src/helpers/browser_mocha_setup.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/xhr2/test/src/helpers/setup.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/xhr2/test/src/helpers/xhr_server.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/xhr2/test/src/nodejs_set_test.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/xhr2/test/src/redirect_test.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/xhr2/test/src/response_type_test.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/xhr2/test/src/responseurl_test.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/xhr2/test/src/send_test.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/xhr2/test/src/status_test.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-src/node_modules/xhr2/test/src/xhr_test.coffee" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/node_modules/.bin/ng-xi18n" afterPath="$PROJECT_DIR$/angular-src/node_modules/.bin/ng-xi18n" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/node_modules/.bin/ngc" afterPath="$PROJECT_DIR$/angular-src/node_modules/.bin/ngc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/animations/@angular/animations.es5.js" afterPath="$PROJECT_DIR$/angular-src/node_modules/@angular/animations/@angular/animations.es5.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/animations/bundles/animations.umd.js" afterPath="$PROJECT_DIR$/angular-src/node_modules/@angular/animations/bundles/animations.umd.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/common/@angular/common.es5.js" afterPath="$PROJECT_DIR$/angular-src/node_modules/@angular/common/@angular/common.es5.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/common/bundles/common.umd.js" afterPath="$PROJECT_DIR$/angular-src/node_modules/@angular/common/bundles/common.umd.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler/@angular/compiler.es5.js" afterPath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler/@angular/compiler.es5.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler/bundles/compiler.umd.js" afterPath="$PROJECT_DIR$/angular-src/node_modules/@angular/compiler/bundles/compiler.umd.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/core/@angular/core.es5.js" afterPath="$PROJECT_DIR$/angular-src/node_modules/@angular/core/@angular/core.es5.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/core/bundles/core.umd.js" afterPath="$PROJECT_DIR$/angular-src/node_modules/@angular/core/bundles/core.umd.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/http/@angular/http.es5.js" afterPath="$PROJECT_DIR$/angular-src/node_modules/@angular/http/@angular/http.es5.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/http/bundles/http.umd.js" afterPath="$PROJECT_DIR$/angular-src/node_modules/@angular/http/bundles/http.umd.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/platform-browser-dynamic/@angular/platform-browser-dynamic.es5.js" afterPath="$PROJECT_DIR$/angular-src/node_modules/@angular/platform-browser-dynamic/@angular/platform-browser-dynamic.es5.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/platform-browser-dynamic/bundles/platform-browser-dynamic.umd.js" afterPath="$PROJECT_DIR$/angular-src/node_modules/@angular/platform-browser-dynamic/bundles/platform-browser-dynamic.umd.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/platform-browser/@angular/platform-browser.es5.js" afterPath="$PROJECT_DIR$/angular-src/node_modules/@angular/platform-browser/@angular/platform-browser.es5.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/platform-browser/bundles/platform-browser.umd.js" afterPath="$PROJECT_DIR$/angular-src/node_modules/@angular/platform-browser/bundles/platform-browser.umd.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/platform-server/@angular/platform-server.es5.js" afterPath="$PROJECT_DIR$/angular-src/node_modules/@angular/platform-server/@angular/platform-server.es5.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/platform-server/bundles/platform-server.umd.js" afterPath="$PROJECT_DIR$/angular-src/node_modules/@angular/platform-server/bundles/platform-server.umd.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/router/@angular/router.es5.js" afterPath="$PROJECT_DIR$/angular-src/node_modules/@angular/router/@angular/router.es5.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/node_modules/@angular/router/bundles/router.umd.js" afterPath="$PROJECT_DIR$/angular-src/node_modules/@angular/router/bundles/router.umd.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/node_modules/ajv/.tonic_example.js" afterPath="$PROJECT_DIR$/angular-src/node_modules/ajv/.tonic_example.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/node_modules/json-stable-stringify/.npmignore" afterPath="$PROJECT_DIR$/angular-src/node_modules/json-stable-stringify/.npmignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/node_modules/json-stable-stringify/.travis.yml" afterPath="$PROJECT_DIR$/angular-src/node_modules/json-stable-stringify/.travis.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/node_modules/json-stable-stringify/LICENSE" afterPath="$PROJECT_DIR$/angular-src/node_modules/json-stable-stringify/LICENSE" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/node_modules/json-stable-stringify/example/key_cmp.js" afterPath="$PROJECT_DIR$/angular-src/node_modules/json-stable-stringify/example/key_cmp.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/node_modules/json-stable-stringify/example/nested.js" afterPath="$PROJECT_DIR$/angular-src/node_modules/json-stable-stringify/example/nested.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/node_modules/json-stable-stringify/example/str.js" afterPath="$PROJECT_DIR$/angular-src/node_modules/json-stable-stringify/example/str.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/node_modules/json-stable-stringify/example/value_cmp.js" afterPath="$PROJECT_DIR$/angular-src/node_modules/json-stable-stringify/example/value_cmp.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/node_modules/json-stable-stringify/index.js" afterPath="$PROJECT_DIR$/angular-src/node_modules/json-stable-stringify/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/node_modules/json-stable-stringify/package.json" afterPath="$PROJECT_DIR$/angular-src/node_modules/json-stable-stringify/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/node_modules/json-stable-stringify/readme.markdown" afterPath="$PROJECT_DIR$/angular-src/node_modules/json-stable-stringify/readme.markdown" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/node_modules/json-stable-stringify/test/cmp.js" afterPath="$PROJECT_DIR$/angular-src/node_modules/json-stable-stringify/test/cmp.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/node_modules/json-stable-stringify/test/nested.js" afterPath="$PROJECT_DIR$/angular-src/node_modules/json-stable-stringify/test/nested.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/node_modules/json-stable-stringify/test/replacer.js" afterPath="$PROJECT_DIR$/angular-src/node_modules/json-stable-stringify/test/replacer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/node_modules/json-stable-stringify/test/space.js" afterPath="$PROJECT_DIR$/angular-src/node_modules/json-stable-stringify/test/space.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/node_modules/json-stable-stringify/test/str.js" afterPath="$PROJECT_DIR$/angular-src/node_modules/json-stable-stringify/test/str.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/node_modules/json-stable-stringify/test/to-json.js" afterPath="$PROJECT_DIR$/angular-src/node_modules/json-stable-stringify/test/to-json.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/node_modules/jsonify/README.markdown" afterPath="$PROJECT_DIR$/angular-src/node_modules/jsonify/README.markdown" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/node_modules/jsonify/index.js" afterPath="$PROJECT_DIR$/angular-src/node_modules/jsonify/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/node_modules/jsonify/lib/parse.js" afterPath="$PROJECT_DIR$/angular-src/node_modules/jsonify/lib/parse.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/node_modules/jsonify/lib/stringify.js" afterPath="$PROJECT_DIR$/angular-src/node_modules/jsonify/lib/stringify.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/node_modules/jsonify/package.json" afterPath="$PROJECT_DIR$/angular-src/node_modules/jsonify/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/node_modules/jsonify/test/parse.js" afterPath="$PROJECT_DIR$/angular-src/node_modules/jsonify/test/parse.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/node_modules/jsonify/test/stringify.js" afterPath="$PROJECT_DIR$/angular-src/node_modules/jsonify/test/stringify.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/package-lock.json" afterPath="$PROJECT_DIR$/angular-src/package-lock.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/package.json" afterPath="$PROJECT_DIR$/angular-src/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/app.component.html" afterPath="$PROJECT_DIR$/angular-src/src/app/app.component.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/app.module.ts" afterPath="$PROJECT_DIR$/angular-src/src/app/app.module.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/dashboard/dashboard.component.css" afterPath="$PROJECT_DIR$/angular-src/src/app/components/dashboard/dashboard.component.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/dashboard/dashboard.component.html" afterPath="$PROJECT_DIR$/angular-src/src/app/components/dashboard/dashboard.component.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/dashboard/dashboard.component.ts" afterPath="$PROJECT_DIR$/angular-src/src/app/components/dashboard/dashboard.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/navbar/navbar.component.html" afterPath="$PROJECT_DIR$/angular-src/src/app/components/navbar/navbar.component.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/home/home.component.html" afterPath="$PROJECT_DIR$/angular-src/src/app/components/home/home.component.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/home/home.component.ts" afterPath="$PROJECT_DIR$/angular-src/src/app/components/home/home.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/login/login.component.html" afterPath="$PROJECT_DIR$/angular-src/src/app/components/login/login.component.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/login/login.component.ts" afterPath="$PROJECT_DIR$/angular-src/src/app/components/login/login.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/searchtalent/searchtalent.component.html" afterPath="$PROJECT_DIR$/angular-src/src/app/components/searchtalent/searchtalent.component.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/searchtalent/searchtalent.component.ts" afterPath="$PROJECT_DIR$/angular-src/src/app/components/searchtalent/searchtalent.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/index.html" afterPath="$PROJECT_DIR$/angular-src/src/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/styles.css" afterPath="$PROJECT_DIR$/angular-src/src/styles.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/user.js" afterPath="$PROJECT_DIR$/models/user.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -311,36 +29,48 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
+    <splitter split-orientation="horizontal" split-proportion="0.5020979">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="dashboard.component.ts" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/dashboard/dashboard.component.ts">
+          <file leaf-file-name="searchtalent.component.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/searchtalent/searchtalent.component.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="17">
-                  <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="dashboard.component.css" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/dashboard/dashboard.component.css">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="204">
-                  <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="app.module.ts" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/angular-src/src/app/app.module.ts">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="420">
-                  <caret line="74" column="23" lean-forward="true" selection-start-line="74" selection-start-column="23" selection-end-line="74" selection-end-column="23" />
+                <state relative-caret-position="-2">
+                  <caret line="9" column="14" lean-forward="true" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
                   <folding>
-                    <element signature="e#0#56#0" expanded="true" />
+                    <element signature="n#style#0;n#div#2;n#div#0;n#form#0;n#!!top" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="searchtalent.component.ts" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/searchtalent/searchtalent.component.ts">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="272">
+                  <caret line="68" column="75" lean-forward="false" selection-start-line="68" selection-start-column="75" selection-end-line="68" selection-end-column="75" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="app.component.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/angular-src/src/app/app.component.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="102">
+                  <caret line="6" column="6" lean-forward="true" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="home.component.html" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/home/home.component.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="272">
+                  <caret line="16" column="11" lean-forward="true" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
+                  <folding>
+                    <element signature="n#style#0;n#div#2;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -349,13 +79,15 @@
         </leaf>
       </split-first>
       <split-second>
-        <leaf>
-          <file leaf-file-name="dashboard.component.html" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/dashboard/dashboard.component.html">
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="login.component.ts" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/login/login.component.ts">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="153">
-                  <caret line="9" column="36" lean-forward="true" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
-                  <folding />
+                <state relative-caret-position="261">
+                  <caret line="39" column="32" lean-forward="true" selection-start-line="39" selection-start-column="32" selection-end-line="39" selection-end-column="32" />
+                  <folding>
+                    <element signature="e#0#48#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -367,6 +99,8 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>localhost</find>
+      <find>flex</find>
+      <find>outline</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -390,32 +124,36 @@
         <option value="$PROJECT_DIR$/angular-src/src/app/services/validate.service.ts" />
         <option value="$PROJECT_DIR$/angular-src/src/app/components/login/login.component.spec.ts" />
         <option value="$PROJECT_DIR$/angular-src/src/test.ts" />
-        <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/angular-src/src/app/app.component.spec.ts" />
         <option value="$PROJECT_DIR$/angular-src/karma.conf.js" />
         <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/angular-src/src/app/components/home/home.component.ts" />
-        <option value="$PROJECT_DIR$/angular-src/src/app/app.component.css" />
         <option value="$PROJECT_DIR$/angular-src/src/app/components/home/home.component.css" />
         <option value="$PROJECT_DIR$/angular-src/src/app/components/searchtalent/searchtalent.component.css" />
         <option value="$PROJECT_DIR$/angular-src/src/app/components/profile/profile.component.html" />
         <option value="$PROJECT_DIR$/routes/users.js" />
-        <option value="$PROJECT_DIR$/models/user.js" />
-        <option value="$PROJECT_DIR$/angular-src/src/app/components/home/home.component.html" />
-        <option value="$PROJECT_DIR$/angular-src/src/app/components/searchtalent/searchtalent.component.html" />
-        <option value="$PROJECT_DIR$/angular-src/src/styles.css" />
-        <option value="$PROJECT_DIR$/angular-src/src/index.html" />
-        <option value="$PROJECT_DIR$/angular-src/src/app/components/searchtalent/searchtalent.component.ts" />
         <option value="$PROJECT_DIR$/angular-src/src/app/components/register/register.component.ts" />
         <option value="$PROJECT_DIR$/angular-src/src/app/components/profile/profile.component.ts" />
-        <option value="$PROJECT_DIR$/angular-src/src/app/components/login/login.component.ts" />
-        <option value="$PROJECT_DIR$/angular-src/package.json" />
         <option value="$PROJECT_DIR$/angular-src/src/app/components/navbar/navbar.component.html" />
         <option value="$PROJECT_DIR$/angular-src/src/app/components/navbar/navbar.component.ts" />
-        <option value="$PROJECT_DIR$/angular-src/src/app/components/dashboard/dashboard.component.ts" />
+        <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/models/user.js" />
+        <option value="$PROJECT_DIR$/angular-src/src/index.html" />
+        <option value="$PROJECT_DIR$/angular-src/src/app/components/login/login.component.html" />
+        <option value="$PROJECT_DIR$/angular-src/src/app/components/login/login.component.ts" />
+        <option value="$PROJECT_DIR$/angular-src/src/app/components/scheduler/scheduler.component.ts" />
+        <option value="$PROJECT_DIR$/angular-src/src/app/components/scheduler/scheduler.component.html" />
+        <option value="$PROJECT_DIR$/angular-src/src/styles.css" />
+        <option value="$PROJECT_DIR$/angular-src/src/app/app.component.css" />
         <option value="$PROJECT_DIR$/angular-src/src/app/components/dashboard/dashboard.component.css" />
-        <option value="$PROJECT_DIR$/angular-src/src/app/components/dashboard/dashboard.component.html" />
+        <option value="$PROJECT_DIR$/angular-src/package.json" />
         <option value="$PROJECT_DIR$/angular-src/src/app/app.module.ts" />
+        <option value="$PROJECT_DIR$/angular-src/src/app/components/dashboard/dashboard.component.ts" />
+        <option value="$PROJECT_DIR$/angular-src/src/app/components/dashboard/dashboard.component.html" />
+        <option value="$PROJECT_DIR$/angular-src/src/app/components/home/home.component.ts" />
+        <option value="$PROJECT_DIR$/angular-src/src/app/app.component.html" />
+        <option value="$PROJECT_DIR$/angular-src/src/app/components/home/home.component.html" />
+        <option value="$PROJECT_DIR$/angular-src/src/app/components/searchtalent/searchtalent.component.html" />
+        <option value="$PROJECT_DIR$/angular-src/src/app/components/searchtalent/searchtalent.component.ts" />
       </list>
     </option>
   </component>
@@ -430,8 +168,7 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="274" />
-    <option name="y" value="32" />
+    <option name="x" value="352" />
     <option name="width" value="1400" />
     <option name="height" value="998" />
   </component>
@@ -450,8 +187,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -493,7 +229,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="dashboard" type="462c0819:PsiDirectoryNode" />
+              <item name="home" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TalentFinder" type="b2602c69:ProjectViewProjectNode" />
@@ -502,7 +238,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="navbar" type="462c0819:PsiDirectoryNode" />
+              <item name="searchtalent" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TalentFinder" type="b2602c69:ProjectViewProjectNode" />
@@ -523,7 +259,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -546,7 +283,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.angular">
+  <component name="RunManager" selected="Node.js.app.js">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -722,12 +459,30 @@
       <workItem from="1510800962247" duration="8454000" />
       <workItem from="1510817651822" duration="2054000" />
       <workItem from="1512292573508" duration="837000" />
-      <workItem from="1512330827787" duration="10243000" />
+      <workItem from="1512330827787" duration="10400000" />
+      <workItem from="1512452953049" duration="806000" />
+      <workItem from="1512862758428" duration="1238000" />
+      <workItem from="1512938123161" duration="7943000" />
+      <workItem from="1513063478990" duration="5375000" />
+      <workItem from="1513556519377" duration="794000" />
+      <workItem from="1513658054835" duration="2617000" />
+      <workItem from="1514431797445" duration="2734000" />
+      <workItem from="1514962764773" duration="1082000" />
+      <workItem from="1515350990955" duration="621000" />
+      <workItem from="1515478027099" duration="647000" />
+      <workItem from="1515560484904" duration="6356000" />
+      <workItem from="1516257900280" duration="9358000" />
+      <workItem from="1517554632525" duration="634000" />
+      <workItem from="1518383769764" duration="1472000" />
+      <workItem from="1518496314498" duration="9621000" />
+      <workItem from="1518998317368" duration="3038000" />
+      <workItem from="1522653134371" duration="1295000" />
+      <workItem from="1528100129315" duration="4837000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="216632000" />
+    <option name="totallyTimeSpent" value="277257000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -749,20 +504,20 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3072747" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32899022" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3072747" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32899022" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3072747" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20575693" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23347548" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39977476" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -786,15 +541,15 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39977476" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32899022" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30932203" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10104167" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32899022" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3072747" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3072747" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2196162" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
@@ -834,112 +589,21 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="11" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/angular-src/src/environments/environment.prod.ts" />
-    <entry file="file://$PROJECT_DIR$/angular-src/src/app/services/data.service.spec.ts" />
-    <entry file="file://$PROJECT_DIR$/angular-src/src/app/services/auth.service.spec.ts" />
-    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/login/login.component.spec.ts" />
-    <entry file="file://$PROJECT_DIR$/angular-src/karma.conf.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="51" lean-forward="false" selection-start-line="10" selection-start-column="51" selection-end-line="10" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular-src/package-lock.json" />
-    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/searchtalent/searchtalent.component.spec.ts" />
-    <entry file="file://$PROJECT_DIR$/package.json" />
-    <entry file="file://$PROJECT_DIR$/angular-src/src/app/app.component.spec.ts" />
-    <entry file="file://$PROJECT_DIR$/angular-src/node_modules/@angular/router/src/router.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1173">
-          <caret line="163" column="21" lean-forward="false" selection-start-line="163" selection-start-column="21" selection-end-line="163" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/database.js" />
-    <entry file="file://$PROJECT_DIR$/angular-src/src/app/guards/auth.guard.ts" />
-    <entry file="file://$PROJECT_DIR$/angular-src/node_modules/typescript/lib/typescript.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="22567" column="28" lean-forward="false" selection-start-line="22567" selection-start-column="28" selection-end-line="22567" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/passport.js" />
-    <entry file="file://$PROJECT_DIR$/angular-src/node_modules/@angular/core/src/metadata/ng_module.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="153" column="4" lean-forward="false" selection-start-line="153" selection-start-column="4" selection-end-line="153" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/login/login.component.css" />
-    <entry file="file://$PROJECT_DIR$/angular-src/src/app/app.component.css" />
     <entry file="file://$PROJECT_DIR$/angular-src/src/test.ts" />
     <entry file="file://$PROJECT_DIR$/angular-src/src/main.ts" />
-    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/login/login.component.html" />
     <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/home/home.component.spec.ts" />
-    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/home/home.component.html" />
     <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/profile/profile.component.html" />
     <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/home/home.component.css" />
     <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/searchtalent/searchtalent.component.css" />
-    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/searchtalent/searchtalent.component.html" />
     <entry file="file://$PROJECT_DIR$/angular-src/angular-cli.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="862">
           <caret line="62" column="19" lean-forward="true" selection-start-line="62" selection-start-column="19" selection-end-line="62" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/users.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-459">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/user.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-867">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular-src/src/styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="319" column="0" lean-forward="true" selection-start-line="319" selection-start-column="0" selection-end-line="319" selection-end-column="0" />
-          <folding>
-            <element signature="e#78120#78320#2" expanded="false" />
-            <element signature="e#78461#78610#2" expanded="false" />
-            <element signature="e#78780#78926#2" expanded="false" />
-            <element signature="e#79558#79721#1" expanded="false" />
-            <element signature="e#93598#93841#2" expanded="false" />
-            <element signature="e#94828#95077#2" expanded="false" />
-            <element signature="e#128761#128951#2" expanded="false" />
-            <element signature="e#129008#129198#2" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular-src/src/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="19" lean-forward="true" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -950,52 +614,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/searchtalent/searchtalent.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="61" column="0" lean-forward="false" selection-start-line="61" selection-start-column="0" selection-end-line="78" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/register/register.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="51" column="18" lean-forward="false" selection-start-line="51" selection-start-column="18" selection-end-line="51" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#48#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/login/login.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="43" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/home/home.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/angular-src/src/app/services/validate.service.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular-src/src/app/services/search.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1003,7 +625,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1011,39 +632,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="40">
           <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="39" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular-src/src/app/services/auth.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="44" column="36" lean-forward="false" selection-start-line="44" selection-start-column="36" selection-end-line="44" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular-src/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="41" column="28" lean-forward="true" selection-start-line="41" selection-start-column="28" selection-end-line="41" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular-src/src/app/app.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular-src/src/app/app.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1051,50 +639,303 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="27" selection-end-column="6" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/services/search.service.spec.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/navbar/navbar.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="61" lean-forward="false" selection-start-line="3" selection-start-column="61" selection-end-line="3" selection-end-column="61" />
-          <folding>
-            <element signature="e#0#48#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="306">
+          <caret line="21" column="31" lean-forward="false" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/dashboard/dashboard.component.html">
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/services/auth.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="8" column="8" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/users.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="101" column="44" lean-forward="false" selection-start-line="101" selection-start-column="44" selection-end-line="101" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/node_modules/@angular/router/src/router_module.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="180" column="21" lean-forward="false" selection-start-line="180" selection-start-column="21" selection-end-line="180" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/node_modules/@angular/router/@angular/router.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="5832" column="6" lean-forward="false" selection-start-line="5832" selection-start-column="6" selection-end-line="5832" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/guards/auth.guard.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/services/search.service.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
-          <caret line="9" column="36" lean-forward="true" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
+          <caret line="11" column="21" lean-forward="false" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/scheduler/scheduler.component.spec.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/node_modules/@angular/material/esm2015/datepicker.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="1739" column="23" lean-forward="false" selection-start-line="1739" selection-start-column="23" selection-end-line="1739" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/node_modules/@angular/material/bundles/material-paginator.umd.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="2682" column="41" lean-forward="false" selection-start-line="2682" selection-start-column="41" selection-end-line="2682" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/node_modules/@angular/material/bundles/material-datepicker.umd.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="5556" column="41" lean-forward="false" selection-start-line="5556" selection-start-column="41" selection-end-line="5556" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/scheduler/scheduler.component.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/app.component.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/scheduler/scheduler.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="57" lean-forward="true" selection-start-line="5" selection-start-column="57" selection-end-line="5" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/dashboard/dashboard.component.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/node_modules/@angular/material/bundles/material-input.umd.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="2630" column="41" lean-forward="false" selection-start-line="2630" selection-start-column="41" selection-end-line="2630" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/user.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="57" column="39" lean-forward="false" selection-start-line="57" selection-start-column="39" selection-end-line="57" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package-lock.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1020">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="4" lean-forward="true" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="32" lean-forward="true" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/app.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="799">
+          <caret line="89" column="28" lean-forward="false" selection-start-line="89" selection-start-column="28" selection-end-line="89" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/login/login.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="11" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/register/register.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/register/register.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="14" lean-forward="true" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/scheduler/scheduler.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="1" lean-forward="false" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/dashboard/dashboard.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        <state relative-caret-position="374">
+          <caret line="22" column="5" lean-forward="false" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#48#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/home/home.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="16" column="4" lean-forward="false" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/dashboard/dashboard.component.css">
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/app.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="1" lean-forward="false" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/idea.jar!/resources/html5-schema/html5/structural.rnc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
-          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+          <caret line="115" column="16" lean-forward="false" selection-start-line="115" selection-start-column="16" selection-end-line="115" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/angular-src/src/app/app.module.ts">
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/dashboard/dashboard.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="74" column="23" lean-forward="true" selection-start-line="74" selection-start-column="23" selection-end-line="74" selection-end-column="23" />
+        <state relative-caret-position="17">
+          <caret line="1" column="38" lean-forward="false" selection-start-line="1" selection-start-column="38" selection-end-line="1" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/src/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="4" lean-forward="false" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/src/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="7422" column="1" lean-forward="false" selection-start-line="7422" selection-start-column="1" selection-end-line="7422" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/searchtalent/searchtalent.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2">
+          <caret line="9" column="14" lean-forward="true" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
           <folding>
-            <element signature="e#0#56#0" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#form#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/searchtalent/searchtalent.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="68" column="75" lean-forward="false" selection-start-line="68" selection-start-column="75" selection-end-line="68" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/login/login.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="39" column="32" lean-forward="true" selection-start-line="39" selection-start-column="32" selection-end-line="39" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#48#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/app.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="6" lean-forward="true" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/home/home.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="11" lean-forward="true" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
+          <folding>
+            <element signature="n#style#0;n#div#2;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

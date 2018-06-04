@@ -66,9 +66,9 @@ export class SearchtalentComponent implements OnInit {
                     });
                     this.searchData = data;
                     this.dataArrayLength = data.documents.length;
-                    this.numberOfPages = Math.ceil(data.documents.length/5);
+                    this.numberOfPages = Math.ceil(data.documents.length/10);
                     this.currentPage = 1;
-                    this.dataArray = data.documents.slice(this.currentPage*5 - 5, this.currentPage*5);
+                    this.dataArray = data.documents.slice(this.currentPage*10 - 10, this.currentPage*10);
                     this.viewArrayProfile = true;
                 }
                 else {

@@ -1,39 +1,43 @@
-<!DOCTYPE html>
-<html>
-<body>
-    <div class="jumbotron text-center">
-        <table role="Search" width="800" border="0" cellspacing="0" cellpadding="0" align="center" style="margin-top:1em">
-            <tbody>
-                <h1 class="display-3"> TalentFinder </h1>
-                <form (submit)="onSearchSubmit()">
-                    <table cellspacing="0" cellpadding="1" width="100%" align="center">
-                    <tr>
-                        <td align="left">
-                            <label>Skill</label>
-                        </td>
-                        <td colspan="2" align="left">
-                            <label>Where</label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td  align="left">
-                            <input class="form-control"
-                            type="text"
-                            [(ngModel)]="skillInput"
-                            name="hpSkillInputBox">
-                        </td>
-                        <td colspan="2" align="left">
-                            <input class="form-control"
-                            type="text"
-                            [(ngModel)]="whereInput"
-                            name="hpWhereInputBox">
-                        </td>
-                        <input type="submit" class="btn btn-primary" value="Find Talents">
-                    </tr>
-                    </table>
-                </form>
-            </tbody>
-        </table>
-    </div>
-</body>
-</html>
+<div class="jumbotron text-center container">
+    <h1 class="display-3"> TalentFinder </h1>
+    <form (submit)="onSearchSubmit()">
+        <div class="row text-left">
+            <div class="col-5 form-group">
+                <label class="font-weight-bold " for="skillInput">SKILL</label>
+                <input type="text" id="skillInput" name="skillInput" [(ngModel)]="skillInput" class="form-control">
+            </div>
+            <div class="col-5 form-group">
+                <label class="font-weight-bold" for="whereInput">WHERE</label>
+                <input type="text" id="whereInput" name="whereInput" [(ngModel)]="whereInput" class="form-control">
+            </div>
+            <div class="col-2 form-group" style="bottom:-26px;">
+                <button type="submit" class="btn btn-primary">Find Talent</button>
+            </div>
+        </div>
+    </form>
+</div>
+        <!--<table cellspacing="0" cellpadding="1" width="100%" align="center">-->
+        <!--<tr>-->
+            <!--<td align="left">-->
+                <!--<label>Skill</label>-->
+            <!--</td>-->
+            <!--<td colspan="2" align="left">-->
+                <!--<label>Where</label>-->
+            <!--</td>-->
+        <!--</tr>-->
+        <!--<tr>-->
+            <!--<td  align="left">-->
+                <!--<input class="form-control"-->
+                <!--type="text"-->
+                <!--[(ngModel)]="skillInput"-->
+                <!--name="hpSkillInputBox">-->
+            <!--</td>-->
+            <!--<td colspan="2" align="left">-->
+                <!--<input class="form-control"-->
+                <!--type="text"-->
+                <!--[(ngModel)]="whereInput"-->
+                <!--name="hpWhereInputBox">-->
+            <!--</td>-->
+            <!--<input type="submit" class="btn btn-primary" value="Find Talents">-->
+        <!--</tr>-->
+        <!--</table>-->

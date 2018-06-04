@@ -49,8 +49,8 @@ module.exports.getUserByUsername = function (username, callback) {
 }
 
 module.exports.getMatchingUsers = function (req, callback){
-    User.find({"skill": new RegExp(req.body.hpSkillInputBox, "i"),
-                "city": new RegExp(req.body.hpWhereInputBox, "i")},
+    User.find({"skill": new RegExp(req.body.skillInput, "i"),
+                "city": new RegExp(req.body.whereInput, "i")},
                 callback);
 }
 

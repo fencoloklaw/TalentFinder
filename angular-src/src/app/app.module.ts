@@ -1,6 +1,6 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpModule} from '@angular/http';
 import {RouterModule, Routes} from '@angular/router';
 
@@ -21,16 +21,26 @@ import {SearchService} from './services/search.service';
 import {DataService} from "./services/data.service";
 import {
     MatAutocompleteModule,
-    MatButtonModule, MatCardActions, MatCardModule, MatDatepickerModule, MatDialogModule, MatFormFieldModule,
-    MatIconModule, MatInputModule,
+    MatButtonModule, MatButtonToggleModule,
+    MatCardActions,
+    MatCardModule,
+    MatDatepickerModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    MatIconModule,
+    MatInputModule,
     MatListModule,
-    MatMenuModule,
+    MatMenuModule, MatNativeDateModule,
     MatPaginatorModule, MatRadioModule, MatSelectModule,
-    MatSnackBarModule, MatSortModule,
+    MatSnackBarModule,
+    MatSortModule,
     MatStepperModule,
     MatToolbarModule
 } from "@angular/material";
 import {ScrollDispatchModule} from "@angular/cdk/scrolling";
+import { SchedulerComponent } from './components/scheduler/scheduler.component';
+import {FlexLayoutModule} from "@angular/flex-layout";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 const appRoutes: Routes = [
     {path: '', component: HomeComponent},
@@ -50,7 +60,8 @@ const appRoutes: Routes = [
         HomeComponent,
         ProfileComponent,
         DashboardComponent,
-        SearchtalentComponent
+        SearchtalentComponent,
+        SchedulerComponent
     ],
     imports: [
         BrowserModule,
@@ -63,6 +74,7 @@ const appRoutes: Routes = [
         MatMenuModule,
         MatIconModule,
         MatButtonModule,
+        MatButtonToggleModule,
         ScrollDispatchModule,
         MatListModule,
         MatStepperModule,
@@ -70,12 +82,15 @@ const appRoutes: Routes = [
         MatSnackBarModule,
         MatPaginatorModule,
         MatAutocompleteModule,
-        MatFormFieldModule,
         MatInputModule,
         MatRadioModule,
         MatSelectModule,
-        MatDatepickerModule
-
+        MatDatepickerModule,
+        MatFormFieldModule,
+        MatNativeDateModule,
+        BrowserAnimationsModule,
+        FlexLayoutModule,
+        ReactiveFormsModule
     ],
     providers: [ValidateService, AuthService, AuthGuard, SearchService, DataService],
     bootstrap: [AppComponent]

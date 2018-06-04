@@ -19,13 +19,16 @@ export class LoginComponent implements OnInit {
     }
 
     ngOnInit() {
+        this.username = "";
+        this.password = "";
+
     }
 
     onLoginSubmit() {
         const user = {
             username: this.username,
             password: this.password
-        }
+        };
 
         this.authService.authenticateUser(user).subscribe(data => {
             if (data.success) {
@@ -43,6 +46,15 @@ export class LoginComponent implements OnInit {
                 this.router.navigate(['login']);
             }
         });
-
     }
+
+    validLogin(){
+        if((this.username.length > 0) && (this.password.length > 0)){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
 }

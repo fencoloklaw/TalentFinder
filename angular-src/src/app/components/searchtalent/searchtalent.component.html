@@ -1,35 +1,23 @@
-<form class="page-header" (submit)="onSearchSubmit()">
-    <table cellspacing="0" cellpadding="1" width="100%" align="center">
-        <tr>
-            <td align="left">
-                <label>Skill</label>
-            </td>
-            <td colspan="2" align="left">
-                <label>Where</label>
-            </td>
-        </tr>
-        <tr>
-            <td  align="left">
-                <input class="form-control"
-                       type="text"
-                       [(ngModel)]="skillInput"
-                       name="hpSkillInputBox">
-            </td>
-            <td colspan="2" align="left">
-                <input class="form-control"
-                       type="text"
-                       [(ngModel)]="whereInput"
-                       name="hpWhereInputBox">
-            </td>
-            <input type="submit" class="btn btn-primary" value="Find Talents">
-        </tr>
-    </table>
+<form class="container p-3" (submit)="onSearchSubmit()">
+    <div class="row text-left">
+        <div class="col-5 form-group">
+            <label class="font-weight-bold " for="skillInput">SKILL</label>
+            <input type="text" id="skillInput" name="skillInput" [(ngModel)]="skillInput" class="form-control">
+        </div>
+        <div class="col-5 form-group">
+            <label class="font-weight-bold" for="whereInput">WHERE</label>
+            <input type="text" id="whereInput" name="whereInput" [(ngModel)]="whereInput" class="form-control">
+        </div>
+        <div class="col-2 form-group" style="bottom:-26px;">
+            <button type="submit" class="btn btn-primary">Find Talent</button>
+        </div>
+    </div>
 </form>
 <div id="search-container">
-    <div style="padding-top: 20px">
-        <div *ngIf="viewArrayProfile==true" class="jumbotron">
+    <div class="mt-5">
+        <div *ngIf="viewArrayProfile==true" class="">
             <ul class="list-group" *ngFor="let data of dataArray">
-                <li class="list-group-item" (click)="showProfile(data)">
+                <button class="list-group-item list-group-item-action" (click)="showProfile(data)">
                     <span>Name: {{data.name}}</span>
                     <br>
                     <span>Email: {{data.email}}</span>
@@ -37,20 +25,20 @@
                     <span>Skill: {{data.skill}}</span>
                     <br>
                     <span>City: {{data.city}}</span>
-                </li>
+                </button>
             </ul>
             <div>
                 <ul class="pagination pagination-lg">
-                    <li class="page-item left">
-                        <a class="page-link" *ngIf="currentPage>1" (click)="onChangePageBack()">Previous</a>
-                    </li>
-                    <li class="page-item right">
-                        <a class="page-link" *ngIf="currentPage<numberOfPages" (click)="onChangePage()">Next</a>
-                    </li>
+                    <button class="list-group-item list-group-item-action page-link" *ngIf="currentPage>1" (click)="onChangePageBack()">
+                        <span>Previous</span>
+                    </button>
+                    <button class="list-group-item list-group-item-action page-link" *ngIf="currentPage<numberOfPages" (click)="onChangePage()">
+                        <span>Next</span>
+                    </button>
                 </ul>
             </div>
-            <div *ngIf="dataArrayLength==0">
-                <p>No users found.</p>
+            <div class="container" *ngIf="dataArrayLength==0">
+                <p class="lead">No users found.</p>
             </div>
         </div>
         <div *ngIf="viewArrayProfile==false" class="card border-primary">

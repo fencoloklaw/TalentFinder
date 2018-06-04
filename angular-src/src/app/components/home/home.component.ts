@@ -15,10 +15,6 @@ export class HomeComponent implements OnInit {
 
     skillInput: String;
     whereInput: String;
-    @HostListener('window:resize')
-    onResize(){
-
-    }
 
     constructor(private router: Router,
                 private flashMessage: FlashMessagesService,
