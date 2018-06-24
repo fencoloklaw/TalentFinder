@@ -10,13 +10,16 @@ import {FlashMessagesService} from 'angular2-flash-messages';
 })
 export class ProfileComponent implements OnInit {
     _id : String;
-    name : String;
-    username : String;
+    // name : String;
+    firstName: String;
+    lastName: String;
+    // username : String;
     email: String;
     skill: String;
     experience : String;
     volunteer : String;
     city : String;
+    description : String;
 
     constructor(private authService: AuthService,
                 private router: Router,
@@ -27,13 +30,14 @@ export class ProfileComponent implements OnInit {
     ngOnInit() {
         this.authService.getProfile().subscribe(profile => {
                 this._id = profile.user._id;
-                this.name = profile.user.name;
-                this.username = profile.user.username;
+                this.firstName = profile.user.firstName;
+                this.lastName = profile.user.lastName;
                 this.email = profile.user.email;
                 this.skill = profile.user.skill;
                 this.experience = profile.user.experience;
                 this.volunteer = profile.user.volunteer;
                 this.city = profile.user.city;
+                this.description = profile.user.description;
             },
             err => {
                 console.log(err);
@@ -44,28 +48,31 @@ export class ProfileComponent implements OnInit {
     onUpdateProfile() {
         const updateUser = {
             _id: this._id,
-            name: this.name,
-            username: this.username,
+            firstName : this.firstName,
+            lastName : this.lastName,
             email: this.email,
             skill: this.skill,
             experience: this.experience,
             volunteer: this.volunteer,
-            city: this.city
-        }
+            city: this.city,
+            description: this.description
+        };
 
         this.authService.updateProfile(updateUser).subscribe(data => {
-            // this.flashMessage.show("Profile Updated", {
-            //     cssClass: 'alert-success',
-            //     timeout: 5000
-            // });
-            // this._id = data.user._id;
-            // this.name = data.user.name;
-            // this.username = data.user.username;
-            // this.email = data.user.email;
-            // this.skill = data.user.skill;
-            // this.experience = data.user.experience;
-            // this.volunteer = data.user.volunteer;
-            // this.city = data.user.city;
+            this.flashMessage.show("Profile Updated", {
+                cssClass: 'alert-success',
+                timeout: 5000
+            });
+            this._id = data.user._id;
+            this.firstName = data.user.firstName;
+            this.lastName = data.user.lastName;
+            this.email = data.user.email;
+            this.skill = data.user.skill;
+            this.experience = data.user.experience;
+            this.volunteer = data.user.volunteer;
+            this.city = data.user.city;
+            this.description = data.user.description;
+
         });
     }
 }

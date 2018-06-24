@@ -11,14 +11,16 @@ const User = require('../models/user');
 router.post('/register', (req, res) => {
     //res.send('REGISTER');
     let newUser = new User({
-        name: req.body.name,
+        // name: req.body.name,
+        firstName: "",
+        lastName: "",
         email: req.body.email,
-        username: req.body.username,
         password: req.body.password,
         experience: "",
         skill: "",
         volunteer: "",
-        city: ""
+        city: "",
+        description: ""
     });
 
     User.addUser(newUser, (err) => {
@@ -33,10 +35,10 @@ router.post('/register', (req, res) => {
 //Authenticate
 router.post('/authenticate', (req, res) => {
     //res.send('AUTHENTICATE');
-    const username = req.body.username;
+    const email = req.body.email;
     const password = req.body.password;
 
-    User.getUserByUsername(username, (err, user) => {
+    User.getUserByEmail(email, (err, user) => {
         if (err) throw err;
         if (!user) {
             return res.json({success: false, msg: 'User not found'});
@@ -54,8 +56,10 @@ router.post('/authenticate', (req, res) => {
                     token: 'JWT ' + token,
                     user: {
                         id: user._id,
-                        name: user.name,
-                        username: user.username,
+                        // name: user.name,
+                        // firstName: user.firstName;
+                        // lastName: user.lastName;
+                        // username: user.username,
                         email: user.email
                     }
                 });

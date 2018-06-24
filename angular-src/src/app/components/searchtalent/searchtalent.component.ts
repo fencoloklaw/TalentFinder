@@ -87,7 +87,7 @@ export class SearchtalentComponent implements OnInit {
     onChangePage() {
         if (this.currentPage < this.numberOfPages) {
             this.currentPage++;
-            this.dataArray = this.searchData.documents.slice(this.currentPage * 5 - 5, this.currentPage * 5);
+            this.dataArray = this.searchData.documents.slice(this.currentPage * 10 - 10, this.currentPage * 10);
         }
         else{
             //do not display next
@@ -97,7 +97,7 @@ export class SearchtalentComponent implements OnInit {
     onChangePageBack() {
         if (this.currentPage > 1) {
             this.currentPage--;
-            this.dataArray = this.searchData.documents.slice(this.currentPage * 5 - 5, this.currentPage * 5);
+            this.dataArray = this.searchData.documents.slice(this.currentPage * 10 - 10, this.currentPage * 10);
         }
         else{
             //do not display next
@@ -111,7 +111,7 @@ export class SearchtalentComponent implements OnInit {
 
     returnSearch(){
         this.viewArrayProfile = true;
-        this.dataArray = this.searchData.documents.slice(this.currentPage * 5 - 5, this.currentPage * 5);
+        this.dataArray = this.searchData.documents.slice(this.currentPage * 10 - 10, this.currentPage * 10);
         this.profile = "";
     }
 }

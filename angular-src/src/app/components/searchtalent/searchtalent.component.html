@@ -18,7 +18,7 @@
         <div *ngIf="viewArrayProfile==true" class="">
             <ul class="list-group" *ngFor="let data of dataArray">
                 <button class="list-group-item list-group-item-action" (click)="showProfile(data)">
-                    <span>Name: {{data.name}}</span>
+                    <span>Name: {{data.firstName}} {{data.lastName}}</span>
                     <br>
                     <span>Email: {{data.email}}</span>
                     <br>
@@ -43,7 +43,7 @@
         </div>
         <div *ngIf="viewArrayProfile==false" class="card border-primary">
             <div class="card-body">
-                <h2>{{profile.name}}</h2>
+                <h2>{{profile.firstName}} {{profile.lastName}}</h2>
                 <br>
                 <span>Email: {{profile.email}}</span>
                 <br>

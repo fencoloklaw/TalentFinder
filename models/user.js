@@ -4,17 +4,22 @@ const config = require('../config/database');
 
 //User Schema
 const UserSchema = mongoose.Schema({
-    name: {
-        type: String
+    firstName: {
+        type: String,
+        required: false
+    },
+    lastName: {
+        type: String,
+        required: false
     },
     email: {
         type: String,
         required: true
     },
-    username: {
-        type: String,
-        required: true
-    },
+    // username: {
+    //     type: String,
+    //     required: true
+    // },
     password: {
         type: String,
         required: true
@@ -34,6 +39,10 @@ const UserSchema = mongoose.Schema({
     city: {
         type: String,
         required: false
+    },
+    description: {
+        type: String,
+        required: false
     }
 });
 
@@ -41,18 +50,24 @@ const User = module.exports = mongoose.model('User', UserSchema);
 
 module.exports.getUserById = function (id, callback) {
     User.findById(id, callback);
-}
+};
 
-module.exports.getUserByUsername = function (username, callback) {
-    const query = {username: username};
+// module.exports.getUserByUsername = function (username, callback) {
+//     const query = {username: username};
+//     User.findOne(query, callback);
+// };
+
+module.exports.getUserByEmail = function (email, callback) {
+    const query = {email: email};
     User.findOne(query, callback);
-}
+};
+
 
 module.exports.getMatchingUsers = function (req, callback){
     User.find({"skill": new RegExp(req.body.skillInput, "i"),
                 "city": new RegExp(req.body.whereInput, "i")},
                 callback);
-}
+};
 
 module.exports.addUser = function (newUser, callback) {
     bcrypt.genSalt(10, (err, salt) => {
@@ -62,26 +77,27 @@ module.exports.addUser = function (newUser, callback) {
             newUser.save(callback);
         });
     });
-}
+};
 
 module.exports.comparePassword = function (candidatePassword, hash, callback) {
     bcrypt.compare(candidatePassword, hash, (err, isMatch) => {
         if (err) throw err;
         callback(null, isMatch);
     });
-}
+};
 
 module.exports.updateUser = function (req, callback){
     User.findById(req.body._id, (err, oldUser) => {
         if(err) throw err;
         if(oldUser) {
-            oldUser.name = req.body.name;
-            oldUser.email = req.body.email;
+            oldUser.firstName = req.body.firstName;
+            oldUser.lastName = req.body.lastName;
             oldUser.skill = req.body.skill;
             oldUser.volunteer = req.body.volunteer;
             oldUser.experience = req.body.experience;
             oldUser.city = req.body.city;
+            oldUser.description = req.body.description;
             oldUser.save(callback);
         }
     });
-}
+};

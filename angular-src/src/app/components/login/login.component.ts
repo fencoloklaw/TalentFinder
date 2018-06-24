@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {AuthService} from '../../services/auth.service';
 import {Router} from '@angular/router';
 import {FlashMessagesService} from 'angular2-flash-messages';
+import {ValidateService} from "../../services/validate.service";
 
 @Component({
     selector: 'app-login',
@@ -10,23 +11,24 @@ import {FlashMessagesService} from 'angular2-flash-messages';
 })
 export class LoginComponent implements OnInit {
 
-    username: String;
+    email: String;
     password: String;
 
     constructor(private authService: AuthService,
                 private router: Router,
-                private flashMessage: FlashMessagesService) {
+                private flashMessage: FlashMessagesService,
+                private validateService: ValidateService) {
     }
 
     ngOnInit() {
-        this.username = "";
+        this.email = "";
         this.password = "";
 
     }
 
     onLoginSubmit() {
         const user = {
-            username: this.username,
+            email: this.email,
             password: this.password
         };
 
@@ -49,7 +51,7 @@ export class LoginComponent implements OnInit {
     }
 
     validLogin(){
-        if((this.username.length > 0) && (this.password.length > 0)){
+        if((this.email.length > 0) && (this.password.length > 0) && this.validateService.validateEmail(this.email)){
             return true;
         }
         else{
