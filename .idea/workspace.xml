@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c07b5172-988e-4094-b77d-c889132298e2" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/services/auth.service.ts" afterPath="$PROJECT_DIR$/angular-src/src/app/services/auth.service.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/services/search.service.ts" afterPath="$PROJECT_DIR$/angular-src/src/app/services/search.service.ts" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -529,12 +527,12 @@
       <workItem from="1528781857670" duration="8667000" />
       <workItem from="1529274272739" duration="1781000" />
       <workItem from="1529387767505" duration="734000" />
-      <workItem from="1529735119900" duration="13801000" />
+      <workItem from="1529735119900" duration="14003000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="308893000" />
+    <option name="totallyTimeSpent" value="309095000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
