@@ -12,14 +12,14 @@ router.post('/register', (req, res) => {
     //res.send('REGISTER');
     let newUser = new User({
         // name: req.body.name,
-        firstName: "",
-        lastName: "",
+        firstName: req.body.firstName,
+        lastName: req.body.lastName,
         email: req.body.email,
         password: req.body.password,
         experience: "",
-        skill: "",
+        skill: req.body.skill,
         volunteer: "",
-        city: "",
+        city: "Vancouver",
         description: ""
     });
 
@@ -116,8 +116,6 @@ router.post('/search', (req, res, next) => {
         });
     });
     // res.send(username);
-
-
 });
 
 module.exports = router;

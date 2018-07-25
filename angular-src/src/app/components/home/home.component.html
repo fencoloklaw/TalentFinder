@@ -1,6 +1,6 @@
-<div class="jumbotron text-center container">
-    <h1 class="display-3"> TalentFinder </h1>
-    <form (submit)="onSearchSubmit()">
+<div class="h-100 jumbotron text-center container">
+    <h1 class="h-25">TalentFinder</h1>
+    <form class="h-50" (submit)="onSearchSubmit()">
         <div class="row text-left">
             <div class="col-5 form-group">
                 <label class="font-weight-bold " for="skillInput">SKILL</label>
@@ -15,17 +15,21 @@
             </div>
         </div>
     </form>
-    <div *ngIf="!authService.loggedIn()" class="row mb-3 mt-5" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
-        <div class="col">
-            <button class="btn btn-outline-secondary" [routerLink]="['/register']">
-                <span>Set Up Account</span>
-            </button>
+    <div class="h-25">
+        <div *ngIf="!authService.loggedIn()" class="row mb-3 mt-5" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+            <div class="col">
+                <button class="btn btn-outline-secondary" [routerLink]="['/register']">
+                    <span>Set Up Account</span>
+                </button>
+            </div>
         </div>
-    </div>
-    <div *ngIf="authService.loggedIn()" class="row mb-3 mt-5">
-        <div class="col">
-            <h3>Recommended Jobs</h3>
-            <div></div>
+        <div *ngIf="authService.loggedIn()" class="row mb-3 mt-5">
+            <div class="col">
+                <h3>Recommended Jobs</h3>
+                <div id="recommendedJobsList">
+
+                </div>
+            </div>
         </div>
     </div>
 </div>
