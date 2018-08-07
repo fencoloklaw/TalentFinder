@@ -742,7 +742,7 @@ var RegisterComponent = (function () {
         }
         //Validate Email
         if (!this.validateService.validateEmail(user.email)) {
-            this.flashMessage.show('please use valid email', { cssClass: 'alert-danger', timeout: 3000 });
+            this.flashMessage.show('Please use valid email', { cssClass: 'alert-danger', timeout: 3000 });
             return false;
         }
         //Register User
@@ -1228,7 +1228,7 @@ var ValidateService = (function () {
     function ValidateService() {
     }
     ValidateService.prototype.validateRegister = function (user) {
-        if (user.email == undefined || user.password == undefined || user.lastName == undefined || user.firstName == undefined || user.skills == undefined) {
+        if (user.email == undefined || user.password == undefined || user.lastName == undefined || user.firstName == undefined || user.skill == undefined) {
             return false;
         }
         else {
