@@ -21,11 +21,13 @@ mongoose.connection.on('error', (err) => {
 
 const app = express();
 
+
+
+// Port Number
 const users = require('./routes/users');
 
-//Port Number
-const port = process.env.PORT || 8080;
-// const port = 3000;
+// const port = process.env.PORT || 8080;
+const port = 3000;
 
 //CORS MW
 app.use(cors());
@@ -52,6 +54,7 @@ app.get('/', (req, res) => {
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'public/index.html'));
 });
+
 
 //Start Server
 app.listen(port, () => {
