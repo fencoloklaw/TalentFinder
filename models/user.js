@@ -16,10 +16,6 @@ const UserSchema = mongoose.Schema({
         type: String,
         required: true
     },
-    // username: {
-    //     type: String,
-    //     required: true
-    // },
     password: {
         type: String,
         required: true
@@ -38,7 +34,11 @@ const UserSchema = mongoose.Schema({
     },
     city: {
         type: String,
-        required: false
+        required: true
+    },
+    region: {
+        type: String,
+        required: true
     },
     description: {
         type: String,
@@ -96,6 +96,7 @@ module.exports.updateUser = function (req, callback){
             oldUser.volunteer = req.body.volunteer;
             oldUser.experience = req.body.experience;
             oldUser.city = req.body.city;
+            oldUser.region = req.body.region;
             oldUser.description = req.body.description;
             oldUser.save(callback);
         }

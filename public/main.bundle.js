@@ -48,12 +48,18 @@ module.exports = "<app-navbar></app-navbar>\r\n<div class=\"container-fluid h-10
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Rx__ = __webpack_require__("../../../../rxjs/Rx.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_Rx__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
 
 var AppComponent = (function () {
     function AppComponent() {
@@ -66,7 +72,8 @@ AppComponent = __decorate([
         selector: 'app-root',
         template: __webpack_require__("../../../../../src/app/app.component.html"),
         styles: [__webpack_require__("../../../../../src/app/app.component.css")]
-    })
+    }),
+    __metadata("design:paramtypes", [])
 ], AppComponent);
 
 //# sourceMappingURL=C:/Users/Fenco/Projects/TalentFinder/angular-src/src/app.component.js.map
@@ -102,12 +109,14 @@ AppComponent = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__angular_cdk_scrolling__ = __webpack_require__("../../../cdk/esm5/scrolling.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__components_scheduler_scheduler_component__ = __webpack_require__("../../../../../src/app/components/scheduler/scheduler.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__angular_flex_layout__ = __webpack_require__("../../../flex-layout/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__angular_common_http__ = __webpack_require__("../../../common/@angular/common/http.es5.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -183,7 +192,8 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_19__angular_material__["g" /* MatFormFieldModule */],
             __WEBPACK_IMPORTED_MODULE_19__angular_material__["l" /* MatNativeDateModule */],
             __WEBPACK_IMPORTED_MODULE_22__angular_flex_layout__["a" /* FlexLayoutModule */],
-            __WEBPACK_IMPORTED_MODULE_2__angular_forms__["h" /* ReactiveFormsModule */]
+            __WEBPACK_IMPORTED_MODULE_2__angular_forms__["h" /* ReactiveFormsModule */],
+            __WEBPACK_IMPORTED_MODULE_23__angular_common_http__["a" /* HttpClientModule */],
         ],
         providers: [__WEBPACK_IMPORTED_MODULE_13__services_validate_service__["a" /* ValidateService */], __WEBPACK_IMPORTED_MODULE_15__services_auth_service__["a" /* AuthService */], __WEBPACK_IMPORTED_MODULE_16__guards_auth_guard__["a" /* AuthGuard */], __WEBPACK_IMPORTED_MODULE_17__services_search_service__["a" /* SearchService */], __WEBPACK_IMPORTED_MODULE_18__services_data_service__["a" /* DataService */]],
         bootstrap: [__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* AppComponent */]]
@@ -306,6 +316,7 @@ module.exports = "<div class=\"h-100 jumbotron text-center container\">\r\n    <
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_validate_service__ = __webpack_require__("../../../../../src/app/services/validate.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_auth_service__ = __webpack_require__("../../../../../src/app/services/auth.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_data_service__ = __webpack_require__("../../../../../src/app/services/data.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__services_search_service__ = __webpack_require__("../../../../../src/app/services/search.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -321,17 +332,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var HomeComponent = (function () {
-    function HomeComponent(router, flashMessage, validateService, authService, dataService) {
+    function HomeComponent(router, flashMessage, validateService, authService, dataService, searchService) {
         this.router = router;
         this.flashMessage = flashMessage;
         this.validateService = validateService;
         this.authService = authService;
         this.dataService = dataService;
+        this.searchService = searchService;
     }
     HomeComponent.prototype.ngOnInit = function () {
         this.skillInput = "";
         this.whereInput = "";
+        this.whereInput = this.searchService.city;
+        if (this.whereInput == "") {
+            this.findLocation();
+        }
     };
     HomeComponent.prototype.onSearchSubmit = function () {
         if (this.validateService.validateNotNull(this.whereInput)) {
@@ -343,6 +360,18 @@ var HomeComponent = (function () {
             this.flashMessage.show('Where has not been specified', { cssClass: 'alert-danger', timeout: 3000 });
         }
     };
+    HomeComponent.prototype.findLocation = function () {
+        var _this = this;
+        this.searchService.getAddress().subscribe(function (res) {
+            if (res) {
+                _this.whereInput = res.city;
+                _this.searchService.setAddress(res);
+            }
+            else {
+                return "";
+            }
+        });
+    };
     return HomeComponent;
 }());
 HomeComponent = __decorate([
@@ -351,10 +380,10 @@ HomeComponent = __decorate([
         template: __webpack_require__("../../../../../src/app/components/home/home.component.html"),
         styles: [__webpack_require__("../../../../../src/app/components/home/home.component.css")]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages__["FlashMessagesService"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages__["FlashMessagesService"]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__services_validate_service__["a" /* ValidateService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_validate_service__["a" /* ValidateService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4__services_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__services_auth_service__["a" /* AuthService */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_5__services_data_service__["a" /* DataService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__services_data_service__["a" /* DataService */]) === "function" && _e || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages__["FlashMessagesService"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages__["FlashMessagesService"]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__services_validate_service__["a" /* ValidateService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_validate_service__["a" /* ValidateService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4__services_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__services_auth_service__["a" /* AuthService */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_5__services_data_service__["a" /* DataService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__services_data_service__["a" /* DataService */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_6__services_search_service__["a" /* SearchService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_6__services_search_service__["a" /* SearchService */]) === "function" && _f || Object])
 ], HomeComponent);
 
-var _a, _b, _c, _d, _e;
+var _a, _b, _c, _d, _e, _f;
 //# sourceMappingURL=C:/Users/Fenco/Projects/TalentFinder/angular-src/src/home.component.js.map
 
 /***/ }),
@@ -570,7 +599,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/profile/profile.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\r\n    <form (submit)=\"onUpdateProfile()\">\r\n        <h2 class=\"page-header\">\r\n            <span>Profile</span>\r\n        </h2>\r\n        <div class=\"row mb-3\">\r\n            <div class=\"col\">\r\n                <img class=\"img-thumbnail w-50\" src=\"http://i0.kym-cdn.com/photos/images/newsfeed/000/581/296/c09.jpg\">\r\n            </div>\r\n            <div class=\"col\">\r\n                <img class=\"img-thumbnail w-50 float-right\" src=\"https://www.patternfly.org/pattern-library/data-visualization/pie-chart/img/right-legend-pie-chart.png\">\r\n            </div>\r\n        </div>\r\n        <div class=\"row mb-3\">\r\n            <div class=\"col\">\r\n                <label>First Name : </label>\r\n                <input type=\"text\" [(ngModel)]=\"firstName\" name=\"firstName\" class=\"form-control\">\r\n            </div>\r\n            <div class=\"col\">\r\n                <label>Last Name : </label>\r\n                <input type=\"text\" [(ngModel)]=\"lastName\" name=\"lastName\" class=\"form-control\">\r\n            </div>\r\n        </div>\r\n        <div class=\"row mb-3\">\r\n            <div class=\"col\">\r\n                <label>Personal Summary : </label>\r\n                <textarea class=\"form-control\" rows=\"4\" name=\"description\" [(ngModel)]=\"description\" placeholder=\"Introduction/Description\"></textarea>\r\n            </div>\r\n        </div>\r\n        <div class=\"row mb-3\">\r\n            <div class=\"col\">\r\n                <label>Skill : </label>\r\n                <input type=\"text\" [(ngModel)]=\"skill\" name=\"skill\" class=\"form-control\">\r\n            </div>\r\n        </div>\r\n        <div class=\"row mb-3\">\r\n            <div class=\"col\">\r\n                <label>Past Experience : </label>\r\n                <textarea class=\"form-control\" rows=\"4\" placeholder=\"Past Experience\" name=\"experience\" [(ngModel)]=\"experience\"></textarea>\r\n            </div>\r\n        </div>\r\n        <div class=\"row mb-3\">\r\n            <div class=\"col\">\r\n                <label>City : </label>\r\n                <input type=\"text\" [(ngModel)]=\"city\" name=\"city\" class=\"form-control\">\r\n            </div>\r\n            <div class=\"col\">\r\n            <label>Province : </label>\r\n            <select [(ngModel)]=\"province\" name=\"province\" class=\"form-control custom-select\">\r\n                <option value=\"AB\">Alberta</option>\r\n                <option value=\"BC\">British Columbia</option>\r\n                <option value=\"MB\">Manitoba</option>\r\n                <option value=\"NB\">New Brunswick</option>\r\n                <option value=\"NL\">Newfoundland and Labrador</option>\r\n                <option value=\"NS\">Nova Scotia</option>\r\n                <option value=\"ON\">Ontario</option>\r\n                <option value=\"PE\">Prince Edward Island</option>\r\n                <option value=\"QC\">Quebec</option>\r\n                <option value=\"SK\">Saskatchewan</option>\r\n                <option value=\"NT\">Northwest Territories</option>\r\n                <option value=\"NU\">Nunavut</option>\r\n                <option value=\"YT\">Yukon</option>\r\n            </select>\r\n            </div>\r\n        </div>\r\n        <div class=\"row mb-3\">\r\n            <div class=\"col\">\r\n                <label>Certificates/Licenses : </label>\r\n                <input type=\"text\" [(ngModel)]=\"certificates\" name=\"certificates\" class=\"form-control\">\r\n            </div>\r\n            <div class=\"col\">\r\n                <label>Awards : </label>\r\n                <input type=\"text\" [(ngModel)]=\"awards\" name=\"awards\" class=\"form-control\">\r\n            </div>\r\n        </div>\r\n        <div class=\"text-center\">\r\n            <input type=\"submit\" class=\"btn btn-block btn-primary\" value=\"Update\">\r\n        </div>\r\n    </form>\r\n</div>"
+module.exports = "<div class=\"container\">\r\n    <form (submit)=\"onUpdateProfile()\">\r\n        <h2 class=\"page-header\">\r\n            <span>Profile</span>\r\n        </h2>\r\n        <div class=\"row mb-3\">\r\n            <div class=\"col\">\r\n                <img class=\"img-thumbnail w-50\" src=\"http://i0.kym-cdn.com/photos/images/newsfeed/000/581/296/c09.jpg\">\r\n            </div>\r\n            <div class=\"col\">\r\n                <img class=\"img-thumbnail w-50 float-right\" src=\"https://www.patternfly.org/pattern-library/data-visualization/pie-chart/img/right-legend-pie-chart.png\">\r\n            </div>\r\n        </div>\r\n        <div class=\"row mb-3\">\r\n            <div class=\"col\">\r\n                <label>First Name : </label>\r\n                <input type=\"text\" [(ngModel)]=\"firstName\" name=\"firstName\" class=\"form-control\">\r\n            </div>\r\n            <div class=\"col\">\r\n                <label>Last Name : </label>\r\n                <input type=\"text\" [(ngModel)]=\"lastName\" name=\"lastName\" class=\"form-control\">\r\n            </div>\r\n        </div>\r\n        <div class=\"row mb-3\">\r\n            <div class=\"col\">\r\n                <label>Personal Summary : </label>\r\n                <textarea class=\"form-control\" rows=\"4\" name=\"description\" [(ngModel)]=\"description\" placeholder=\"Introduction/Description\"></textarea>\r\n            </div>\r\n        </div>\r\n        <div class=\"row mb-3\">\r\n            <div class=\"col\">\r\n                <label>Skill : </label>\r\n                <input type=\"text\" [(ngModel)]=\"skill\" name=\"skill\" class=\"form-control\">\r\n            </div>\r\n        </div>\r\n        <div class=\"row mb-3\">\r\n            <div class=\"col\">\r\n                <label>Past Experience : </label>\r\n                <textarea class=\"form-control\" rows=\"4\" placeholder=\"Past Experience\" name=\"experience\" [(ngModel)]=\"experience\"></textarea>\r\n            </div>\r\n        </div>\r\n        <div class=\"row mb-3\">\r\n            <div class=\"col\">\r\n                <label>City : </label>\r\n                <input type=\"text\" [(ngModel)]=\"city\" name=\"city\" class=\"form-control\">\r\n            </div>\r\n            <div class=\"col\">\r\n            <label>Province/State : </label>\r\n            <select [(ngModel)]=\"region\" name=\"region\" class=\"form-control custom-select required\">\r\n                <option value=\"Alberta\">Alberta</option>\r\n                <option value=\"British Columbia\">British Columbia</option>\r\n                <option value=\"Manitoba\">Manitoba</option>\r\n                <option value=\"New Brunswick\">New Brunswick</option>\r\n                <option value=\"Newfoundland and Labrador\">Newfoundland and Labrador</option>\r\n                <option value=\"Nova Scotia\">Nova Scotia</option>\r\n                <option value=\"Ontario\">Ontario</option>\r\n                <option value=\"Prince Edward Island\">Prince Edward Island</option>\r\n                <option value=\"Quebec\">Quebec</option>\r\n                <option value=\"Saskatchewan\">Saskatchewan</option>\r\n                <option value=\"Northwest Territories\">Northwest Territories</option>\r\n                <option value=\"Nunavut\">Nunavut</option>\r\n                <option value=\"Yukon\">Yukon</option>\r\n            </select>\r\n            </div>\r\n        </div>\r\n        <div class=\"row mb-3\">\r\n            <div class=\"col\">\r\n                <label>Certificates/Licenses : </label>\r\n                <input type=\"text\" [(ngModel)]=\"certificates\" name=\"certificates\" class=\"form-control\">\r\n            </div>\r\n            <div class=\"col\">\r\n                <label>Awards : </label>\r\n                <input type=\"text\" [(ngModel)]=\"awards\" name=\"awards\" class=\"form-control\">\r\n            </div>\r\n        </div>\r\n        <div class=\"text-center\">\r\n            <input type=\"submit\" class=\"btn btn-block btn-primary\" value=\"Update\">\r\n        </div>\r\n    </form>\r\n</div>"
 
 /***/ }),
 
@@ -614,6 +643,7 @@ var ProfileComponent = (function () {
             _this.experience = profile.user.experience;
             _this.volunteer = profile.user.volunteer;
             _this.city = profile.user.city;
+            _this.region = profile.user.region;
             _this.description = profile.user.description;
         }, function (err) {
             console.log(err);
@@ -631,6 +661,7 @@ var ProfileComponent = (function () {
             experience: this.experience,
             volunteer: this.volunteer,
             city: this.city,
+            region: this.region,
             description: this.description
         };
         this.authService.updateProfile(updateUser).subscribe(function (data) {
@@ -646,6 +677,7 @@ var ProfileComponent = (function () {
             _this.experience = data.user.experience;
             _this.volunteer = data.user.volunteer;
             _this.city = data.user.city;
+            _this.region = data.user.region;
             _this.description = data.user.description;
         });
     };
@@ -686,7 +718,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/register/register.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\r\n    <h1 class=\"page-header\">Register</h1>\r\n    <form>\r\n        <fieldset>\r\n            <div class=\"row mb-3\">\r\n                <div class=\"col\">\r\n                    <label>Email Address :</label>\r\n                    <input type=\"email\" [(ngModel)]=\"email\" name=\"email\" class=\"form-control\" placeholder=\"email@something.com\" required>\r\n                </div>\r\n            </div>\r\n            <div class=\"row mb-3\">\r\n                <div class=\"col\">\r\n                    <label>First Name :</label>\r\n                    <input type=\"text\" [(ngModel)]=\"firstName\" name=\"firstName\" class=\"form-control\" required>\r\n                </div>\r\n            </div>\r\n            <div class=\"row mb-3\">\r\n                <div class=\"col\">\r\n                    <label>Last Name :</label>\r\n                    <input type=\"text\" [(ngModel)]=\"lastName\" name=\"lastName\" class=\"form-control\" required>\r\n                </div>\r\n            </div>\r\n            <div class=\"row mb-3\">\r\n                <div class=\"col\">\r\n                    <label>Skills :</label>\r\n                    <input type=\"text\" [(ngModel)]=\"skill\" name=\"skills\" class=\"form-control\" required>\r\n                </div>\r\n            </div>\r\n            <div class=\"row mb-3\">\r\n                <div class=\"col\">\r\n                    <label>Password :</label>\r\n                    <input type=\"password\" [(ngModel)]=\"password\" name=\"password\" class=\"form-control\" placeholder=\"Password\" required>\r\n                </div>\r\n            </div>\r\n            <div class=\"text-center\">\r\n                <input type=\"submit\" class=\"btn btn-block btn-primary\" value=\"Register\" (click)=\"onRegisterSubmit()\">\r\n            </div>\r\n        </fieldset>\r\n    </form>\r\n</div>\r\n\r\n"
+module.exports = "<div class=\"container\">\r\n    <h1 class=\"page-header\">Register</h1>\r\n    <form>\r\n        <fieldset>\r\n            <div class=\"row mb-3\">\r\n                <div class=\"col\">\r\n                    <label>Email Address :</label>\r\n                    <input type=\"email\" [(ngModel)]=\"email\" name=\"email\" class=\"form-control\" placeholder=\"email@something.com\" required>\r\n                </div>\r\n            </div>\r\n            <div class=\"row mb-3\">\r\n                <div class=\"col\">\r\n                    <label>First Name :</label>\r\n                    <input type=\"text\" [(ngModel)]=\"firstName\" name=\"firstName\" class=\"form-control\" required>\r\n                </div>\r\n            </div>\r\n            <div class=\"row mb-3\">\r\n                <div class=\"col\">\r\n                    <label>Last Name :</label>\r\n                    <input type=\"text\" [(ngModel)]=\"lastName\" name=\"lastName\" class=\"form-control\" required>\r\n                </div>\r\n            </div>\r\n            <div class=\"row mb-3\">\r\n                <div class=\"col\">\r\n                    <label>Skills :</label>\r\n                    <input type=\"text\" [(ngModel)]=\"skill\" name=\"skills\" class=\"form-control\" required>\r\n                </div>\r\n            </div>\r\n            <div class=\"row mb-3\">\r\n                <div class=\"col\">\r\n                    <label>City :</label>\r\n                    <input type=\"text\" [(ngModel)]=\"city\" name=\"city\" class=\"form-control\" required>\r\n                </div>\r\n            </div>\r\n            <div class=\"row mb-3\">\r\n                <div class=\"col\">\r\n                    <label>Province/State :</label>\r\n                    <select [(ngModel)]=\"region\" name=\"region\" class=\"form-control custom-select required\">\r\n                        <option value=\"Alberta\">Alberta</option>\r\n                        <option value=\"British Columbia\">British Columbia</option>\r\n                        <option value=\"Manitoba\">Manitoba</option>\r\n                        <option value=\"New Brunswick\">New Brunswick</option>\r\n                        <option value=\"Newfoundland and Labrador\">Newfoundland and Labrador</option>\r\n                        <option value=\"Nova Scotia\">Nova Scotia</option>\r\n                        <option value=\"Ontario\">Ontario</option>\r\n                        <option value=\"Prince Edward Island\">Prince Edward Island</option>\r\n                        <option value=\"Quebec\">Quebec</option>\r\n                        <option value=\"Saskatchewan\">Saskatchewan</option>\r\n                        <option value=\"Northwest Territories\">Northwest Territories</option>\r\n                        <option value=\"Nunavut\">Nunavut</option>\r\n                        <option value=\"Yukon\">Yukon</option>\r\n                    </select>\r\n                </div>\r\n            </div>\r\n            <div class=\"row mb-3\">\r\n                <div class=\"col\">\r\n                    <label>Password :</label>\r\n                    <input type=\"password\" [(ngModel)]=\"password\" name=\"password\" class=\"form-control\" placeholder=\"Password\" required>\r\n                </div>\r\n            </div>\r\n            <div class=\"text-center\">\r\n                <input type=\"submit\" class=\"btn btn-block btn-primary\" value=\"Register\" (click)=\"onRegisterSubmit()\">\r\n            </div>\r\n        </fieldset>\r\n    </form>\r\n</div>\r\n\r\n"
 
 /***/ }),
 
@@ -701,6 +733,7 @@ module.exports = "<div class=\"container\">\r\n    <h1 class=\"page-header\">Reg
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__ = __webpack_require__("../../../../angular2-flash-messages/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_search_service__ = __webpack_require__("../../../../../src/app/services/search.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -715,25 +748,32 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var RegisterComponent = (function () {
-    function RegisterComponent(validateService, flashMessage, authService, router) {
+    function RegisterComponent(validateService, flashMessage, authService, router, searchService) {
         this.validateService = validateService;
         this.flashMessage = flashMessage;
         this.authService = authService;
         this.router = router;
+        this.searchService = searchService;
     }
     RegisterComponent.prototype.ngOnInit = function () {
+        this.city = this.searchService.city;
+        this.region = this.searchService.region;
+        if (this.city == "" || this.region == "") {
+            this.findLocation();
+        }
     };
     RegisterComponent.prototype.onRegisterSubmit = function () {
         var _this = this;
         var user = {
-            // name: this.name,
             email: this.email,
-            // username: this.username,
-            password: this.password,
             firstName: this.firstName,
             lastName: this.lastName,
-            skill: this.skill
+            skill: this.skill,
+            city: this.city,
+            region: this.region,
+            password: this.password
         };
         //Required Fields
         if (!this.validateService.validateRegister(user)) {
@@ -758,6 +798,19 @@ var RegisterComponent = (function () {
             _this.router.navigate(['/login']);
         });
     };
+    RegisterComponent.prototype.findLocation = function () {
+        var _this = this;
+        this.searchService.getAddress().subscribe(function (res) {
+            if (res) {
+                _this.city = res.city;
+                _this.region = res.region;
+                _this.searchService.setAddress(res);
+            }
+            else {
+                return "";
+            }
+        });
+    };
     return RegisterComponent;
 }());
 RegisterComponent = __decorate([
@@ -766,10 +819,10 @@ RegisterComponent = __decorate([
         template: __webpack_require__("../../../../../src/app/components/register/register.component.html"),
         styles: [__webpack_require__("../../../../../src/app/components/register/register.component.css")]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_validate_service__["a" /* ValidateService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_validate_service__["a" /* ValidateService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__["FlashMessagesService"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__["FlashMessagesService"]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__services_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_auth_service__["a" /* AuthService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4__angular_router__["a" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__angular_router__["a" /* Router */]) === "function" && _d || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_validate_service__["a" /* ValidateService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_validate_service__["a" /* ValidateService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__["FlashMessagesService"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__["FlashMessagesService"]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__services_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_auth_service__["a" /* AuthService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4__angular_router__["a" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__angular_router__["a" /* Router */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_5__services_search_service__["a" /* SearchService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__services_search_service__["a" /* SearchService */]) === "function" && _e || Object])
 ], RegisterComponent);
 
-var _a, _b, _c, _d;
+var _a, _b, _c, _d, _e;
 //# sourceMappingURL=C:/Users/Fenco/Projects/TalentFinder/angular-src/src/register.component.js.map
 
 /***/ }),
@@ -1187,6 +1240,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var SearchService = (function () {
     function SearchService(http) {
         this.http = http;
+        this.city = "";
+        this.region = "";
     }
     SearchService.prototype.searchUser = function (search) {
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
@@ -1199,6 +1254,14 @@ var SearchService = (function () {
         headers.append('Content-Type', 'application/json');
         return this.http.post(__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].serverUrl + 'users/search', '', { headers: headers })
             .map(function (res) { return res.json(); });
+    };
+    SearchService.prototype.getAddress = function () {
+        return this.http.get('http://ipinfo.io/geo')
+            .map(function (res) { return res.json(); });
+    };
+    SearchService.prototype.setAddress = function (res) {
+        this.city = res.city;
+        this.region = res.region;
     };
     return SearchService;
 }());
@@ -1232,7 +1295,7 @@ var ValidateService = (function () {
     function ValidateService() {
     }
     ValidateService.prototype.validateRegister = function (user) {
-        if (user.email == undefined || user.password == undefined || user.lastName == undefined || user.firstName == undefined || user.skill == undefined) {
+        if (user.email == undefined || user.password == undefined || user.lastName == undefined || user.firstName == undefined || user.skill == undefined || user.city == undefined || user.region == undefined) {
             return false;
         }
         else {
@@ -1267,14 +1330,9 @@ ValidateService = __decorate([
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return environment; });
-// The file contents for the current environment will overwrite these during build.
-// The build system defaults to the dev environment which uses `environment.ts`, but if you do
-// `ng build --env=prod` then `environment.prod.ts` will be used instead.
-// The list of which env maps to which file can be found in `angular-cli.json`.
-// The file contents for the current environment will overwrite these during build.
 var environment = {
-    production: false,
-    serverUrl: "http://localhost:3000/"
+    production: true,
+    serverUrl: ''
 };
 //# sourceMappingURL=C:/Users/Fenco/Projects/TalentFinder/angular-src/src/environment.js.map
 

@@ -10,15 +10,14 @@ import {FlashMessagesService} from 'angular2-flash-messages';
 })
 export class ProfileComponent implements OnInit {
     _id : String;
-    // name : String;
     firstName: String;
     lastName: String;
-    // username : String;
     email: String;
     skill: String;
     experience : String;
     volunteer : String;
     city : String;
+    region : String;
     description : String;
 
     constructor(private authService: AuthService,
@@ -37,6 +36,7 @@ export class ProfileComponent implements OnInit {
                 this.experience = profile.user.experience;
                 this.volunteer = profile.user.volunteer;
                 this.city = profile.user.city;
+                this.region = profile.user.region;
                 this.description = profile.user.description;
             },
             err => {
@@ -55,6 +55,7 @@ export class ProfileComponent implements OnInit {
             experience: this.experience,
             volunteer: this.volunteer,
             city: this.city,
+            region: this.region,
             description: this.description
         };
 
@@ -71,8 +72,8 @@ export class ProfileComponent implements OnInit {
             this.experience = data.user.experience;
             this.volunteer = data.user.volunteer;
             this.city = data.user.city;
+            this.region = data.user.region;
             this.description = data.user.description;
-
         });
     }
 }

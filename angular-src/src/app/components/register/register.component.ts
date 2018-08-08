@@ -3,6 +3,7 @@ import {ValidateService} from '../../services/validate.service';
 import {AuthService} from '../../services/auth.service';
 import {FlashMessagesService} from 'angular2-flash-messages';
 import {Router} from '@angular/router';
+import {SearchService} from "../../services/search.service";
 
 @Component({
     selector: 'app-register',
@@ -10,31 +11,39 @@ import {Router} from '@angular/router';
     styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
-    name: String;
+    // name: String;
     email: String;
     password: String;
     lastName: String;
     firstName: String;
     skill: String;
+    city: String;
+    region: String;
 
     constructor(private validateService: ValidateService,
                 private flashMessage: FlashMessagesService,
                 private authService: AuthService,
-                private router: Router) {
+                private router: Router,
+                private searchService : SearchService) {
     }
 
     ngOnInit() {
+        this.city = this.searchService.city;
+        this.region = this.searchService.region;
+        if (this.city == "" || this.region == "") {
+            this.findLocation();
+        }
     }
 
     onRegisterSubmit() {
         const user = {
-            // name: this.name,
             email: this.email,
-            // username: this.username,
-            password: this.password,
             firstName: this.firstName,
             lastName: this.lastName,
-            skill: this.skill
+            skill: this.skill,
+            city: this.city,
+            region: this.region,
+            password: this.password
         };
         //Required Fields
         if (!this.validateService.validateRegister(user)) {
@@ -59,6 +68,19 @@ export class RegisterComponent implements OnInit {
                timeout: 2000
             });
             this.router.navigate(['/login'])
+        });
+    }
+
+    findLocation():void {
+        this.searchService.getAddress().subscribe(res => {
+            if(res){
+                this.city = res.city;
+                this.region = res.region;
+                this.searchService.setAddress(res);
+            }
+            else {
+                return "";
+            }
         });
     }
 }

@@ -28,6 +28,32 @@
             </div>
             <div class="row mb-3">
                 <div class="col">
+                    <label>City :</label>
+                    <input type="text" [(ngModel)]="city" name="city" class="form-control" required>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col">
+                    <label>Province/State :</label>
+                    <select [(ngModel)]="region" name="region" class="form-control custom-select required">
+                        <option value="Alberta">Alberta</option>
+                        <option value="British Columbia">British Columbia</option>
+                        <option value="Manitoba">Manitoba</option>
+                        <option value="New Brunswick">New Brunswick</option>
+                        <option value="Newfoundland and Labrador">Newfoundland and Labrador</option>
+                        <option value="Nova Scotia">Nova Scotia</option>
+                        <option value="Ontario">Ontario</option>
+                        <option value="Prince Edward Island">Prince Edward Island</option>
+                        <option value="Quebec">Quebec</option>
+                        <option value="Saskatchewan">Saskatchewan</option>
+                        <option value="Northwest Territories">Northwest Territories</option>
+                        <option value="Nunavut">Nunavut</option>
+                        <option value="Yukon">Yukon</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col">
                     <label>Password :</label>
                     <input type="password" [(ngModel)]="password" name="password" class="form-control" placeholder="Password" required>
                 </div>

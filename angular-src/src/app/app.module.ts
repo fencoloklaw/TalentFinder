@@ -41,6 +41,7 @@ import {ScrollDispatchModule} from "@angular/cdk/scrolling";
 import { SchedulerComponent } from './components/scheduler/scheduler.component';
 import {FlexLayoutModule} from "@angular/flex-layout";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {HttpClient, HttpClientModule} from "@angular/common/http";
 
 const appRoutes: Routes = [
     {path: '', component: HomeComponent},
@@ -89,7 +90,8 @@ const appRoutes: Routes = [
         MatFormFieldModule,
         MatNativeDateModule,
         FlexLayoutModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        HttpClientModule,
     ],
     providers: [ValidateService, AuthService, AuthGuard, SearchService, DataService],
     bootstrap: [AppComponent]

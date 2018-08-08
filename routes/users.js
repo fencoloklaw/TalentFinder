@@ -11,14 +11,15 @@ const User = require('../models/user');
 router.post('/register', (req, res) => {
     //res.send('REGISTER');
     let newUser = new User({
+        email: req.body.email,
         firstName: req.body.firstName,
         lastName: req.body.lastName,
-        email: req.body.email,
         password: req.body.password,
         experience: "",
         skill: req.body.skill,
         volunteer: "",
-        city: "Vancouver",
+        city: req.body.city,
+        region: req.body.region,
         description: ""
     });
 
