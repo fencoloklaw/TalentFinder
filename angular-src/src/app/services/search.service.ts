@@ -27,7 +27,7 @@ export class SearchService {
     }
 
     getAddress(){
-        return this.http.get('http://ipinfo.io/geo')
+        return this.http.get('https://ipinfo.io/geo')
             .map(res => res.json());
         }
 

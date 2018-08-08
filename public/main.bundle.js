@@ -1256,7 +1256,7 @@ var SearchService = (function () {
             .map(function (res) { return res.json(); });
     };
     SearchService.prototype.getAddress = function () {
-        return this.http.get('http://ipinfo.io/geo')
+        return this.http.get('https://ipinfo.io/geo')
             .map(function (res) { return res.json(); });
     };
     SearchService.prototype.setAddress = function (res) {

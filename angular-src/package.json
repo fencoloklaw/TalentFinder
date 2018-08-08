@@ -25,7 +25,6 @@
     "@angular/platform-browser-dynamic": "^4.4.6",
     "@angular/platform-server": "^4.4.6",
     "@angular/router": "^4.4.6",
-    "@google/maps": "^0.5.5",
     "ajv": "^5.0.0",
     "angular2-flash-messages": "^1.0.8",
     "angular2-jwt": "^0.2.3",
