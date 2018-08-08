@@ -47,6 +47,9 @@ export class SearchtalentComponent implements OnInit {
         else {
             this.skillInput = "";
             this.whereInput = "";
+            if(this.whereInput == ""){
+                this.findLocation();
+            }
         }
         this.viewArrayProfile = true;
     }
@@ -113,5 +116,17 @@ export class SearchtalentComponent implements OnInit {
         this.viewArrayProfile = true;
         this.dataArray = this.searchData.documents.slice(this.currentPage * 10 - 10, this.currentPage * 10);
         this.profile = "";
+    }
+
+    findLocation():void {
+        this.searchService.getAddress().subscribe(res => {
+            if(res){
+                this.whereInput = res.city;
+                this.searchService.setAddress(res);
+            }
+            else {
+                return "";
+            }
+        });
     }
 }

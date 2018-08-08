@@ -969,6 +969,9 @@ var SearchtalentComponent = (function () {
         else {
             this.skillInput = "";
             this.whereInput = "";
+            if (this.whereInput == "") {
+                this.findLocation();
+            }
         }
         this.viewArrayProfile = true;
     };
@@ -1030,6 +1033,18 @@ var SearchtalentComponent = (function () {
         this.viewArrayProfile = true;
         this.dataArray = this.searchData.documents.slice(this.currentPage * 10 - 10, this.currentPage * 10);
         this.profile = "";
+    };
+    SearchtalentComponent.prototype.findLocation = function () {
+        var _this = this;
+        this.searchService.getAddress().subscribe(function (res) {
+            if (res) {
+                _this.whereInput = res.city;
+                _this.searchService.setAddress(res);
+            }
+            else {
+                return "";
+            }
+        });
     };
     return SearchtalentComponent;
 }());
