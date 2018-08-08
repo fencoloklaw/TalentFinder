@@ -48,7 +48,6 @@ module.exports = "<app-navbar></app-navbar>\r\n<div class=\"container-fluid h-10
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__environments_environment__ = __webpack_require__("../../../../../src/environments/environment.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -56,14 +55,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 
-
 var AppComponent = (function () {
     function AppComponent() {
         this.title = 'app works!';
     }
-    AppComponent.prototype.ngOnInit = function () {
-        console.log(__WEBPACK_IMPORTED_MODULE_1__environments_environment__["a" /* environment */].serverUrl);
-    };
     return AppComponent;
 }());
 AppComponent = __decorate([
@@ -1272,9 +1267,14 @@ ValidateService = __decorate([
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return environment; });
+// The file contents for the current environment will overwrite these during build.
+// The build system defaults to the dev environment which uses `environment.ts`, but if you do
+// `ng build --env=prod` then `environment.prod.ts` will be used instead.
+// The list of which env maps to which file can be found in `angular-cli.json`.
+// The file contents for the current environment will overwrite these during build.
 var environment = {
-    production: true,
-    serverUrl: ''
+    production: false,
+    serverUrl: "http://localhost:3000/"
 };
 //# sourceMappingURL=C:/Users/Fenco/Projects/TalentFinder/angular-src/src/environment.js.map
 
