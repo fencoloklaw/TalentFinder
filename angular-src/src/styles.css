@@ -4,6 +4,9 @@
     border-bottom: 1px solid #f8f5f0
 }
 
+.form-rounded {
+    border-radius: 1rem !important;
+}
 /*!
  * Bootswatch v4.1.1
  * Homepage: https://bootswatch.com

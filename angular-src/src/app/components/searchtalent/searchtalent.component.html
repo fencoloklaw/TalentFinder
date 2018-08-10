@@ -1,12 +1,12 @@
-<form class="container p-3" (submit)="onSearchSubmit()">
+<form class="p-3" (submit)="onSearchSubmit()">
     <div class="row text-left">
         <div class="col-5 form-group">
             <label class="font-weight-bold " for="skillInput">SKILL</label>
-            <input type="text" id="skillInput" name="skillInput" [(ngModel)]="skillInput" class="form-control">
+            <input type="text" id="skillInput" name="skillInput" [(ngModel)]="skillInput" class="form-control form-rounded">
         </div>
         <div class="col-5 form-group">
             <label class="font-weight-bold" for="whereInput">WHERE</label>
-            <input type="text" id="whereInput" name="whereInput" [(ngModel)]="whereInput" class="form-control">
+            <input type="text" id="whereInput" name="whereInput" [(ngModel)]="whereInput" class="form-control form-rounded">
         </div>
         <div class="col-2 form-group" style="bottom:-26px;">
             <button type="submit" class="btn btn-primary">Find Talent</button>
