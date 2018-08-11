@@ -62,7 +62,7 @@ const appRoutes: Routes = [
         ProfileComponent,
         DashboardComponent,
         SearchtalentComponent,
-        SchedulerComponent
+        SchedulerComponent,
     ],
     imports: [
         BrowserModule,

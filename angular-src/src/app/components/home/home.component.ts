@@ -1,4 +1,4 @@
-import {Component, OnInit, AfterViewChecked} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
 import {FlashMessagesService} from 'angular2-flash-messages';
 import {ValidateService} from '../../services/validate.service';
@@ -15,6 +15,7 @@ export class HomeComponent implements OnInit{
 
     skillInput: String;
     whereInput: String;
+    loggedIn: boolean = false;
 
     constructor(private router: Router,
                 private flashMessage: FlashMessagesService,
@@ -28,6 +29,7 @@ export class HomeComponent implements OnInit{
         this.skillInput = "";
         this.whereInput = "";
         this.whereInput = this.searchService.city;
+        this.loggedIn = this.authService.loggedIn();
         if(this.whereInput == ""){
             this.findLocation();
         }

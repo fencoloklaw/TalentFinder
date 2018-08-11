@@ -38,11 +38,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-<<<<<<< HEAD
-module.exports = "<app-navbar></app-navbar>\r\n<flash-messages></flash-messages>\r\n<router-outlet></router-outlet>\r\n"
-=======
-module.exports = "<app-navbar></app-navbar>\r\n<div class= \"h-100\">\r\n    <flash-messages></flash-messages>\r\n    <router-outlet></router-outlet>\r\n</div>\r\n"
->>>>>>> bb1ff274aca2e5fc757a69f09490bba88ed11218
+module.exports = "<app-navbar></app-navbar>\r\n<flash-messages></flash-messages>\r\n<router-outlet></router-outlet>"
 
 /***/ }),
 
@@ -168,7 +164,7 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_10__components_profile_profile_component__["a" /* ProfileComponent */],
             __WEBPACK_IMPORTED_MODULE_11__components_dashboard_dashboard_component__["a" /* DashboardComponent */],
             __WEBPACK_IMPORTED_MODULE_12__components_searchtalent_searchtalent_component__["a" /* SearchtalentComponent */],
-            __WEBPACK_IMPORTED_MODULE_21__components_scheduler_scheduler_component__["a" /* SchedulerComponent */]
+            __WEBPACK_IMPORTED_MODULE_21__components_scheduler_scheduler_component__["a" /* SchedulerComponent */],
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
@@ -304,11 +300,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/home/home.component.html":
 /***/ (function(module, exports) {
 
-<<<<<<< HEAD
-module.exports = "<div class=\"h-100 jumbotron text-center\">\r\n    <!--<div class=\"h-25 text-left mb-md-5 h1\">TalentFinder</div>-->\r\n    <form class=\"h-50 d-inline\" (submit)=\"onSearchSubmit()\">\r\n        <div class=\"row container mr-auto ml-auto text-left\">\r\n            <div class=\"col-sm-5 form-group w-100\">\r\n                <label class=\"font-weight-bold \" for=\"skillInput\">SKILL</label>\r\n                <input type=\"text\" id=\"skillInput\" name=\"skillInput\" [(ngModel)]=\"skillInput\" class=\"form-control\">\r\n            </div>\r\n            <div class=\"col-sm-5 form-group w-100\">\r\n                <label class=\"font-weight-bold\" for=\"whereInput\">WHERE</label>\r\n                <input type=\"text\" id=\"whereInput\" name=\"whereInput\" [(ngModel)]=\"whereInput\" class=\"form-control\">\r\n            </div>\r\n            <div class=\"col-sm-2 form-group w-100\">\r\n                <button type=\"submit\" class=\"w-100 btn btn-primary\" style=\"margin-top:2.0rem !important;\">Find Talent</button>\r\n            </div>\r\n        </div>\r\n    </form>\r\n    <div class=\"h-25\">\r\n        <div *ngIf=\"!authService.loggedIn()\" class=\"row mb-3 mt-5\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\">\r\n            <div class=\"col\">\r\n                <button class=\"btn btn-outline-secondary\" [routerLink]=\"['/register']\">\r\n                    <span>Set Up Account</span>\r\n                </button>\r\n            </div>\r\n        </div>\r\n        <div *ngIf=\"authService.loggedIn()\" class=\"row mb-3 mt-5\">\r\n            <div class=\"col\">\r\n                <h3>Recommended Jobs</h3>\r\n                <div id=\"recommendedJobsList\">\r\n\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>"
-=======
-module.exports = "<div class=\"h-100 jumbotron text-center pl-xl-5 pr-xl-5\">\r\n    <!--<div class=\"h-25 text-left mb-md-5 h1\">TalentFinder</div>-->\r\n    <form class=\"h-50 d-inline\" (submit)=\"onSearchSubmit()\">\r\n        <div class=\"row text-left\">\r\n            <div class=\"col-sm-5 form-group w-100\">\r\n                <label class=\"font-weight-bold \" for=\"skillInput\">SKILL</label>\r\n                <input type=\"text\" id=\"skillInput\" name=\"skillInput\" [(ngModel)]=\"skillInput\" class=\"form-control form-rounded\">\r\n            </div>\r\n            <div class=\"col-sm-5 form-group w-100\">\r\n                <label class=\"font-weight-bold\" for=\"whereInput\">WHERE</label>\r\n                <input type=\"text\" id=\"whereInput\" name=\"whereInput\" [(ngModel)]=\"whereInput\" class=\"form-control form-rounded\">\r\n            </div>\r\n            <div class=\"col-sm-2 form-group w-100\">\r\n                <button type=\"submit\" class=\"w-100 btn btn-primary\" style=\"margin-top:2.0rem !important;\">Find Talent</button>\r\n            </div>\r\n        </div>\r\n    </form>\r\n    <div class=\"h-25\">\r\n        <div *ngIf=\"!authService.loggedIn()\" class=\"row mb-3 mt-5\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\">\r\n            <div class=\"col\">\r\n                <button class=\"btn btn-outline-secondary\" [routerLink]=\"['/register']\">\r\n                    <span>Set Up Account</span>\r\n                </button>\r\n            </div>\r\n        </div>\r\n        <div *ngIf=\"authService.loggedIn()\" class=\"row mb-3 mt-5\">\r\n            <div class=\"col\">\r\n                <h3>Recommended Jobs</h3>\r\n                <div id=\"recommendedJobsList\">\r\n\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>"
->>>>>>> bb1ff274aca2e5fc757a69f09490bba88ed11218
+module.exports = "<div class=\"text-center jumbotron\">\r\n    <!--<div class=\"h-25 text-left mb-md-5 h1\">TalentFinder</div>-->\r\n    <div class=\"container-fluid\">\r\n        <div class=\"h-50\">\r\n            <form class=\"d-inline\" (submit)=\"onSearchSubmit()\">\r\n                <div class=\"row container mr-auto ml-auto text-left\">\r\n                    <div class=\"col-sm-5 form-group w-100\">\r\n                        <label class=\"font-weight-bold \" for=\"skillInput\">SKILL</label>\r\n                        <input type=\"text\" id=\"skillInput\" name=\"skillInput\" [(ngModel)]=\"skillInput\" class=\"form-control form-rounded\">\r\n                    </div>\r\n                    <div class=\"col-sm-5 form-group w-100\">\r\n                        <label class=\"font-weight-bold\" for=\"whereInput\">WHERE</label>\r\n                        <input type=\"text\" id=\"whereInput\" name=\"whereInput\" [(ngModel)]=\"whereInput\" class=\"form-control form-rounded\">\r\n                    </div>\r\n                    <div class=\"col-sm-2 form-group w-100\">\r\n                        <button type=\"submit\" class=\"w-100 btn btn-primary\" style=\"margin-top:2.0rem !important;\">Find Talent</button>\r\n                    </div>\r\n                </div>\r\n            </form>\r\n        </div>\r\n        <div class=\"h-25\">\r\n            <div *ngIf=\"!loggedIn\" class=\"row mb-3 mt-5\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\">\r\n                <div class=\"col\">\r\n                    <button class=\"btn btn-outline-secondary\" [routerLink]=\"['/register']\">\r\n                        <span>Set Up Account</span>\r\n                    </button>\r\n                </div>\r\n            </div>\r\n            <div *ngIf=\"loggedIn\" class=\"row mb-3 mt-5\">\r\n                <div class=\"col\">\r\n                    <h3>Recommended Jobs</h3>\r\n                    <div id=\"recommendedJobsList\">\r\n\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>"
 
 /***/ }),
 
@@ -349,11 +341,13 @@ var HomeComponent = (function () {
         this.authService = authService;
         this.dataService = dataService;
         this.searchService = searchService;
+        this.loggedIn = false;
     }
     HomeComponent.prototype.ngOnInit = function () {
         this.skillInput = "";
         this.whereInput = "";
         this.whereInput = this.searchService.city;
+        this.loggedIn = this.authService.loggedIn();
         if (this.whereInput == "") {
             this.findLocation();
         }
@@ -1353,9 +1347,14 @@ ValidateService = __decorate([
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return environment; });
+// The file contents for the current environment will overwrite these during build.
+// The build system defaults to the dev environment which uses `environment.ts`, but if you do
+// `ng build --env=prod` then `environment.prod.ts` will be used instead.
+// The list of which env maps to which file can be found in `angular-cli.json`.
+// The file contents for the current environment will overwrite these during build.
 var environment = {
-    production: true,
-    serverUrl: ''
+    production: false,
+    serverUrl: "http://localhost:3000/"
 };
 //# sourceMappingURL=C:/Users/Fenco/Projects/TalentFinder/angular-src/src/environment.js.map
 

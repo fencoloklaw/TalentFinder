@@ -1,33 +1,37 @@
-<div class="h-100 jumbotron text-center">
+<div class="text-center jumbotron">
     <!--<div class="h-25 text-left mb-md-5 h1">TalentFinder</div>-->
-    <form class="h-50 d-inline" (submit)="onSearchSubmit()">
-        <div class="row container mr-auto ml-auto text-left">
-            <div class="col-sm-5 form-group w-100">
-                <label class="font-weight-bold " for="skillInput">SKILL</label>
-                <input type="text" id="skillInput" name="skillInput" [(ngModel)]="skillInput" class="form-control form-rounded">
-            </div>
-            <div class="col-sm-5 form-group w-100">
-                <label class="font-weight-bold" for="whereInput">WHERE</label>
-                <input type="text" id="whereInput" name="whereInput" [(ngModel)]="whereInput" class="form-control form-rounded">
-            </div>
-            <div class="col-sm-2 form-group w-100">
-                <button type="submit" class="w-100 btn btn-primary" style="margin-top:2.0rem !important;">Find Talent</button>
-            </div>
+    <div class="container-fluid">
+        <div class="h-50">
+            <form class="d-inline" (submit)="onSearchSubmit()">
+                <div class="row container mr-auto ml-auto text-left">
+                    <div class="col-sm-5 form-group w-100">
+                        <label class="font-weight-bold " for="skillInput">SKILL</label>
+                        <input type="text" id="skillInput" name="skillInput" [(ngModel)]="skillInput" class="form-control form-rounded">
+                    </div>
+                    <div class="col-sm-5 form-group w-100">
+                        <label class="font-weight-bold" for="whereInput">WHERE</label>
+                        <input type="text" id="whereInput" name="whereInput" [(ngModel)]="whereInput" class="form-control form-rounded">
+                    </div>
+                    <div class="col-sm-2 form-group w-100">
+                        <button type="submit" class="w-100 btn btn-primary" style="margin-top:2.0rem !important;">Find Talent</button>
+                    </div>
+                </div>
+            </form>
         </div>
-    </form>
-    <div class="h-25">
-        <div *ngIf="!authService.loggedIn()" class="row mb-3 mt-5" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
-            <div class="col">
-                <button class="btn btn-outline-secondary" [routerLink]="['/register']">
-                    <span>Set Up Account</span>
-                </button>
+        <div class="h-25">
+            <div *ngIf="!loggedIn" class="row mb-3 mt-5" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+                <div class="col">
+                    <button class="btn btn-outline-secondary" [routerLink]="['/register']">
+                        <span>Set Up Account</span>
+                    </button>
+                </div>
             </div>
-        </div>
-        <div *ngIf="authService.loggedIn()" class="row mb-3 mt-5">
-            <div class="col">
-                <h3>Recommended Jobs</h3>
-                <div id="recommendedJobsList">
+            <div *ngIf="loggedIn" class="row mb-3 mt-5">
+                <div class="col">
+                    <h3>Recommended Jobs</h3>
+                    <div id="recommendedJobsList">
 
+                    </div>
                 </div>
             </div>
         </div>
