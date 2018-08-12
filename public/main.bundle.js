@@ -225,7 +225,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/dashboard/dashboard.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<h2 class=\"page-header\">Dashboard</h2>\r\n<mat-card>Welcome to Dashboard</mat-card>\r\n\r\n"
+module.exports = "<div class=\"container\">\r\n    <h2 class=\"page-header\">Dashboard</h2>\r\n    <mat-card>Welcome to Dashboard</mat-card>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -647,6 +647,8 @@ var ProfileComponent = (function () {
             _this.city = profile.user.city;
             _this.region = profile.user.region;
             _this.description = profile.user.description;
+            _this.certificates = profile.user.certificates;
+            _this.awards = profile.user.awards;
         }, function (err) {
             console.log(err);
             return false;
@@ -664,7 +666,9 @@ var ProfileComponent = (function () {
             volunteer: this.volunteer,
             city: this.city,
             region: this.region,
-            description: this.description
+            description: this.description,
+            certificates: this.certificates,
+            awards: this.awards
         };
         this.authService.updateProfile(updateUser).subscribe(function (data) {
             _this.flashMessage.show("Profile Updated", {
@@ -681,6 +685,8 @@ var ProfileComponent = (function () {
             _this.city = data.user.city;
             _this.region = data.user.region;
             _this.description = data.user.description;
+            _this.certificates = data.user.certificates;
+            _this.awards = data.user.awards;
         });
     };
     return ProfileComponent;

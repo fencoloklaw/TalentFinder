@@ -43,6 +43,14 @@ const UserSchema = mongoose.Schema({
     description: {
         type: String,
         required: false
+    },
+    certificates: {
+        type: String,
+        required: false
+    },
+    awards: {
+        type: String,
+        required: false
     }
 });
 
@@ -98,6 +106,8 @@ module.exports.updateUser = function (req, callback){
             oldUser.city = req.body.city;
             oldUser.region = req.body.region;
             oldUser.description = req.body.description;
+            oldUser.certificates = req.body.certificates;
+            oldUser.awards = req.body.awards;
             oldUser.save(callback);
         }
     });

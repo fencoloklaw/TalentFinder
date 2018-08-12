@@ -19,6 +19,8 @@ export class ProfileComponent implements OnInit {
     city : String;
     region : String;
     description : String;
+    certificates: String;
+    awards: String;
 
     constructor(private authService: AuthService,
                 private router: Router,
@@ -38,6 +40,8 @@ export class ProfileComponent implements OnInit {
                 this.city = profile.user.city;
                 this.region = profile.user.region;
                 this.description = profile.user.description;
+                this.certificates = profile.user.certificates;
+                this.awards = profile.user.awards;
             },
             err => {
                 console.log(err);
@@ -56,7 +60,9 @@ export class ProfileComponent implements OnInit {
             volunteer: this.volunteer,
             city: this.city,
             region: this.region,
-            description: this.description
+            description: this.description,
+            certificates: this.certificates,
+            awards: this.awards
         };
 
         this.authService.updateProfile(updateUser).subscribe(data => {
@@ -74,6 +80,8 @@ export class ProfileComponent implements OnInit {
             this.city = data.user.city;
             this.region = data.user.region;
             this.description = data.user.description;
+            this.certificates = data.user.certificates;
+            this.awards = data.user.awards;
         });
     }
 }

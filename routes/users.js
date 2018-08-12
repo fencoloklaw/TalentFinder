@@ -20,7 +20,9 @@ router.post('/register', (req, res) => {
         volunteer: "",
         city: req.body.city,
         region: req.body.region,
-        description: ""
+        description: "",
+        certificates: "",
+        awards: ""
     });
 
     User.addUser(newUser, (err) => {
@@ -56,10 +58,6 @@ router.post('/authenticate', (req, res) => {
                     token: 'JWT ' + token,
                     user: {
                         id: user._id,
-                        // name: user.name,
-                        // firstName: user.firstName;
-                        // lastName: user.lastName;
-                        // username: user.username,
                         email: user.email
                     }
                 });
@@ -78,33 +76,14 @@ router.get('/profile', passport.authenticate('jwt', {session: false}), (req, res
 
 //Update Profile
 router.put('/updateProfile', passport.authenticate('jwt', {session: false}), (req, res) => {
-    // let userInfo = new User({
-    //     _id : req.body._id,
-    //     name : req.body.name,
-    //     username : req.body.username,
-    //     email : req.body.email,
-    //     skill : "skill",
-    //     experience : req.body.experience,
-    //     volunteer : req.body.volunteer
-    // });
-    // res.json({user: userInfo});
-
     User.updateUser(req, (err, data)=>{
         if(err) throw err;
         res.json({user: data});
     });
-    // User.updateUser(userInfo, (err, updatedUser) => {
-    //     if (err) throw err;
-    //     if(updatedUser){
-    //         console.out(updatedUser);
-    //         res.json(updatedUser);
-    //     }
-    // });
 });
 
 //SearchRes
 router.post('/search', (req, res, next) => {
-    //const username = req.body.hpWhereInputBox;
     User.getMatchingUsers(req, (err, data) => {
         if (err) throw err;
         if (!data) {
