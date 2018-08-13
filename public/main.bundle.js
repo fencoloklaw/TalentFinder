@@ -1112,7 +1112,6 @@ var _a, _b;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_jwt__ = __webpack_require__("../../../../angular2-jwt/angular2-jwt.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_jwt___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_angular2_jwt__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__environments_environment__ = __webpack_require__("../../../../../src/environments/environment.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1126,7 +1125,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
 var AuthService = (function () {
     function AuthService(http) {
         this.http = http;
@@ -1134,13 +1132,13 @@ var AuthService = (function () {
     AuthService.prototype.registerUser = function (user) {
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
         headers.append('Content-Type', 'application/json');
-        return this.http.post(__WEBPACK_IMPORTED_MODULE_4__environments_environment__["a" /* environment */].serverUrl + 'users/register', user, { headers: headers })
+        return this.http.post('users/register', user, { headers: headers })
             .map(function (res) { return res.json(); });
     };
     AuthService.prototype.authenticateUser = function (user) {
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
         headers.append('Content-Type', 'application/json');
-        return this.http.post(__WEBPACK_IMPORTED_MODULE_4__environments_environment__["a" /* environment */].serverUrl + 'users/authenticate', user, { headers: headers })
+        return this.http.post('users/authenticate', user, { headers: headers })
             .map(function (res) { return res.json(); });
     };
     AuthService.prototype.storeUserData = function (token, user) {
@@ -1154,7 +1152,7 @@ var AuthService = (function () {
         this.loadToken();
         headers.append('Authorization', this.authToken);
         headers.append('Content-Type', 'application/json');
-        return this.http.get(__WEBPACK_IMPORTED_MODULE_4__environments_environment__["a" /* environment */].serverUrl + 'users/profile', { headers: headers })
+        return this.http.get('users/profile', { headers: headers })
             .map(function (res) { return res.json(); });
     };
     AuthService.prototype.updateProfile = function (user) {
@@ -1162,7 +1160,7 @@ var AuthService = (function () {
         this.loadToken();
         headers.append('Authorization', this.authToken);
         headers.append('Content-Type', 'application/json');
-        return this.http.put(__WEBPACK_IMPORTED_MODULE_4__environments_environment__["a" /* environment */].serverUrl + 'users/updateProfile', user, { headers: headers })
+        return this.http.put('users/updateProfile', user, { headers: headers })
             .map(function (res) { return res.json(); });
     };
     AuthService.prototype.loadToken = function () {
@@ -1231,7 +1229,6 @@ DataService = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__("../../../../rxjs/add/operator/map.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__environments_environment__ = __webpack_require__("../../../../../src/environments/environment.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1244,7 +1241,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
 var SearchService = (function () {
     function SearchService(http) {
         this.http = http;
@@ -1254,13 +1250,13 @@ var SearchService = (function () {
     SearchService.prototype.searchUser = function (search) {
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
         headers.append('Content-Type', 'application/json');
-        return this.http.post(__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].serverUrl + 'users/search', search, { headers: headers })
+        return this.http.post('users/search', search, { headers: headers })
             .map(function (res) { return res.json(); });
     };
     SearchService.prototype.getRecommendedJobs = function () {
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
         headers.append('Content-Type', 'application/json');
-        return this.http.post(__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].serverUrl + 'users/search', '', { headers: headers })
+        return this.http.post('users/search', '', { headers: headers })
             .map(function (res) { return res.json(); });
     };
     SearchService.prototype.getAddress = function () {

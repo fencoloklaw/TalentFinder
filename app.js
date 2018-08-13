@@ -26,7 +26,7 @@ const app = express();
 // Port Number
 const users = require('./routes/users');
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 8080;
 
 //CORS MW
 app.use(cors());
