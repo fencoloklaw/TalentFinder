@@ -15,14 +15,14 @@ export class SearchService {
     searchUser(search) {
         let headers = new Headers();
         headers.append('Content-Type', 'application/json');
-        return this.http.post('users/search', search, {headers: headers})
+        return this.http.post(environment.serverUrl + 'users/search', search, {headers: headers})
             .map(res => res.json());
     }
 
     getRecommendedJobs(){
         let headers = new Headers();
         headers.append('Content-Type', 'application/json');
-        return this.http.post('users/search', '', {headers: headers})
+        return this.http.post(environment.serverUrl + 'users/search', '', {headers: headers})
             .map(res => res.json());
     }
 

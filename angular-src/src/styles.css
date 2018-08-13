@@ -17,12 +17,14 @@
     position: fixed !important;
     top: 10% !important;
     right: 10% !important;
+    z-index: 10;
 }
 
 .floating-action-navbar {
     position: fixed !important;
     top: 0px !important;
-    width:100%
+    width: 100%;
+    z-index: 10;
 }
 /*!
  * Bootswatch v4.1.1

@@ -308,7 +308,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/home/home.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"text-center jumbotron\">\r\n    <!--<div class=\"h-25 text-left mb-md-5 h1\">TalentFinder</div>-->\r\n    <div class=\"container-fluid\">\r\n        <div class=\"h-50\">\r\n            <form class=\"d-inline\" (submit)=\"onSearchSubmit()\">\r\n                <div class=\"row container mr-auto ml-auto text-left\">\r\n                    <div class=\"col-sm-5 form-group w-100\">\r\n                        <label class=\"font-weight-bold \" for=\"skillInput\">SKILL</label>\r\n                        <input type=\"text\" id=\"skillInput\" name=\"skillInput\" [(ngModel)]=\"skillInput\" class=\"form-control form-rounded\">\r\n                    </div>\r\n                    <div class=\"col-sm-5 form-group w-100\">\r\n                        <label class=\"font-weight-bold\" for=\"whereInput\">WHERE</label>\r\n                        <input type=\"text\" id=\"whereInput\" name=\"whereInput\" [(ngModel)]=\"whereInput\" class=\"form-control form-rounded\">\r\n                    </div>\r\n                    <div class=\"col-sm-2 form-group w-100\">\r\n                        <button type=\"submit\" class=\"w-100 btn btn-primary\" style=\"margin-top:2.0rem !important;\">Find Talent</button>\r\n                    </div>\r\n                </div>\r\n            </form>\r\n        </div>\r\n        <div class=\"h-25\">\r\n            <div *ngIf=\"!loggedIn\" class=\"row mb-3 mt-5\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\">\r\n                <div class=\"col\">\r\n                    <button class=\"btn btn-outline-secondary\" [routerLink]=\"['/register']\">\r\n                        <span>Set Up Account</span>\r\n                    </button>\r\n                </div>\r\n            </div>\r\n            <div *ngIf=\"loggedIn\" class=\"row mb-3 mt-5\">\r\n                <div class=\"col\">\r\n                    <h3>Recommended Jobs</h3>\r\n                    <div id=\"recommendedJobsList\">\r\n\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>"
+module.exports = "<div class=\"text-center jumbotron\">\r\n    <!--<div class=\"h-25 text-left mb-md-5 h1\">TalentFinder</div>-->\r\n    <div class=\"container-fluid\">\r\n        <div class=\"h-50\">\r\n            <form class=\"d-inline\" (submit)=\"onSearchSubmit()\">\r\n                <div class=\"row container mr-auto ml-auto text-left\">\r\n                    <div class=\"col-sm-5 form-group w-100\">\r\n                        <label class=\"font-weight-bold \" for=\"skillInput\">EXPERTISE</label>\r\n                        <input type=\"text\" id=\"skillInput\" name=\"skillInput\" [(ngModel)]=\"skillInput\" class=\"form-control form-rounded\">\r\n                    </div>\r\n                    <div class=\"col-sm-5 form-group w-100\">\r\n                        <label class=\"font-weight-bold\" for=\"whereInput\">WHERE</label>\r\n                        <input type=\"text\" id=\"whereInput\" name=\"whereInput\" [(ngModel)]=\"whereInput\" class=\"form-control form-rounded\">\r\n                    </div>\r\n                    <div class=\"col-sm-2 form-group w-100\">\r\n                        <button type=\"submit\" class=\"w-100 btn btn-primary\" style=\"margin-top:2.0rem !important;\">Find Talent</button>\r\n                    </div>\r\n                </div>\r\n            </form>\r\n        </div>\r\n        <div class=\"h-25\">\r\n            <div *ngIf=\"!loggedIn\" class=\"row mb-3 mt-5\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\">\r\n                <div class=\"col\">\r\n                    <button class=\"btn btn-outline-secondary\" [routerLink]=\"['/register']\">\r\n                        <span>Set Up Account</span>\r\n                    </button>\r\n                </div>\r\n            </div>\r\n            <div *ngIf=\"loggedIn\" class=\"row mb-3 mt-5\">\r\n                <div class=\"col\">\r\n                    <h3>Recommended Jobs</h3>\r\n                    <div id=\"recommendedJobsList\">\r\n\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>"
 
 /***/ }),
 
@@ -909,7 +909,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/searchtalent/searchtalent.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container-fluid\">\r\n    <form class=\"p-3 d-inline\" (submit)=\"onSearchSubmit()\">\r\n        <div class=\"row container mr-auto ml-auto text-left\">\r\n            <div class=\"col-sm-5 form-group w-100\">\r\n                <label class=\"font-weight-bold \" for=\"skillInput\">SKILL</label>\r\n                <input type=\"text\" id=\"skillInput\" name=\"skillInput\" [(ngModel)]=\"skillInput\" class=\"form-control form-rounded\">\r\n            </div>\r\n            <div class=\"col-sm-5 form-group w-100\">\r\n                <label class=\"font-weight-bold\" for=\"whereInput\">WHERE</label>\r\n                <input type=\"text\" id=\"whereInput\" name=\"whereInput\" [(ngModel)]=\"whereInput\" class=\"form-control form-rounded\">\r\n            </div>\r\n            <div class=\"col-sm-2 form-group w-100\">\r\n                <button type=\"submit\" class=\"w-100 btn btn-primary\" style=\"margin-top:2.0rem !important;\">Find Talent</button>\r\n            </div>\r\n        </div>\r\n    </form>\r\n    <div class=\"\">\r\n        <div class=\"mt-5\">\r\n            <div *ngIf=\"viewArrayProfile==true\" class=\"\">\r\n                <ul class=\"list-group\" *ngFor=\"let data of dataArray\">\r\n                    <button class=\"list-group-item list-group-item-action\" (click)=\"showProfile(data)\">\r\n                        <span>Name: {{data.firstName}} {{data.lastName}}</span>\r\n                        <br>\r\n                        <span>Email: {{data.email}}</span>\r\n                        <br>\r\n                        <span>Skill: {{data.skill}}</span>\r\n                        <br>\r\n                        <span>City: {{data.city}}</span>\r\n                    </button>\r\n                </ul>\r\n                <div>\r\n                    <ul class=\"pagination pagination-lg\">\r\n                        <button class=\"list-group-item list-group-item-action page-link\" *ngIf=\"currentPage>1\" (click)=\"onChangePageBack()\">\r\n                            <span>&laquo; Previous</span>\r\n                        </button>\r\n                        <button class=\"list-group-item list-group-item-action page-link\" *ngIf=\"currentPage<numberOfPages\" (click)=\"onChangePage()\">\r\n                            <span>Next &raquo;</span>\r\n                        </button>\r\n                    </ul>\r\n                </div>\r\n                <div class=\"container\" *ngIf=\"dataArrayLength==0\">\r\n                    <p class=\"lead\">No users found.</p>\r\n                </div>\r\n            </div>\r\n            <div *ngIf=\"viewArrayProfile==false\" class=\"card border-primary\">\r\n                <div class=\"card-body\">\r\n                    <button class=\"btn btn-secondary\" (click)=\"returnSearch()\">&laquo; Return</button>\r\n                    <h2>{{profile.firstName}} {{profile.lastName}}</h2>\r\n                    <br>\r\n                    <span>Email: {{profile.email}}</span>\r\n                    <br>\r\n                    <span>Skill: {{profile.skill}}</span>\r\n                    <br>\r\n                    <span>City: {{profile.city}}</span>\r\n                    <br>\r\n                    <span>Experience: {{profile.experience}}</span>\r\n                    <br>\r\n                    <span>Volunteer: {{profile.volunteer}}</span>\r\n                    <br>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>"
+module.exports = "<div class=\"container-fluid\">\r\n    <form class=\"p-3 d-inline\" (submit)=\"onSearchSubmit()\">\r\n        <div class=\"row container mr-auto ml-auto text-left\">\r\n            <div class=\"col-sm-5 form-group w-100\">\r\n                <label class=\"font-weight-bold \" for=\"skillInput\">EXPERTISE</label>\r\n                <input type=\"text\" id=\"skillInput\" name=\"skillInput\" [(ngModel)]=\"skillInput\" class=\"form-control form-rounded\">\r\n            </div>\r\n            <div class=\"col-sm-5 form-group w-100\">\r\n                <label class=\"font-weight-bold\" for=\"whereInput\">WHERE</label>\r\n                <input type=\"text\" id=\"whereInput\" name=\"whereInput\" [(ngModel)]=\"whereInput\" class=\"form-control form-rounded\">\r\n            </div>\r\n            <div class=\"col-sm-2 form-group w-100\">\r\n                <button type=\"submit\" class=\"w-100 btn btn-primary\" style=\"margin-top:2.0rem !important;\">Find Talent</button>\r\n            </div>\r\n        </div>\r\n    </form>\r\n    <div class=\"\">\r\n        <div class=\"mt-5\">\r\n            <div *ngIf=\"viewArrayProfile==true\" class=\"\">\r\n                <ul class=\"list-group\" *ngFor=\"let data of dataArray\">\r\n                    <button class=\"list-group-item list-group-item-action\" (click)=\"showProfile(data)\">\r\n                        <span>Name: {{data.firstName}} {{data.lastName}}</span>\r\n                        <br>\r\n                        <span>Email: {{data.email}}</span>\r\n                        <br>\r\n                        <span>Skill: {{data.skill}}</span>\r\n                        <br>\r\n                        <span>City: {{data.city}}</span>\r\n                    </button>\r\n                </ul>\r\n                <div>\r\n                    <ul class=\"pagination pagination-lg\">\r\n                        <button class=\"list-group-item list-group-item-action page-link\" *ngIf=\"currentPage>1\" (click)=\"onChangePageBack()\">\r\n                            <span>&laquo; Previous</span>\r\n                        </button>\r\n                        <button class=\"list-group-item list-group-item-action page-link\" *ngIf=\"currentPage<numberOfPages\" (click)=\"onChangePage()\">\r\n                            <span>Next &raquo;</span>\r\n                        </button>\r\n                    </ul>\r\n                </div>\r\n                <div class=\"container\" *ngIf=\"dataArrayLength==0\">\r\n                    <p class=\"lead\">No users found.</p>\r\n                </div>\r\n            </div>\r\n            <div *ngIf=\"viewArrayProfile==false\" class=\"card border-primary\">\r\n                <div class=\"card-body\">\r\n                    <button class=\"btn btn-secondary\" (click)=\"returnSearch()\">&laquo; Return</button>\r\n                    <h2>{{profile.firstName}} {{profile.lastName}}</h2>\r\n                    <br>\r\n                    <span>Email: {{profile.email}}</span>\r\n                    <br>\r\n                    <span>Skill: {{profile.skill}}</span>\r\n                    <br>\r\n                    <span>City: {{profile.city}}</span>\r\n                    <br>\r\n                    <span>Experience: {{profile.experience}}</span>\r\n                    <br>\r\n                    <span>Volunteer: {{profile.volunteer}}</span>\r\n                    <br>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>"
 
 /***/ }),
 
@@ -1112,6 +1112,7 @@ var _a, _b;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_jwt__ = __webpack_require__("../../../../angular2-jwt/angular2-jwt.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_jwt___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_angular2_jwt__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__environments_environment__ = __webpack_require__("../../../../../src/environments/environment.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1125,6 +1126,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var AuthService = (function () {
     function AuthService(http) {
         this.http = http;
@@ -1132,13 +1134,13 @@ var AuthService = (function () {
     AuthService.prototype.registerUser = function (user) {
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
         headers.append('Content-Type', 'application/json');
-        return this.http.post('users/register', user, { headers: headers })
+        return this.http.post(__WEBPACK_IMPORTED_MODULE_4__environments_environment__["a" /* environment */].serverUrl + 'users/register', user, { headers: headers })
             .map(function (res) { return res.json(); });
     };
     AuthService.prototype.authenticateUser = function (user) {
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
         headers.append('Content-Type', 'application/json');
-        return this.http.post('users/authenticate', user, { headers: headers })
+        return this.http.post(__WEBPACK_IMPORTED_MODULE_4__environments_environment__["a" /* environment */].serverUrl + 'users/authenticate', user, { headers: headers })
             .map(function (res) { return res.json(); });
     };
     AuthService.prototype.storeUserData = function (token, user) {
@@ -1152,7 +1154,7 @@ var AuthService = (function () {
         this.loadToken();
         headers.append('Authorization', this.authToken);
         headers.append('Content-Type', 'application/json');
-        return this.http.get('users/profile', { headers: headers })
+        return this.http.get(__WEBPACK_IMPORTED_MODULE_4__environments_environment__["a" /* environment */].serverUrl + 'users/profile', { headers: headers })
             .map(function (res) { return res.json(); });
     };
     AuthService.prototype.updateProfile = function (user) {
@@ -1160,7 +1162,7 @@ var AuthService = (function () {
         this.loadToken();
         headers.append('Authorization', this.authToken);
         headers.append('Content-Type', 'application/json');
-        return this.http.put('users/updateProfile', user, { headers: headers })
+        return this.http.put(__WEBPACK_IMPORTED_MODULE_4__environments_environment__["a" /* environment */].serverUrl + 'users/updateProfile', user, { headers: headers })
             .map(function (res) { return res.json(); });
     };
     AuthService.prototype.loadToken = function () {
@@ -1229,6 +1231,7 @@ DataService = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__("../../../../rxjs/add/operator/map.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__environments_environment__ = __webpack_require__("../../../../../src/environments/environment.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1241,6 +1244,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var SearchService = (function () {
     function SearchService(http) {
         this.http = http;
@@ -1250,13 +1254,13 @@ var SearchService = (function () {
     SearchService.prototype.searchUser = function (search) {
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
         headers.append('Content-Type', 'application/json');
-        return this.http.post('users/search', search, { headers: headers })
+        return this.http.post(__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].serverUrl + 'users/search', search, { headers: headers })
             .map(function (res) { return res.json(); });
     };
     SearchService.prototype.getRecommendedJobs = function () {
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
         headers.append('Content-Type', 'application/json');
-        return this.http.post('users/search', '', { headers: headers })
+        return this.http.post(__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].serverUrl + 'users/search', '', { headers: headers })
             .map(function (res) { return res.json(); });
     };
     SearchService.prototype.getAddress = function () {
@@ -1391,7 +1395,7 @@ ValidateService = __decorate([
 // The file contents for the current environment will overwrite these during build.
 var environment = {
     production: false,
-    serverUrl: "http://localhost:3000/"
+    serverUrl: "http://localhost:8080/"
 };
 //# sourceMappingURL=C:/Users/Fenco/Projects/TalentFinder/angular-src/src/environment.js.map
 
