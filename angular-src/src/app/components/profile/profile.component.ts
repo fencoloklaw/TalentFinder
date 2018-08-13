@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {AuthService} from '../../services/auth.service';
 import {Router} from '@angular/router';
 import {FlashMessagesService} from 'angular2-flash-messages';
+import {ToasterService} from "../../services/toaster.service";
 
 @Component({
     selector: 'app-profile',
@@ -24,7 +25,7 @@ export class ProfileComponent implements OnInit {
 
     constructor(private authService: AuthService,
                 private router: Router,
-                private flashMessage: FlashMessagesService
+                private toasterService: ToasterService
                 ) {
     }
 
@@ -66,10 +67,8 @@ export class ProfileComponent implements OnInit {
         };
 
         this.authService.updateProfile(updateUser).subscribe(data => {
-            this.flashMessage.show("Profile Updated", {
-                cssClass: 'alert-success',
-                timeout: 5000
-            });
+            this.toasterService.success('Profile Updated');
+
             this._id = data.user._id;
             this.firstName = data.user.firstName;
             this.lastName = data.user.lastName;

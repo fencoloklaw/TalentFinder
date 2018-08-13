@@ -41,7 +41,9 @@ import {ScrollDispatchModule} from "@angular/cdk/scrolling";
 import { SchedulerComponent } from './components/scheduler/scheduler.component';
 import {FlexLayoutModule} from "@angular/flex-layout";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-import {HttpClient, HttpClientModule} from "@angular/common/http";
+import {HttpClientModule} from "@angular/common/http";
+import {ToastModule} from "ng2-toastr";
+import {ToasterService} from "./services/toaster.service";
 
 const appRoutes: Routes = [
     {path: '', component: HomeComponent},
@@ -92,8 +94,10 @@ const appRoutes: Routes = [
         FlexLayoutModule,
         ReactiveFormsModule,
         HttpClientModule,
+        BrowserAnimationsModule,
+        ToastModule.forRoot()
     ],
-    providers: [ValidateService, AuthService, AuthGuard, SearchService, DataService],
+    providers: [ValidateService, AuthService, AuthGuard, SearchService, DataService, ToasterService],
     bootstrap: [AppComponent]
 })
 export class AppModule {

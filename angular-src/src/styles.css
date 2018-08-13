@@ -12,6 +12,18 @@
     width: 100vw !important;
     height: 100vh !important;
 }
+
+.floating-action-button {
+    position: fixed !important;
+    top: 10% !important;
+    right: 10% !important;
+}
+
+.floating-action-navbar {
+    position: fixed !important;
+    top: 0px !important;
+    width:100%
+}
 /*!
  * Bootswatch v4.1.1
  * Homepage: https://bootswatch.com
@@ -24,6 +36,7 @@
  * Copyright 2011-2018 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
+
 @import url("https://fonts.googleapis.com/css?family=Raleway:400,700");
 :root {
     --blue: #4582EC;
@@ -541,7 +554,8 @@ pre code {
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
-    margin-left: auto
+    margin-left: auto;
+    margin-top: 100px;
 }
 
 @media (min-width: 576px) {
@@ -573,7 +587,7 @@ pre code {
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
-    margin-left: auto
+    margin-left: auto;
 }
 
 .row {

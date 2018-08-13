@@ -50,6 +50,8 @@ module.exports = "<app-navbar></app-navbar>\r\n<flash-messages></flash-messages>
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Rx__ = __webpack_require__("../../../../rxjs/Rx.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_Rx__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ng2_toastr__ = __webpack_require__("../../../../ng2-toastr/ng2-toastr.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ng2_toastr___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_ng2_toastr__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -61,9 +63,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
 var AppComponent = (function () {
-    function AppComponent() {
+    function AppComponent(toastr, vcr) {
+        this.toastr = toastr;
+        this.vcr = vcr;
         this.title = 'app works!';
+        this.toastr.setRootViewContainerRef(vcr);
     }
     return AppComponent;
 }());
@@ -73,9 +79,10 @@ AppComponent = __decorate([
         template: __webpack_require__("../../../../../src/app/app.component.html"),
         styles: [__webpack_require__("../../../../../src/app/app.component.css")]
     }),
-    __metadata("design:paramtypes", [])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2_ng2_toastr__["ToastsManager"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ng2_toastr__["ToastsManager"]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewContainerRef"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewContainerRef"]) === "function" && _b || Object])
 ], AppComponent);
 
+var _a, _b;
 //# sourceMappingURL=C:/Users/Fenco/Projects/TalentFinder/angular-src/src/app.component.js.map
 
 /***/ }),
@@ -109,13 +116,20 @@ AppComponent = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__angular_cdk_scrolling__ = __webpack_require__("../../../cdk/esm5/scrolling.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__components_scheduler_scheduler_component__ = __webpack_require__("../../../../../src/app/components/scheduler/scheduler.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__angular_flex_layout__ = __webpack_require__("../../../flex-layout/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__angular_common_http__ = __webpack_require__("../../../common/@angular/common/http.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__angular_platform_browser_animations__ = __webpack_require__("../../../platform-browser/@angular/platform-browser/animations.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__angular_common_http__ = __webpack_require__("../../../common/@angular/common/http.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25_ng2_toastr__ = __webpack_require__("../../../../ng2-toastr/ng2-toastr.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25_ng2_toastr___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_25_ng2_toastr__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__services_toaster_service__ = __webpack_require__("../../../../../src/app/services/toaster.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
+
 
 
 
@@ -167,7 +181,7 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_21__components_scheduler_scheduler_component__["a" /* SchedulerComponent */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
+            __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["BrowserModule"],
             __WEBPACK_IMPORTED_MODULE_2__angular_forms__["c" /* FormsModule */],
             __WEBPACK_IMPORTED_MODULE_3__angular_http__["HttpModule"],
             __WEBPACK_IMPORTED_MODULE_4__angular_router__["b" /* RouterModule */].forRoot(appRoutes),
@@ -193,9 +207,11 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_19__angular_material__["l" /* MatNativeDateModule */],
             __WEBPACK_IMPORTED_MODULE_22__angular_flex_layout__["a" /* FlexLayoutModule */],
             __WEBPACK_IMPORTED_MODULE_2__angular_forms__["h" /* ReactiveFormsModule */],
-            __WEBPACK_IMPORTED_MODULE_23__angular_common_http__["a" /* HttpClientModule */],
+            __WEBPACK_IMPORTED_MODULE_24__angular_common_http__["a" /* HttpClientModule */],
+            __WEBPACK_IMPORTED_MODULE_23__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */],
+            __WEBPACK_IMPORTED_MODULE_25_ng2_toastr__["ToastModule"].forRoot()
         ],
-        providers: [__WEBPACK_IMPORTED_MODULE_13__services_validate_service__["a" /* ValidateService */], __WEBPACK_IMPORTED_MODULE_15__services_auth_service__["a" /* AuthService */], __WEBPACK_IMPORTED_MODULE_16__guards_auth_guard__["a" /* AuthGuard */], __WEBPACK_IMPORTED_MODULE_17__services_search_service__["a" /* SearchService */], __WEBPACK_IMPORTED_MODULE_18__services_data_service__["a" /* DataService */]],
+        providers: [__WEBPACK_IMPORTED_MODULE_13__services_validate_service__["a" /* ValidateService */], __WEBPACK_IMPORTED_MODULE_15__services_auth_service__["a" /* AuthService */], __WEBPACK_IMPORTED_MODULE_16__guards_auth_guard__["a" /* AuthGuard */], __WEBPACK_IMPORTED_MODULE_17__services_search_service__["a" /* SearchService */], __WEBPACK_IMPORTED_MODULE_18__services_data_service__["a" /* DataService */], __WEBPACK_IMPORTED_MODULE_26__services_toaster_service__["a" /* ToasterService */]],
         bootstrap: [__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* AppComponent */]]
     })
 ], AppModule);
@@ -423,9 +439,8 @@ module.exports = "<div class=\"container\">\r\n    <h1 class=\"page-header\">Log
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_auth_service__ = __webpack_require__("../../../../../src/app/services/auth.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__ = __webpack_require__("../../../../angular2-flash-messages/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_validate_service__ = __webpack_require__("../../../../../src/app/services/validate.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_validate_service__ = __webpack_require__("../../../../../src/app/services/validate.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_toaster_service__ = __webpack_require__("../../../../../src/app/services/toaster.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -441,11 +456,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var LoginComponent = (function () {
-    function LoginComponent(authService, router, flashMessage, validateService) {
+    function LoginComponent(authService, router, validateService, toasterService) {
         this.authService = authService;
         this.router = router;
-        this.flashMessage = flashMessage;
         this.validateService = validateService;
+        this.toasterService = toasterService;
     }
     LoginComponent.prototype.ngOnInit = function () {
         this.email = "";
@@ -460,18 +475,14 @@ var LoginComponent = (function () {
         this.authService.authenticateUser(user).subscribe(function (data) {
             if (data.success) {
                 _this.authService.storeUserData(data.token, data.user);
-                _this.flashMessage.show('You are now logged in', {
-                    cssClass: 'alert-success',
-                    timeout: 5000
+                _this.router.navigate(['dashboard']).then(function () {
+                    _this.toasterService.success('You are now logged in');
                 });
-                _this.router.navigate(['dashboard']);
             }
             else {
-                _this.flashMessage.show(data.msg, {
-                    cssClass: 'alert-danger',
-                    timeout: 5000
+                _this.router.navigate(['login']).then(function () {
+                    _this.toasterService.warning(data.msg);
                 });
-                _this.router.navigate(['login']);
             }
         });
     };
@@ -491,7 +502,7 @@ LoginComponent = __decorate([
         template: __webpack_require__("../../../../../src/app/components/login/login.component.html"),
         styles: [__webpack_require__("../../../../../src/app/components/login/login.component.css")]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_auth_service__["a" /* AuthService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__["FlashMessagesService"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__["FlashMessagesService"]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4__services_validate_service__["a" /* ValidateService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__services_validate_service__["a" /* ValidateService */]) === "function" && _d || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_auth_service__["a" /* AuthService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__services_validate_service__["a" /* ValidateService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_validate_service__["a" /* ValidateService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4__services_toaster_service__["a" /* ToasterService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__services_toaster_service__["a" /* ToasterService */]) === "function" && _d || Object])
 ], LoginComponent);
 
 var _a, _b, _c, _d;
@@ -520,7 +531,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/navbar/navbar.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-expand-lg navbar-dark bg-primary navbar-fixed-top\">\r\n    <a class=\"navbar-brand\" href=\"#\">TalentFinder</a>\r\n    <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\r\n        <span class=\"navbar-toggler-icon\"></span>\r\n    </button>\r\n\r\n    <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\r\n        <ul class=\"navbar-nav mr-auto\">\r\n            <li class=\"nav-item active text-right\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\">\r\n                <a class=\"nav-link\" [routerLink]=\"['/']\">Home</a>\r\n            </li>\r\n        </ul>\r\n        <ul class=\"navbar-nav\">\r\n            <li class=\"nav-item text-right\" *ngIf=\"authService.loggedIn()\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\">\r\n                <a class=\"nav-link\" [routerLink]=\"['/dashboard']\">Dashboard</a>\r\n            </li>\r\n            <li class=\"nav-item text-right\" *ngIf=\"authService.loggedIn()\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\">\r\n                <a class=\"nav-link\" [routerLink]=\"['/profile']\">Profile</a>\r\n            </li>\r\n            <li class=\"nav-item text-right\" *ngIf=\"!authService.loggedIn()\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\">\r\n                <a class=\"nav-link\" [routerLink]=\"['/login']\">Login</a>\r\n            </li>\r\n            <li class=\"nav-item text-right\" *ngIf=\"!authService.loggedIn()\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\">\r\n                <a class=\"nav-link\" [routerLink]=\"['/register']\">Register</a>\r\n            </li>\r\n            <li class=\"nav-item text-right\" *ngIf=\"authService.loggedIn()\">\r\n                <a class=\"nav-link\" (click)=\"onLogoutClick()\" href=\"#\">Logout</a>\r\n            </li>\r\n        </ul>\r\n    </div>\r\n</nav>\r\n"
+module.exports = "<nav class=\"navbar navbar-expand-lg navbar-dark bg-primary floating-action-navbar\">\r\n    <a class=\"navbar-brand\" [routerLink]=\"['/']\">TalentFinder</a>\r\n    <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\r\n        <span class=\"navbar-toggler-icon\"></span>\r\n    </button>\r\n\r\n    <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\r\n        <ul class=\"navbar-nav ml-auto\">\r\n            <li class=\"nav-item text-right\" *ngIf=\"authService.loggedIn()\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\">\r\n                <a class=\"nav-link\" [routerLink]=\"['/dashboard']\">Dashboard</a>\r\n            </li>\r\n            <li class=\"nav-item text-right\" *ngIf=\"authService.loggedIn()\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\">\r\n                <a class=\"nav-link\" [routerLink]=\"['/profile']\">Profile</a>\r\n            </li>\r\n            <li class=\"nav-item text-right\" *ngIf=\"!authService.loggedIn()\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\">\r\n                <a class=\"nav-link\" [routerLink]=\"['/login']\">Login</a>\r\n            </li>\r\n            <li class=\"nav-item text-right\" *ngIf=\"!authService.loggedIn()\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\">\r\n                <a class=\"nav-link\" [routerLink]=\"['/register']\">Register</a>\r\n            </li>\r\n            <li class=\"nav-item text-right\" *ngIf=\"authService.loggedIn()\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\">\r\n                <a class=\"nav-link\" (click)=\"onLogoutClick()\" href=\"#\">Logout</a>\r\n            </li>\r\n        </ul>\r\n    </div>\r\n</nav>\r\n"
 
 /***/ }),
 
@@ -532,8 +543,7 @@ module.exports = "<nav class=\"navbar navbar-expand-lg navbar-dark bg-primary na
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_auth_service__ = __webpack_require__("../../../../../src/app/services/auth.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__ = __webpack_require__("../../../../angular2-flash-messages/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_toaster_service__ = __webpack_require__("../../../../../src/app/services/toaster.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -548,20 +558,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var NavbarComponent = (function () {
-    function NavbarComponent(authService, router, flashMessage) {
+    function NavbarComponent(authService, router, toasterService) {
         this.authService = authService;
         this.router = router;
-        this.flashMessage = flashMessage;
+        this.toasterService = toasterService;
     }
-    NavbarComponent.prototype.ngOnInit = function () {
-    };
     NavbarComponent.prototype.onLogoutClick = function () {
+        var _this = this;
         this.authService.logout();
-        this.flashMessage.show('You are logged out', {
-            cssClass: 'alert-success',
-            timeout: 3000
+        this.router.navigate(['/login']).then(function () {
+            _this.toasterService.success('You are logged out');
         });
-        this.router.navigate(['/login']);
         return false;
     };
     return NavbarComponent;
@@ -572,7 +579,7 @@ NavbarComponent = __decorate([
         template: __webpack_require__("../../../../../src/app/components/navbar/navbar.component.html"),
         styles: [__webpack_require__("../../../../../src/app/components/navbar/navbar.component.css")]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_auth_service__["a" /* AuthService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__["FlashMessagesService"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__["FlashMessagesService"]) === "function" && _c || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_auth_service__["a" /* AuthService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__services_toaster_service__["a" /* ToasterService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_toaster_service__["a" /* ToasterService */]) === "function" && _c || Object])
 ], NavbarComponent);
 
 var _a, _b, _c;
@@ -601,7 +608,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/profile/profile.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\r\n    <form (submit)=\"onUpdateProfile()\">\r\n        <h2 class=\"page-header\">\r\n            <span>Profile</span>\r\n        </h2>\r\n        <div class=\"row mb-3\">\r\n            <div class=\"col\">\r\n                <img class=\"img-thumbnail w-50\" src=\"http://i0.kym-cdn.com/photos/images/newsfeed/000/581/296/c09.jpg\">\r\n            </div>\r\n            <div class=\"col\">\r\n                <img class=\"img-thumbnail w-50 float-right\" src=\"https://www.patternfly.org/pattern-library/data-visualization/pie-chart/img/right-legend-pie-chart.png\">\r\n            </div>\r\n        </div>\r\n        <div class=\"row mb-3\">\r\n            <div class=\"col\">\r\n                <label>First Name : </label>\r\n                <input type=\"text\" [(ngModel)]=\"firstName\" name=\"firstName\" class=\"form-control\">\r\n            </div>\r\n            <div class=\"col\">\r\n                <label>Last Name : </label>\r\n                <input type=\"text\" [(ngModel)]=\"lastName\" name=\"lastName\" class=\"form-control\">\r\n            </div>\r\n        </div>\r\n        <div class=\"row mb-3\">\r\n            <div class=\"col\">\r\n                <label>Personal Summary : </label>\r\n                <textarea class=\"form-control\" rows=\"4\" name=\"description\" [(ngModel)]=\"description\" placeholder=\"Introduction/Description\"></textarea>\r\n            </div>\r\n        </div>\r\n        <div class=\"row mb-3\">\r\n            <div class=\"col\">\r\n                <label>Skill : </label>\r\n                <input type=\"text\" [(ngModel)]=\"skill\" name=\"skill\" class=\"form-control\">\r\n            </div>\r\n        </div>\r\n        <div class=\"row mb-3\">\r\n            <div class=\"col\">\r\n                <label>Past Experience : </label>\r\n                <textarea class=\"form-control\" rows=\"4\" placeholder=\"Past Experience\" name=\"experience\" [(ngModel)]=\"experience\"></textarea>\r\n            </div>\r\n        </div>\r\n        <div class=\"row mb-3\">\r\n            <div class=\"col\">\r\n                <label>City : </label>\r\n                <input type=\"text\" [(ngModel)]=\"city\" name=\"city\" class=\"form-control\">\r\n            </div>\r\n            <div class=\"col\">\r\n            <label>Province/State : </label>\r\n            <select [(ngModel)]=\"region\" name=\"region\" class=\"form-control custom-select required\">\r\n                <option value=\"Alberta\">Alberta</option>\r\n                <option value=\"British Columbia\">British Columbia</option>\r\n                <option value=\"Manitoba\">Manitoba</option>\r\n                <option value=\"New Brunswick\">New Brunswick</option>\r\n                <option value=\"Newfoundland and Labrador\">Newfoundland and Labrador</option>\r\n                <option value=\"Nova Scotia\">Nova Scotia</option>\r\n                <option value=\"Ontario\">Ontario</option>\r\n                <option value=\"Prince Edward Island\">Prince Edward Island</option>\r\n                <option value=\"Quebec\">Quebec</option>\r\n                <option value=\"Saskatchewan\">Saskatchewan</option>\r\n                <option value=\"Northwest Territories\">Northwest Territories</option>\r\n                <option value=\"Nunavut\">Nunavut</option>\r\n                <option value=\"Yukon\">Yukon</option>\r\n            </select>\r\n            </div>\r\n        </div>\r\n        <div class=\"row mb-3\">\r\n            <div class=\"col\">\r\n                <label>Certificates/Licenses : </label>\r\n                <input type=\"text\" [(ngModel)]=\"certificates\" name=\"certificates\" class=\"form-control\">\r\n            </div>\r\n            <div class=\"col\">\r\n                <label>Awards : </label>\r\n                <input type=\"text\" [(ngModel)]=\"awards\" name=\"awards\" class=\"form-control\">\r\n            </div>\r\n        </div>\r\n        <div class=\"text-center\">\r\n            <input type=\"submit\" class=\"btn btn-block btn-primary\" value=\"Update\">\r\n        </div>\r\n    </form>\r\n</div>"
+module.exports = "<div class=\"container\">\r\n    <form (submit)=\"onUpdateProfile()\">\r\n        <h2 class=\"page-header\">\r\n            <span>Profile</span>\r\n        </h2>\r\n        <div class=\"row mb-3\">\r\n            <div class=\"col\">\r\n                <img class=\"img-thumbnail w-50\" src=\"http://i0.kym-cdn.com/photos/images/newsfeed/000/581/296/c09.jpg\">\r\n            </div>\r\n            <div class=\"col\">\r\n                <img class=\"img-thumbnail w-50 float-right\" src=\"https://www.patternfly.org/pattern-library/data-visualization/pie-chart/img/right-legend-pie-chart.png\">\r\n            </div>\r\n        </div>\r\n        <div class=\"row mb-3\">\r\n            <div class=\"col\">\r\n                <label>First Name : </label>\r\n                <input type=\"text\" [(ngModel)]=\"firstName\" name=\"firstName\" class=\"form-control\">\r\n            </div>\r\n            <div class=\"col\">\r\n                <label>Last Name : </label>\r\n                <input type=\"text\" [(ngModel)]=\"lastName\" name=\"lastName\" class=\"form-control\">\r\n            </div>\r\n        </div>\r\n        <div class=\"row mb-3\">\r\n            <div class=\"col\">\r\n                <label>Personal Summary : </label>\r\n                <textarea class=\"form-control\" rows=\"4\" name=\"description\" [(ngModel)]=\"description\" placeholder=\"Introduction/Description\"></textarea>\r\n            </div>\r\n        </div>\r\n        <div class=\"row mb-3\">\r\n            <div class=\"col\">\r\n                <label>Skill : </label>\r\n                <input type=\"text\" [(ngModel)]=\"skill\" name=\"skill\" class=\"form-control\">\r\n            </div>\r\n        </div>\r\n        <div class=\"row mb-3\">\r\n            <div class=\"col\">\r\n                <label>Past Experience : </label>\r\n                <textarea class=\"form-control\" rows=\"4\" placeholder=\"Past Experience\" name=\"experience\" [(ngModel)]=\"experience\"></textarea>\r\n            </div>\r\n        </div>\r\n        <div class=\"row mb-3\">\r\n            <div class=\"col\">\r\n                <label>City : </label>\r\n                <input type=\"text\" [(ngModel)]=\"city\" name=\"city\" class=\"form-control\">\r\n            </div>\r\n            <div class=\"col\">\r\n            <label>Province/State : </label>\r\n            <select [(ngModel)]=\"region\" name=\"region\" class=\"form-control custom-select required\">\r\n                <option value=\"Alberta\">Alberta</option>\r\n                <option value=\"British Columbia\">British Columbia</option>\r\n                <option value=\"Manitoba\">Manitoba</option>\r\n                <option value=\"New Brunswick\">New Brunswick</option>\r\n                <option value=\"Newfoundland and Labrador\">Newfoundland and Labrador</option>\r\n                <option value=\"Nova Scotia\">Nova Scotia</option>\r\n                <option value=\"Ontario\">Ontario</option>\r\n                <option value=\"Prince Edward Island\">Prince Edward Island</option>\r\n                <option value=\"Quebec\">Quebec</option>\r\n                <option value=\"Saskatchewan\">Saskatchewan</option>\r\n                <option value=\"Northwest Territories\">Northwest Territories</option>\r\n                <option value=\"Nunavut\">Nunavut</option>\r\n                <option value=\"Yukon\">Yukon</option>\r\n            </select>\r\n            </div>\r\n        </div>\r\n        <div class=\"row mb-3\">\r\n            <div class=\"col\">\r\n                <label>Certificates/Licenses : </label>\r\n                <input type=\"text\" [(ngModel)]=\"certificates\" name=\"certificates\" class=\"form-control\">\r\n            </div>\r\n            <div class=\"col\">\r\n                <label>Awards : </label>\r\n                <input type=\"text\" [(ngModel)]=\"awards\" name=\"awards\" class=\"form-control\">\r\n            </div>\r\n        </div>\r\n        <div class=\"text-center floating-action-button\">\r\n            <input type=\"submit\" class=\"btn btn-block btn-primary\" value=\"Update\">\r\n        </div>\r\n    </form>\r\n</div>"
 
 /***/ }),
 
@@ -613,8 +620,7 @@ module.exports = "<div class=\"container\">\r\n    <form (submit)=\"onUpdateProf
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_auth_service__ = __webpack_require__("../../../../../src/app/services/auth.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__ = __webpack_require__("../../../../angular2-flash-messages/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_toaster_service__ = __webpack_require__("../../../../../src/app/services/toaster.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -629,10 +635,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var ProfileComponent = (function () {
-    function ProfileComponent(authService, router, flashMessage) {
+    function ProfileComponent(authService, router, toasterService) {
         this.authService = authService;
         this.router = router;
-        this.flashMessage = flashMessage;
+        this.toasterService = toasterService;
     }
     ProfileComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -671,10 +677,7 @@ var ProfileComponent = (function () {
             awards: this.awards
         };
         this.authService.updateProfile(updateUser).subscribe(function (data) {
-            _this.flashMessage.show("Profile Updated", {
-                cssClass: 'alert-success',
-                timeout: 5000
-            });
+            _this.toasterService.success('Profile Updated');
             _this._id = data.user._id;
             _this.firstName = data.user.firstName;
             _this.lastName = data.user.lastName;
@@ -697,7 +700,7 @@ ProfileComponent = __decorate([
         template: __webpack_require__("../../../../../src/app/components/profile/profile.component.html"),
         styles: [__webpack_require__("../../../../../src/app/components/profile/profile.component.css")]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_auth_service__["a" /* AuthService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__["FlashMessagesService"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__["FlashMessagesService"]) === "function" && _c || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_auth_service__["a" /* AuthService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__services_toaster_service__["a" /* ToasterService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_toaster_service__["a" /* ToasterService */]) === "function" && _c || Object])
 ], ProfileComponent);
 
 var _a, _b, _c;
@@ -738,10 +741,9 @@ module.exports = "<div class=\"container\">\r\n    <h1 class=\"page-header\">Reg
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_validate_service__ = __webpack_require__("../../../../../src/app/services/validate.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_auth_service__ = __webpack_require__("../../../../../src/app/services/auth.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__ = __webpack_require__("../../../../angular2-flash-messages/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_search_service__ = __webpack_require__("../../../../../src/app/services/search.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_search_service__ = __webpack_require__("../../../../../src/app/services/search.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_toaster_service__ = __webpack_require__("../../../../../src/app/services/toaster.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -758,12 +760,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var RegisterComponent = (function () {
-    function RegisterComponent(validateService, flashMessage, authService, router, searchService) {
+    function RegisterComponent(validateService, authService, router, searchService, toasterService) {
         this.validateService = validateService;
-        this.flashMessage = flashMessage;
         this.authService = authService;
         this.router = router;
         this.searchService = searchService;
+        this.toasterService = toasterService;
     }
     RegisterComponent.prototype.ngOnInit = function () {
         this.city = this.searchService.city;
@@ -785,25 +787,24 @@ var RegisterComponent = (function () {
         };
         //Required Fields
         if (!this.validateService.validateRegister(user)) {
-            this.flashMessage.show('Fill in required fields', { cssClass: 'alert-danger', timeout: 3000 });
+            this.toasterService.warning('Fill in all required fields');
             return false;
         }
         //Validate Email
         if (!this.validateService.validateEmail(user.email)) {
-            this.flashMessage.show('Please use valid email', { cssClass: 'alert-danger', timeout: 3000 });
+            this.toasterService.warning('Invalid email');
             return false;
         }
         //Register User
         this.authService.registerUser(user).subscribe(function (data) {
             if (data.err) {
-                _this.flashMessage.show('Something went wrong: ' + data.err, { cssClass: 'alert-danger', timeout: 3000 });
-                _this.router.navigate(['/register']);
+                _this.router.navigate(['/register']).then(function () {
+                    _this.toasterService.error('Something went wrong: ' + data.err);
+                });
             }
-            _this.flashMessage.show('You are now registered and can log in', {
-                cssClass: 'alert-success',
-                timeout: 2000
+            _this.router.navigate(['/login']).then(function () {
+                _this.toasterService.success('You are now registered!');
             });
-            _this.router.navigate(['/login']);
         });
     };
     RegisterComponent.prototype.findLocation = function () {
@@ -827,7 +828,7 @@ RegisterComponent = __decorate([
         template: __webpack_require__("../../../../../src/app/components/register/register.component.html"),
         styles: [__webpack_require__("../../../../../src/app/components/register/register.component.css")]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_validate_service__["a" /* ValidateService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_validate_service__["a" /* ValidateService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__["FlashMessagesService"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__["FlashMessagesService"]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__services_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_auth_service__["a" /* AuthService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4__angular_router__["a" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__angular_router__["a" /* Router */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_5__services_search_service__["a" /* SearchService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__services_search_service__["a" /* SearchService */]) === "function" && _e || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_validate_service__["a" /* ValidateService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_validate_service__["a" /* ValidateService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__services_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_auth_service__["a" /* AuthService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* Router */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4__services_search_service__["a" /* SearchService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__services_search_service__["a" /* SearchService */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_5__services_toaster_service__["a" /* ToasterService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__services_toaster_service__["a" /* ToasterService */]) === "function" && _e || Object])
 ], RegisterComponent);
 
 var _a, _b, _c, _d, _e;
@@ -917,7 +918,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/searchtalent/searchtalent.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<form class=\"p-3\" (submit)=\"onSearchSubmit()\">\r\n    <div class=\"row text-left\">\r\n        <div class=\"col-5 form-group\">\r\n            <label class=\"font-weight-bold \" for=\"skillInput\">SKILL</label>\r\n            <input type=\"text\" id=\"skillInput\" name=\"skillInput\" [(ngModel)]=\"skillInput\" class=\"form-control form-rounded\">\r\n        </div>\r\n        <div class=\"col-5 form-group\">\r\n            <label class=\"font-weight-bold\" for=\"whereInput\">WHERE</label>\r\n            <input type=\"text\" id=\"whereInput\" name=\"whereInput\" [(ngModel)]=\"whereInput\" class=\"form-control form-rounded\">\r\n        </div>\r\n        <div class=\"col-2 form-group\" style=\"bottom:-26px;\">\r\n            <button type=\"submit\" class=\"btn btn-primary\">Find Talent</button>\r\n        </div>\r\n    </div>\r\n</form>\r\n<div class=\"\">\r\n    <div class=\"mt-5\">\r\n        <div *ngIf=\"viewArrayProfile==true\" class=\"\">\r\n            <ul class=\"list-group\" *ngFor=\"let data of dataArray\">\r\n                <button class=\"list-group-item list-group-item-action\" (click)=\"showProfile(data)\">\r\n                    <span>Name: {{data.firstName}} {{data.lastName}}</span>\r\n                    <br>\r\n                    <span>Email: {{data.email}}</span>\r\n                    <br>\r\n                    <span>Skill: {{data.skill}}</span>\r\n                    <br>\r\n                    <span>City: {{data.city}}</span>\r\n                </button>\r\n            </ul>\r\n            <div>\r\n                <ul class=\"pagination pagination-lg\">\r\n                    <button class=\"list-group-item list-group-item-action page-link\" *ngIf=\"currentPage>1\" (click)=\"onChangePageBack()\">\r\n                        <span>Previous</span>\r\n                    </button>\r\n                    <button class=\"list-group-item list-group-item-action page-link\" *ngIf=\"currentPage<numberOfPages\" (click)=\"onChangePage()\">\r\n                        <span>Next</span>\r\n                    </button>\r\n                </ul>\r\n            </div>\r\n            <div class=\"container\" *ngIf=\"dataArrayLength==0\">\r\n                <p class=\"lead\">No users found.</p>\r\n            </div>\r\n        </div>\r\n        <div *ngIf=\"viewArrayProfile==false\" class=\"card border-primary\">\r\n            <div class=\"card-body\">\r\n                <h2>{{profile.firstName}} {{profile.lastName}}</h2>\r\n                <br>\r\n                <span>Email: {{profile.email}}</span>\r\n                <br>\r\n                <span>Skill: {{profile.skill}}</span>\r\n                <br>\r\n                <span>City: {{profile.city}}</span>\r\n                <br>\r\n                <span>Experience: {{profile.experience}}</span>\r\n                <br>\r\n                <span>Volunteer: {{profile.volunteer}}</span>\r\n                <br>\r\n                <button class=\"btn btn-secondary\" (click)=\"returnSearch()\">Return</button>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>"
+module.exports = "<div class=\"container-fluid\">\r\n    <form class=\"p-3 d-inline\" (submit)=\"onSearchSubmit()\">\r\n        <div class=\"row container mr-auto ml-auto text-left\">\r\n            <div class=\"col-sm-5 form-group w-100\">\r\n                <label class=\"font-weight-bold \" for=\"skillInput\">SKILL</label>\r\n                <input type=\"text\" id=\"skillInput\" name=\"skillInput\" [(ngModel)]=\"skillInput\" class=\"form-control form-rounded\">\r\n            </div>\r\n            <div class=\"col-sm-5 form-group w-100\">\r\n                <label class=\"font-weight-bold\" for=\"whereInput\">WHERE</label>\r\n                <input type=\"text\" id=\"whereInput\" name=\"whereInput\" [(ngModel)]=\"whereInput\" class=\"form-control form-rounded\">\r\n            </div>\r\n            <div class=\"col-sm-2 form-group w-100\">\r\n                <button type=\"submit\" class=\"w-100 btn btn-primary\" style=\"margin-top:2.0rem !important;\">Find Talent</button>\r\n            </div>\r\n        </div>\r\n    </form>\r\n    <div class=\"\">\r\n        <div class=\"mt-5\">\r\n            <div *ngIf=\"viewArrayProfile==true\" class=\"\">\r\n                <ul class=\"list-group\" *ngFor=\"let data of dataArray\">\r\n                    <button class=\"list-group-item list-group-item-action\" (click)=\"showProfile(data)\">\r\n                        <span>Name: {{data.firstName}} {{data.lastName}}</span>\r\n                        <br>\r\n                        <span>Email: {{data.email}}</span>\r\n                        <br>\r\n                        <span>Skill: {{data.skill}}</span>\r\n                        <br>\r\n                        <span>City: {{data.city}}</span>\r\n                    </button>\r\n                </ul>\r\n                <div>\r\n                    <ul class=\"pagination pagination-lg\">\r\n                        <button class=\"list-group-item list-group-item-action page-link\" *ngIf=\"currentPage>1\" (click)=\"onChangePageBack()\">\r\n                            <span>&laquo; Previous</span>\r\n                        </button>\r\n                        <button class=\"list-group-item list-group-item-action page-link\" *ngIf=\"currentPage<numberOfPages\" (click)=\"onChangePage()\">\r\n                            <span>Next &raquo;</span>\r\n                        </button>\r\n                    </ul>\r\n                </div>\r\n                <div class=\"container\" *ngIf=\"dataArrayLength==0\">\r\n                    <p class=\"lead\">No users found.</p>\r\n                </div>\r\n            </div>\r\n            <div *ngIf=\"viewArrayProfile==false\" class=\"card border-primary\">\r\n                <div class=\"card-body\">\r\n                    <button class=\"btn btn-secondary\" (click)=\"returnSearch()\">&laquo; Return</button>\r\n                    <h2>{{profile.firstName}} {{profile.lastName}}</h2>\r\n                    <br>\r\n                    <span>Email: {{profile.email}}</span>\r\n                    <br>\r\n                    <span>Skill: {{profile.skill}}</span>\r\n                    <br>\r\n                    <span>City: {{profile.city}}</span>\r\n                    <br>\r\n                    <span>Experience: {{profile.experience}}</span>\r\n                    <br>\r\n                    <span>Volunteer: {{profile.volunteer}}</span>\r\n                    <br>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>"
 
 /***/ }),
 
@@ -1295,6 +1296,56 @@ SearchService = __decorate([
 
 var _a;
 //# sourceMappingURL=C:/Users/Fenco/Projects/TalentFinder/angular-src/src/search.service.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/services/toaster.service.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ToasterService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ng2_toastr__ = __webpack_require__("../../../../ng2-toastr/ng2-toastr.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ng2_toastr___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_ng2_toastr__);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var ToasterService = (function () {
+    function ToasterService(toastr, toastOpts) {
+        this.toastr = toastr;
+        this.toastOpts = toastOpts;
+        this.toastOpts.toastLife = 3000;
+        this.toastOpts.showCloseButton = true;
+    }
+    ToasterService.prototype.success = function (message) {
+        this.toastr.success(message);
+    };
+    ToasterService.prototype.info = function (message) {
+        this.toastr.info(message);
+    };
+    ToasterService.prototype.warning = function (message) {
+        this.toastr.warning(message);
+    };
+    ToasterService.prototype.error = function (message) {
+        this.toastr.error(message);
+    };
+    return ToasterService;
+}());
+ToasterService = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ng2_toastr__["ToastsManager"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ng2_toastr__["ToastsManager"]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ng2_toastr__["ToastOptions"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ng2_toastr__["ToastOptions"]) === "function" && _b || Object])
+], ToasterService);
+
+var _a, _b;
+//# sourceMappingURL=C:/Users/Fenco/Projects/TalentFinder/angular-src/src/toaster.service.js.map
 
 /***/ }),
 
