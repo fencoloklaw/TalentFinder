@@ -1,10 +1,10 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
-import {FlashMessagesService} from 'angular2-flash-messages';
 import {ValidateService} from '../../services/validate.service';
 import {AuthService} from '../../services/auth.service';
 import {DataService} from "../../services/data.service";
 import {SearchService} from "../../services/search.service";
+import {ToasterService} from "../../services/toaster.service";
 
 @Component({
     selector: 'app-home',
@@ -18,11 +18,11 @@ export class HomeComponent implements OnInit{
     loggedIn: boolean = false;
 
     constructor(private router: Router,
-                private flashMessage: FlashMessagesService,
                 private validateService: ValidateService,
                 private authService: AuthService,
                 private dataService: DataService,
-                private searchService: SearchService) {
+                private searchService: SearchService,
+                private toasterService: ToasterService) {
     }
 
     ngOnInit() {
@@ -42,7 +42,7 @@ export class HomeComponent implements OnInit{
             this.router.navigate(['searchtalent']);
         }
         else {
-            this.flashMessage.show('Where has not been specified', {cssClass: 'alert-danger', timeout: 3000});
+            this.toasterService.warning('Where field has no value');
         }
     }
 

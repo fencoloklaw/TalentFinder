@@ -1,10 +1,10 @@
 import {Component, HostListener, OnInit} from '@angular/core';
 import {ValidateService} from '../../services/validate.service';
 import {AuthService} from '../../services/auth.service';
-import {FlashMessagesService} from 'angular2-flash-messages';
 import {Router} from '@angular/router';
 import {SearchService} from '../../services/search.service';
 import {DataService} from "../../services/data.service";
+import {ToasterService} from "../../services/toaster.service";
 
 @Component({
     selector: 'app-searchtalent',
@@ -23,11 +23,11 @@ export class SearchtalentComponent implements OnInit {
     currentPage: any;
     profile: any;
     constructor(private router: Router,
-                private flashMessage: FlashMessagesService,
                 private validateService: ValidateService,
                 private authService: AuthService,
                 private searchService: SearchService,
-                private dataService: DataService) {
+                private dataService: DataService,
+                private  toasterService: ToasterService) {
     }
     ngOnInit() {
         if((this.validateService.validateNotNull(this.dataService.skillData))&&(this.validateService.validateNotNull(this.dataService.whereData))){
@@ -63,10 +63,7 @@ export class SearchtalentComponent implements OnInit {
         if (this.validateService.validateNotNull(this.whereInput)) {
             this.searchService.searchUser(search).subscribe(data => {
                 if (data.success) {
-                    this.flashMessage.show('success', {
-                        cssClass: 'alert-success',
-                        timeout: 2000
-                    });
+                    this.toasterService.success('Found Matches!');
                     this.searchData = data;
                     this.dataArrayLength = data.documents.length;
                     this.numberOfPages = Math.ceil(data.documents.length/10);
@@ -75,15 +72,12 @@ export class SearchtalentComponent implements OnInit {
                     this.viewArrayProfile = true;
                 }
                 else {
-                    this.flashMessage.show(data.msg, {
-                        cssClass: 'alert-danger',
-                        timeout: 2000
-                    });
+                    this.toasterService.warning(data.msg);
                 }
             });
         }
         else {
-            this.flashMessage.show('Where has not been specified', {cssClass: 'alert-danger', timeout: 3000});
+            this.toasterService.warning('Where field has no value');
         }
     }
 

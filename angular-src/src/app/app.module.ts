@@ -14,7 +14,6 @@ import {DashboardComponent} from './components/dashboard/dashboard.component';
 import {SearchtalentComponent} from './components/searchtalent/searchtalent.component';
 
 import {ValidateService} from './services/validate.service';
-import {FlashMessagesModule} from 'angular2-flash-messages';
 import {AuthService} from './services/auth.service';
 import {AuthGuard} from './guards/auth.guard';
 import {SearchService} from './services/search.service';
@@ -71,7 +70,6 @@ const appRoutes: Routes = [
         FormsModule,
         HttpModule,
         RouterModule.forRoot(appRoutes),
-        FlashMessagesModule,
         MatCardModule,
         MatToolbarModule,
         MatMenuModule,
