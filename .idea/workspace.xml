@@ -2,25 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df7d6c09-78c7-4447-9099-d5e2c5555a71" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/favicon.ico" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/inline.bundle.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/inline.bundle.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/main.bundle.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/main.bundle.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/polyfills.bundle.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/polyfills.bundle.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/styles.bundle.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/styles.bundle.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor.bundle.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor.bundle.js.map" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/home/home.component.html" afterPath="$PROJECT_DIR$/angular-src/src/app/components/home/home.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/searchtalent/searchtalent.component.html" afterPath="$PROJECT_DIR$/angular-src/src/app/components/searchtalent/searchtalent.component.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/services/auth.service.ts" afterPath="$PROJECT_DIR$/angular-src/src/app/services/auth.service.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/services/search.service.ts" afterPath="$PROJECT_DIR$/angular-src/src/app/services/search.service.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/environments/environment.ts" afterPath="$PROJECT_DIR$/angular-src/src/environments/environment.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/styles.css" afterPath="$PROJECT_DIR$/angular-src/src/styles.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/inline.bundle.js.map" afterPath="$PROJECT_DIR$/public/inline.bundle.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/main.bundle.js" afterPath="$PROJECT_DIR$/public/main.bundle.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/main.bundle.js.map" afterPath="$PROJECT_DIR$/public/main.bundle.js.map" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -33,7 +20,7 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="home.component.html" pinned="false" current-in-tab="false">
+          <file leaf-file-name="home.component.html" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/home/home.component.html">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="51">
@@ -53,11 +40,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="styles.css" pinned="false" current-in-tab="true">
+          <file leaf-file-name="styles.css" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/angular-src/src/styles.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="204">
-                  <caret line="27" column="1" lean-forward="false" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
+                <state relative-caret-position="-306">
+                  <caret line="36" column="44" lean-forward="false" selection-start-line="36" selection-start-column="44" selection-end-line="36" selection-end-column="44" />
                   <folding />
                 </state>
               </provider>
@@ -112,8 +99,8 @@
           <file leaf-file-name="searchtalent.component.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/searchtalent/searchtalent.component.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="323">
-                  <caret line="19" column="23" lean-forward="false" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
+                <state relative-caret-position="51">
+                  <caret line="3" column="40" lean-forward="false" selection-start-line="3" selection-start-column="40" selection-end-line="3" selection-end-column="40" />
                   <folding>
                     <element signature="e#1868#1875#0" expanded="true" />
                     <element signature="e#2114#2121#0" expanded="true" />
@@ -123,7 +110,7 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="login.component.ts" pinned="false" current-in-tab="true">
+          <file leaf-file-name="login.component.ts" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/login/login.component.ts">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="760">
@@ -138,28 +125,18 @@
           <file leaf-file-name="auth.service.ts" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/angular-src/src/app/services/auth.service.ts">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="221">
-                  <caret line="17" column="51" lean-forward="false" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="51" />
+                <state relative-caret-position="255">
+                  <caret line="49" column="29" lean-forward="false" selection-start-line="49" selection-start-column="29" selection-end-line="49" selection-end-column="29" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="environment.ts" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/angular-src/src/environments/environment.ts">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="68">
-                  <caret line="7" column="37" lean-forward="false" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="search.service.ts" pinned="false" current-in-tab="false">
+          <file leaf-file-name="search.service.ts" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/angular-src/src/app/services/search.service.ts">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="111">
-                  <caret line="17" column="54" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="17" selection-end-column="54" />
+                <state relative-caret-position="357">
+                  <caret line="24" column="30" lean-forward="false" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
                   <folding />
                 </state>
               </provider>
@@ -254,12 +231,12 @@
         <option value="$PROJECT_DIR$/angular-src/src/app/components/home/home.component.ts" />
         <option value="$PROJECT_DIR$/angular-src/src/app/app.module.ts" />
         <option value="$PROJECT_DIR$/app.js" />
-        <option value="$PROJECT_DIR$/angular-src/src/app/services/search.service.ts" />
-        <option value="$PROJECT_DIR$/angular-src/src/app/services/auth.service.ts" />
         <option value="$PROJECT_DIR$/angular-src/src/environments/environment.ts" />
         <option value="$PROJECT_DIR$/angular-src/src/app/components/home/home.component.html" />
         <option value="$PROJECT_DIR$/angular-src/src/app/components/searchtalent/searchtalent.component.html" />
         <option value="$PROJECT_DIR$/angular-src/src/styles.css" />
+        <option value="$PROJECT_DIR$/angular-src/src/app/services/auth.service.ts" />
+        <option value="$PROJECT_DIR$/angular-src/src/app/services/search.service.ts" />
       </list>
     </option>
   </component>
@@ -506,12 +483,12 @@
       <workItem from="1533964582328" duration="89000" />
       <workItem from="1533964789513" duration="6497000" />
       <workItem from="1534027786013" duration="9948000" />
-      <workItem from="1534088955689" duration="22221000" />
+      <workItem from="1534088955689" duration="23335000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38755000" />
+    <option name="totallyTimeSpent" value="39869000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -937,22 +914,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/angular-src/src/app/services/auth.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="17" column="51" lean-forward="false" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular-src/src/environments/environment.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="7" column="37" lean-forward="false" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/users.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -961,18 +922,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/angular-src/src/app/services/search.service.ts">
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/profile/profile.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
-          <caret line="17" column="54" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="17" selection-end-column="54" />
+        <state relative-caret-position="255">
+          <caret line="72" column="47" lean-forward="false" selection-start-line="72" selection-start-column="47" selection-end-line="72" selection-end-column="47" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/home/home.component.html">
+    <entry file="file://$PROJECT_DIR$/angular-src/src/styles.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="26" lean-forward="false" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
+        <state relative-caret-position="-306">
+          <caret line="36" column="44" lean-forward="false" selection-start-line="36" selection-start-column="44" selection-end-line="36" selection-end-column="44" />
           <folding />
         </state>
       </provider>
@@ -985,23 +946,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/home/home.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="26" lean-forward="false" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/searchtalent/searchtalent.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="23" lean-forward="false" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
+        <state relative-caret-position="51">
+          <caret line="3" column="40" lean-forward="false" selection-start-line="3" selection-start-column="40" selection-end-line="3" selection-end-column="40" />
           <folding>
             <element signature="e#1868#1875#0" expanded="true" />
             <element signature="e#2114#2121#0" expanded="true" />
             <element signature="e#2574#2581#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/profile/profile.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="72" column="47" lean-forward="false" selection-start-line="72" selection-start-column="47" selection-end-line="72" selection-end-column="47" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1015,10 +976,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/angular-src/src/styles.css">
+    <entry file="file://$PROJECT_DIR$/angular-src/src/environments/environment.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="27" column="1" lean-forward="false" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
+        <state relative-caret-position="68">
+          <caret line="7" column="37" lean-forward="false" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/services/auth.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="49" column="29" lean-forward="false" selection-start-line="49" selection-start-column="29" selection-end-line="49" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/services/search.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="24" column="30" lean-forward="false" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
           <folding />
         </state>
       </provider>
