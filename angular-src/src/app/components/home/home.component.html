@@ -7,6 +7,15 @@
                     <div class="col-sm-5 form-group w-100">
                         <label class="font-weight-bold " for="skillInput">EXPERTISE</label>
                         <input type="text" id="skillInput" name="skillInput" [(ngModel)]="skillInput" class="form-control form-rounded">
+                        <!--<label >EXPERTISE</label>-->
+                        <!--<mat-form-field class="example-full-width">-->
+                            <!--<input type="text" placeholder="Pick one" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto">-->
+                            <!--<mat-autocomplete #auto="matAutocomplete">-->
+                                <!--<mat-option *ngFor="let option of filteredOptions | async" [value]="option">-->
+                                    <!--{{option}}-->
+                                <!--</mat-option>-->
+                            <!--</mat-autocomplete>-->
+                        <!--</mat-form-field>-->
                     </div>
                     <div class="col-sm-5 form-group w-100">
                         <label class="font-weight-bold" for="whereInput">WHERE</label>
@@ -19,17 +28,28 @@
             </form>
         </div>
         <div class="h-25">
-            <div *ngIf="!loggedIn" class="row mb-3 mt-5" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
-                <div class="col">
-                    <button class="btn btn-outline-secondary" [routerLink]="['/register']">
-                        <span>Set Up Account</span>
-                    </button>
+            <div *ngIf="!authService.loggedIn()" class="mt-5" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+                <div class="row">
+                    <div class="col">
+                        <label>Looking for projects?</label>
+                        <button class="btn btn-secondary" [routerLink]="['/register']">
+                            <span>Create a Profile</span>
+                        </button>
+                    </div>
                 </div>
+                <!--<div class="row mt-lg-3">-->
+                    <!--<div class="col">-->
+                        <!--<label>Employers looking to create Projects?</label>-->
+                        <!--<button class="btn btn-outline-secondary" [routerLink]="['/registerBusiness']">-->
+                            <!--<span>Register here!</span>-->
+                        <!--</button>-->
+                    <!--</div>-->
+                <!--</div>-->
             </div>
-            <div *ngIf="loggedIn" class="row mb-3 mt-5">
+            <div *ngIf="authService.loggedIn()" class="row mb-3 mt-5">
                 <div class="col">
-                    <h3>Recommended Jobs</h3>
-                    <div id="recommendedJobsList">
+                    <h3>Local Talent</h3>
+                    <div id="localTalentScroll">
 
                     </div>
                 </div>

@@ -6,6 +6,7 @@ import {DataService} from "../../services/data.service";
 import {SearchService} from "../../services/search.service";
 import {ToasterService} from "../../services/toaster.service";
 
+
 @Component({
     selector: 'app-home',
     templateUrl: './home.component.html',
@@ -15,7 +16,10 @@ export class HomeComponent implements OnInit{
 
     skillInput: String;
     whereInput: String;
-    loggedIn: boolean = false;
+
+    // myControl = new FormControl();
+    // options: string[] = ['One', 'Two', 'Three'];
+    // filteredOptions: Observable<string[]>;
 
     constructor(private router: Router,
                 private validateService: ValidateService,
@@ -26,14 +30,26 @@ export class HomeComponent implements OnInit{
     }
 
     ngOnInit() {
+
+        // this.filteredOptions = this.myControl.valueChanges
+        //     .pipe(
+        //         startWith(''),
+        //         map(value => this._filter(value))
+        //     );
+
         this.skillInput = "";
         this.whereInput = "";
         this.whereInput = this.searchService.city;
-        this.loggedIn = this.authService.loggedIn();
         if(this.whereInput == ""){
             this.findLocation();
         }
     }
+
+    // private _filter(value: string): string[] {
+    //     const filterValue = value.toLowerCase();
+    //
+    //     return this.options.filter(option => option.toLowerCase().includes(filterValue));
+    // }
 
     onSearchSubmit() {
         if (this.validateService.validateNotNull(this.whereInput)) {
@@ -47,7 +63,8 @@ export class HomeComponent implements OnInit{
     }
 
     findLocation():void {
-        this.searchService.getAddress().subscribe(res => {
+        this.searchService.getAddress()
+            .subscribe(res => {
             if(res){
                 this.whereInput = res.city;
                 this.searchService.setAddress(res);

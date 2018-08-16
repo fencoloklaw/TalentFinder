@@ -9,7 +9,6 @@ const User = require('../models/user');
 
 //Register
 router.post('/register', (req, res) => {
-    //res.send('REGISTER');
     let newUser = new User({
         email: req.body.email,
         firstName: req.body.firstName,
@@ -36,7 +35,6 @@ router.post('/register', (req, res) => {
 
 //Authenticate
 router.post('/authenticate', (req, res) => {
-    //res.send('AUTHENTICATE');
     const email = req.body.email;
     const password = req.body.password;
 
@@ -49,15 +47,22 @@ router.post('/authenticate', (req, res) => {
         User.comparePassword(password, user.password, (err, isMatch) => {
             if (err) throw err;
             if (isMatch) {
-                const token = jwt.sign(user, config.secret, {
-                    expiresIn: 604800 // 1 week
-                });
+                header = {
+                    expiresIn: '7d'
+                };
 
+                payload = {
+                    user: {
+                        _id: user._id,
+                        email: user.email
+                    }
+                };
+                const token = jwt.sign(payload, config.secret, header);
                 res.json({
                     success: true,
-                    token: 'JWT ' + token,
+                    token:"JWT " + token,
                     user: {
-                        id: user._id,
+                        _id: user._id,
                         email: user.email
                     }
                 });

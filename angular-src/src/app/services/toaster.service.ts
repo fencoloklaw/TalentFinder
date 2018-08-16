@@ -1,13 +1,11 @@
-import {Injectable, ViewContainerRef} from '@angular/core';
-import {ToastOptions, ToastsManager} from "ng2-toastr";
+import {Injectable} from '@angular/core';
+import {ToastrConfig, ToastrService} from "ngx-toastr";
 
 @Injectable()
 export class ToasterService {
 
-  constructor(private toastr: ToastsManager,
-              private toastOpts: ToastOptions) {
-    this.toastOpts.toastLife = 3000;
-    this.toastOpts.showCloseButton = true;
+  constructor(private toastr: ToastrService) {
+
   }
 
     success(message: string) {

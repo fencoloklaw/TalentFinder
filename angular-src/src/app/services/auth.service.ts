@@ -1,63 +1,58 @@
 import {Injectable} from '@angular/core';
-import {Http, Headers} from '@angular/http';
-import 'rxjs/add/operator/map';
-import {tokenNotExpired} from 'angular2-jwt';
-import {environment} from "../../environments/environment";
+import {HttpClient, HttpHeaders} from "@angular/common/http";
+import {Observable} from "rxjs/index";
+import {JwtHelperService} from "@auth0/angular-jwt";
 
 @Injectable()
-export class AuthService {
+export class AuthService{
     authToken: any;
     user: any;
+    jwtHelper: JwtHelperService = new JwtHelperService();
 
-    constructor(private http: Http) {
+    constructor(private http: HttpClient) {
     }
 
-    registerUser(user) {
-        let headers = new Headers();
-        headers.append('Content-Type', 'application/json');
-        return this.http.post('users/register', user, {headers: headers})
-            .map(res => res.json());
+    tokenGetter(){
+        return localStorage.getItem('access_token');
     }
 
-    authenticateUser(user) {
-        let headers = new Headers();
-        headers.append('Content-Type', 'application/json');
-        return this.http.post('users/authenticate', user, {headers: headers})
-            .map(res => res.json());
+    // http://localhost:8080/
+    registerUser(user): Observable<any> {
+        return this.http.post('users/register', user);
+    }
+
+    authenticateUser(user):Observable<any> {
+        return this.http.post('users/authenticate', user);
     }
 
     storeUserData(token, user) {
-        localStorage.setItem('id_token', token);
+        localStorage.setItem('access_token', token);
         localStorage.setItem('user', JSON.stringify(user)); //local storage must be string
         this.authToken = token;
         this.user = user;
     }
 
-    getProfile() {
-        let headers = new Headers();
+    getProfile():Observable<any> {
         this.loadToken();
-        headers.append('Authorization', this.authToken);
-        headers.append('Content-Type', 'application/json');
-        return this.http.get('users/profile', {headers: headers})
-            .map(res => res.json());
+        let headers = new HttpHeaders().set('Authorization', this.tokenGetter());
+        return this.http.get('users/profile', {headers});
     }
 
-    updateProfile(user){
-        let headers = new Headers();
+    updateProfile(user):Observable<any>{
         this.loadToken();
-        headers.append('Authorization', this.authToken);
-        headers.append('Content-Type', 'application/json');
-        return this.http.put('users/updateProfile', user, {headers: headers})
-            .map(res => res.json());
+        let headers = new HttpHeaders().set('Authorization', this.tokenGetter());
+        return this.http.put('users/updateProfile',  user,{headers});
     }
 
     loadToken() {
-        const token = localStorage.getItem('id_token');
+        const token = localStorage.getItem('access_token');
         this.authToken = token;
     }
 
     loggedIn() {
-        return tokenNotExpired('id_token');
+        const refreshToken = this.tokenGetter();
+        return refreshToken != null && !this.jwtHelper.isTokenExpired(refreshToken);
+
     }
 
     logout() {

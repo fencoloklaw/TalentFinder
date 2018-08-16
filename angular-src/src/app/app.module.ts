@@ -41,8 +41,8 @@ import { SchedulerComponent } from './components/scheduler/scheduler.component';
 import {FlexLayoutModule} from "@angular/flex-layout";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {HttpClientModule} from "@angular/common/http";
-import {ToastModule} from "ng2-toastr";
 import {ToasterService} from "./services/toaster.service";
+import { ToastrModule } from 'ngx-toastr';
 
 const appRoutes: Routes = [
     {path: '', component: HomeComponent},
@@ -68,7 +68,7 @@ const appRoutes: Routes = [
     imports: [
         BrowserModule,
         FormsModule,
-        HttpModule,
+        HttpClientModule,
         RouterModule.forRoot(appRoutes),
         MatCardModule,
         MatToolbarModule,
@@ -93,7 +93,10 @@ const appRoutes: Routes = [
         ReactiveFormsModule,
         HttpClientModule,
         BrowserAnimationsModule,
-        ToastModule.forRoot()
+        ToastrModule.forRoot({
+            timeOut: 3000,
+            closeButton: true
+        }),
     ],
     providers: [ValidateService, AuthService, AuthGuard, SearchService, DataService, ToasterService],
     bootstrap: [AppComponent]
