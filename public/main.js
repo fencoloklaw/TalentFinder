@@ -1485,7 +1485,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_0__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\Fenco\Projects\TalentFinder\angular-src\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! C:\workspace\TalentFinder\angular-src\src\main.ts */"./src/main.ts");
 
 
 /***/ })
