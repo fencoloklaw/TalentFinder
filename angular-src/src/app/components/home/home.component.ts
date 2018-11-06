@@ -17,13 +17,9 @@ export class HomeComponent implements OnInit{
     skillInput: String;
     whereInput: String;
 
-    // myControl = new FormControl();
-    // options: string[] = ['One', 'Two', 'Three'];
-    // filteredOptions: Observable<string[]>;
-
     constructor(private router: Router,
                 private validateService: ValidateService,
-                private authService: AuthService,
+                public authService: AuthService,
                 private dataService: DataService,
                 private searchService: SearchService,
                 private toasterService: ToasterService) {

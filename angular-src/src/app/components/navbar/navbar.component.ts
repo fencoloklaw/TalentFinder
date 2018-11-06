@@ -15,6 +15,9 @@ export class NavbarComponent {
                 private toasterService: ToasterService) {
     }
 
+    loggedIn() {
+        return this.authService.loggedIn();
+    }
 
     onLogoutClick() {
         this.authService.logout();

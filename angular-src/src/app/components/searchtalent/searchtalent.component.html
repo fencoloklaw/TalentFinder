@@ -1,25 +1,25 @@
 <div class="container-fluid">
     <form class="p-3 d-inline" (submit)="onSearchSubmit()">
-        <div class="row container mr-auto ml-auto text-left">
-            <div class="col-sm-5 form-group w-100">
+        <div class="row container mr-auto text-left">
+            <div class="col-sm-5 form-group">
                 <label class="font-weight-bold " for="skillInput">EXPERTISE</label>
                 <input type="text" id="skillInput" name="skillInput" [(ngModel)]="skillInput" class="form-control form-rounded">
             </div>
-            <div class="col-sm-5 form-group w-100">
+            <div class="col-sm-5 form-group">
                 <label class="font-weight-bold" for="whereInput">WHERE</label>
                 <input type="text" id="whereInput" name="whereInput" [(ngModel)]="whereInput" class="form-control form-rounded">
             </div>
-            <div class="col-sm-2 form-group w-100">
-                <button type="submit" class="w-100 btn btn-primary" style="margin-top:2.0rem !important;">Find Talent</button>
+            <div class="col-sm-2 form-group">
+                <button type="submit" class="btn btn-primary" style="margin-top:2.0rem !important;">Find Talent</button>
             </div>
         </div>
     </form>
-    <div class="">
-        <div class="mt-5">
-            <div *ngIf="viewArrayProfile==true" class="">
+    <div class="row mt-5">
+        <div class="col-6">
+            <div class="">
                 <ul class="list-group" *ngFor="let data of dataArray">
                     <button class="list-group-item list-group-item-action" (click)="showProfile(data)">
-                        <span>Name: {{data.firstName}} {{data.lastName}}</span>
+                        <span>Name: {{data.lastName}}, {{data.firstName}}</span>
                         <br>
                         <!--<span>Email: {{data.email}}</span>-->
                         <!--<br>-->
@@ -42,21 +42,50 @@
                     <p class="lead">No users found.</p>
                 </div>
             </div>
-            <div *ngIf="viewArrayProfile==false" class="card border-primary">
-                <div class="card-body">
-                    <button class="btn btn-secondary" (click)="returnSearch()">&laquo; Return</button>
-                    <h2>{{profile.firstName}} {{profile.lastName}}</h2>
-                    <br>
-                    <span>Email: {{profile.email}}</span>
-                    <br>
-                    <span>Skill: {{profile.skill}}</span>
-                    <br>
-                    <span>City: {{profile.city}}</span>
-                    <br>
-                    <span>Experience: {{profile.experience}}</span>
-                    <br>
-                    <span>Volunteer: {{profile.volunteer}}</span>
-                    <br>
+        </div>
+        <div *ngIf="viewArrayProfile==false" class="col-6">
+            <div class="card border-primary">
+                <div class="card-body" style="height:600px; max-height:600px;">
+                    <div class="row">
+                        <div class="col">
+                            <h2>{{profile.lastName}}, {{profile.firstName}}</h2>
+                        </div>
+                        <div class="col">
+                            <button type="button" class="close" aria-label="Close" (click)="returnSearch()">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <span>Status:</span>
+                            <span>Online</span>
+                        </div>
+                        <div class="col">
+                            <button class="float-right btn btn-primary">
+                                <span>Contact Me</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div>
+                        <span>Email: {{profile.email}}</span>
+                    </div>
+                    <div>
+                        <span>Skill: {{profile.skill}}</span>
+                    </div>
+                    <div>
+                        <span>City: {{profile.city}}</span>
+                    </div>
+                    <div>
+                        <span>Experience: {{profile.experience}}</span>
+                    </div>
+                    <div>
+                        <span>Volunteer: {{profile.volunteer}}</span>
+                    </div>
+                    <div>
+                        <span>Availability:</span>
+                        <table></table>
+                    </div>
                 </div>
             </div>
         </div>
