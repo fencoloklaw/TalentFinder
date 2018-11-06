@@ -19,13 +19,15 @@
             <div class="">
                 <ul class="list-group" *ngFor="let data of dataArray">
                     <button class="list-group-item list-group-item-action" (click)="showProfile(data)">
-                        <span>Name: {{data.lastName}}, {{data.firstName}}</span>
-                        <br>
-                        <!--<span>Email: {{data.email}}</span>-->
-                        <!--<br>-->
-                        <span>Skill: {{data.skill}}</span>
-                        <br>
-                        <span>City: {{data.city}}</span>
+                        <div>
+                            <span>Name: {{data.lastName}}, {{data.firstName}}</span>
+                        </div>
+                        <div>
+                            <span>Skill: {{data.skill}}</span>
+                        </div>
+                        <div>
+                            <span>City: {{data.city}}</span>
+                        </div>
                     </button>
                 </ul>
                 <div>
