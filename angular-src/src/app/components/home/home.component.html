@@ -31,7 +31,7 @@
             <div *ngIf="!authService.loggedIn()" class="mt-5" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
                 <div class="row">
                     <div class="col">
-                        <label>Looking for projects?</label>
+                        <label class="mr-1">Looking for projects?</label>
                         <button class="btn btn-secondary" [routerLink]="['/register']">
                             <span>Create a Profile</span>
                         </button>
