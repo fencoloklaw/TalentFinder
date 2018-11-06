@@ -1,2 +1,2 @@
-# authApp
-basic auth app
+# TalentFinder
+
