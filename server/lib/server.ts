@@ -3,7 +3,7 @@ import app from './app';
 import * as https from 'https';
 import * as fs from 'fs';
 
-const PORT = 8080;
+const PORT = process.env.PORT || 8080;
 
 // const httpsOptions = {
 //     key: fs.readFileSync('config/server.key'),

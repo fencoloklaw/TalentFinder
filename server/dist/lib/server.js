@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 // lib/server.ts
 const app_1 = require("./app");
-const PORT = 8080;
+const PORT = process.env.PORT || 8080;
 // const httpsOptions = {
 //     key: fs.readFileSync('config/server.key'),
 //     cert: fs.readFileSync('config/server.crt')
