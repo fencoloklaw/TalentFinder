@@ -41,14 +41,23 @@ class Routes {
             const email = req.body.email;
             const password = req.body.password;
             this.userController.getUserByEmail(email, (err, user) => {
-                if (err)
-                    throw err;
+                if (err) {
+                    return res.status(500).send({
+                        message: 'Failed to getUserByEmail'
+                    });
+                }
                 if (!user) {
-                    return res.json({ success: false, msg: 'User not found' });
+                    return res.status(500).send({
+                        success: false,
+                        msg: 'User not found'
+                    });
                 }
                 this.userController.comparePassword(password, user.password, (err, isMatch) => {
-                    if (err)
-                        throw err;
+                    if (err) {
+                        res.status(500).send({
+                            message: 'Failed to comparePassword'
+                        });
+                    }
                     if (isMatch) {
                         let header = {
                             expiresIn: '7d'
@@ -60,7 +69,7 @@ class Routes {
                             }
                         };
                         const token = jwt.sign(payload, this.config.secret, header);
-                        res.json({
+                        res.status(200).json({
                             success: true,
                             token: "JWT " + token,
                             user: {
@@ -70,7 +79,7 @@ class Routes {
                         });
                     }
                     else {
-                        return res.json({ success: false, msg: 'Wrong Password' });
+                        res.status(401).json({ success: false, msg: 'Wrong Password' });
                     }
                 });
             });

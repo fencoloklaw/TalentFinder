@@ -13,13 +13,13 @@ export class SearchService {
     }
 
     searchUser(search): Observable<any> {
-        let headers = new HttpHeaders({'Content-Type':'application/x-www-form-urlencoded'});
-        return this.http.post('search', search, {headers: headers});
+        let headers = new HttpHeaders({'Content-Type':'application/json'});
+        return this.http.post(environment.serverUrl+'search', search, {headers: headers});
     }
 
     getRecommendedJobs(): Observable<any>{
-        let headers = new HttpHeaders({'Content-Type':'application/x-www-form-urlencoded'});
-        return this.http.post('search', '', {headers: headers});
+        let headers = new HttpHeaders({'Content-Type':'application/json'});
+        return this.http.post(environment.serverUrl+'search', '', {headers: headers});
     }
 
     getAddress() : Observable<any>{

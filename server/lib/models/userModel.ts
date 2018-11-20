@@ -1,8 +1,22 @@
 //   /lib/models/userModel.ts
 import * as mongoose from 'mongoose';
-import { IUser } from "../interface/userInterface";
 
-export const Schema = mongoose.Schema;
+const Schema = mongoose.Schema;
+
+export interface IUser extends mongoose.Document {
+    firstName: string;
+    email: string;
+    lastName: string;
+    password: string;
+    experience: string;
+    skill: string;
+    volunteer: string;
+    city: string;
+    region: string;
+    description: string;
+    certificates: string;
+    awards: string;
+}
 
 export var UserSchema = new Schema ({
     firstName: {

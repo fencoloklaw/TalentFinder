@@ -10,7 +10,7 @@ class UserController {
     }
     getUserByEmail(email, res) {
         const query = { email: email };
-        User.findOne(query, res);
+        User.findOne(query, res.status(200));
     }
     getMatchingUsers(req, res) {
         User.find({ "skill": new RegExp(req.body.skillInput, "i"),

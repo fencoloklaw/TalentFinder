@@ -2,8 +2,8 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 //   /lib/models/userModel.ts
 const mongoose = require("mongoose");
-exports.Schema = mongoose.Schema;
-exports.UserSchema = new exports.Schema({
+const Schema = mongoose.Schema;
+exports.UserSchema = new Schema({
     firstName: {
         type: String,
         required: false
