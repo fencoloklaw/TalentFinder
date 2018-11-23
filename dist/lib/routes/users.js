@@ -1,8 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const userModel_1 = require("../models/userModel");
 const userController_1 = require("../contollers/userController");
-const jwt = require("jsonwebtoken");
 const passport = require("passport");
 const database_1 = require("../../config/database");
 class Routes {
@@ -13,102 +11,49 @@ class Routes {
     routes(app) {
         app.route('/register')
             .post((req, res) => {
-            let newUser = new userModel_1.UserSchema({
-                email: req.body.email,
-                firstName: req.body.firstName,
-                lastName: req.body.lastName,
-                password: req.body.password,
-                experience: "",
-                skill: req.body.skill,
-                volunteer: "",
-                city: req.body.city,
-                region: req.body.region,
-                description: "",
-                certificates: "",
-                awards: ""
-            });
-            this.userController.addUser(newUser, (err) => {
-                if (err) {
-                    res.json({ success: false, msg: 'Failed to register user: ' + err });
-                }
-                else {
-                    res.json({ success: true, msg: 'User Registered' });
-                }
-            });
+            this.userController.addUser(req.body, res);
         });
         app.route('/authenticate')
             .post((req, res) => {
-            const email = req.body.email;
-            const password = req.body.password;
-            this.userController.getUserByEmail(email, (err, user) => {
-                if (err) {
-                    return res.status(500).send({
-                        message: 'Failed to getUserByEmail'
-                    });
-                }
-                if (!user) {
-                    return res.status(500).send({
-                        success: false,
-                        msg: 'User not found'
-                    });
-                }
-                this.userController.comparePassword(password, user.password, (err, isMatch) => {
-                    if (err) {
-                        res.status(500).send({
-                            message: 'Failed to comparePassword'
-                        });
-                    }
-                    if (isMatch) {
-                        let header = {
-                            expiresIn: '7d'
-                        };
-                        let payload = {
-                            user: {
-                                _id: user._id,
-                                email: user.email
-                            }
-                        };
-                        const token = jwt.sign(payload, this.config.secret, header);
-                        res.status(200).json({
-                            success: true,
-                            token: "JWT " + token,
-                            user: {
-                                _id: user._id,
-                                email: user.email
-                            }
-                        });
-                    }
-                    else {
-                        res.status(401).json({ success: false, msg: 'Wrong Password' });
-                    }
-                });
-            });
+            this.userController.getUserByEmail(req, res);
         });
         app.route('/profile')
-            .get(passport.authenticate('jwt', { session: false }), (req, res) => {
+            .get(this.userController.authenticate('jwt'), (req, res) => {
             res.json({ user: req.user });
         });
+        // passport.authenticate('jwt', {session: false}), (req: any, res: Response) => {
+        // res.json({user: req.user});
+        // });
+        // app.route('/updateProfile')
+        //     .put(passport.authenticate('jwt', {session: false}), (req: Request, res: Response) => {
+        //         this.userController.updateUser(req, (err, data)=>{
+        //             if(err) throw err;
+        //             res.json({user:data});
+        //         });
+        //     });
         app.route('/updateProfile')
             .put(passport.authenticate('jwt', { session: false }), (req, res) => {
-            this.userController.updateUser(req, (err, data) => {
-                if (err)
-                    throw err;
-                res.json({ user: data });
-            });
+            this.userController.updateUser(req, res);
         });
+        // app.route('/search')
+        //     .post((req: Request, res: Response, next: NextFunction) => {
+        //         this.userController.getMatchingUsers(req, (err, data) => {
+        //             if (err) {
+        //                 res.status(500).send(err);
+        //             }
+        //             if (!data) {
+        //                 return res.json({success: false, msg: 'User not found'});
+        //             }
+        //             res.json({
+        //                 success: true,
+        //                 documents: data
+        //             });
+        //         });
+        //     });
         app.route('/search')
-            .post((req, res, next) => {
-            this.userController.getMatchingUsers(req, (err, data) => {
-                if (err)
-                    throw err;
-                if (!data) {
-                    return res.json({ success: false, msg: 'User not found' });
-                }
-                res.json({
-                    success: true,
-                    documents: data
-                });
-            });
+            .post((req, res) => {
+            console.log(req.body);
+            this.userController.getMatchingUsers(req, res);
         });
         app.route('/')
             .get((req, res) => {

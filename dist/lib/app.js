@@ -6,8 +6,10 @@ const bodyParser = require("body-parser");
 const users_1 = require("./routes/users");
 const mongoose = require("mongoose");
 const cors = require("cors");
+const userController_1 = require("./contollers/userController");
 class App {
     constructor() {
+        this.userController = new userController_1.UserController();
         this.routePrv = new users_1.Routes();
         this.mongoUrl = 'mongodb://fencol:a1b2c3@ds115352.mlab.com:15352/authapp';
         this.app = express();
@@ -19,9 +21,10 @@ class App {
         // support application/json type post data
         this.app.use(bodyParser.json());
         //support application/x-www-form-urlencoded post data
-        this.app.use(bodyParser.urlencoded({ extended: false }));
+        // this.app.use(bodyParser.urlencoded({ extended: false }));
         // this.app.use(express.static('public'));
         this.app.use(cors());
+        this.app.use(this.userController.initialize());
     }
     mongoSetup() {
         mongoose.Promise = global.Promise;
