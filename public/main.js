@@ -57,6 +57,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppComponent", function() { return AppComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ngx-toastr */ "./node_modules/ngx-toastr/fesm5/ngx-toastr.js");
+/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../environments/environment */ "./src/environments/environment.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -68,10 +69,12 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 };
 
 
+
 var AppComponent = /** @class */ (function () {
     function AppComponent(toastr) {
         this.toastr = toastr;
         this.title = 'app works!';
+        console.log(_environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].production);
     }
     AppComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -314,7 +317,7 @@ module.exports = "@media (max-width: 600px) {\r\n    .column {\r\n        float:
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"text-center jumbotron\">\r\n    <!--<div class=\"h-25 text-left mb-md-5 h1\">TalentFinder</div>-->\r\n    <div class=\"container-fluid\">\r\n        <div class=\"h-50\">\r\n            <form class=\"d-inline\" (submit)=\"onSearchSubmit()\">\r\n                <div class=\"row container mr-auto ml-auto text-left\">\r\n                    <div class=\"col-sm-5 form-group w-100\">\r\n                        <label class=\"font-weight-bold \" for=\"skillInput\">EXPERTISE</label>\r\n                        <input type=\"text\" id=\"skillInput\" name=\"skillInput\" [(ngModel)]=\"skillInput\" class=\"form-control form-rounded\">\r\n                        <!--<label >EXPERTISE</label>-->\r\n                        <!--<mat-form-field class=\"example-full-width\">-->\r\n                            <!--<input type=\"text\" placeholder=\"Pick one\" aria-label=\"Number\" matInput [formControl]=\"myControl\" [matAutocomplete]=\"auto\">-->\r\n                            <!--<mat-autocomplete #auto=\"matAutocomplete\">-->\r\n                                <!--<mat-option *ngFor=\"let option of filteredOptions | async\" [value]=\"option\">-->\r\n                                    <!--{{option}}-->\r\n                                <!--</mat-option>-->\r\n                            <!--</mat-autocomplete>-->\r\n                        <!--</mat-form-field>-->\r\n                    </div>\r\n                    <div class=\"col-sm-5 form-group w-100\">\r\n                        <label class=\"font-weight-bold\" for=\"whereInput\">WHERE</label>\r\n                        <input type=\"text\" id=\"whereInput\" name=\"whereInput\" [(ngModel)]=\"whereInput\" class=\"form-control form-rounded\">\r\n                    </div>\r\n                    <div class=\"col-sm-2 form-group w-100\">\r\n                        <button type=\"submit\" class=\"w-100 btn btn-primary\" style=\"margin-top:2.0rem !important;\">Find Talent</button>\r\n                    </div>\r\n                </div>\r\n            </form>\r\n        </div>\r\n        <div class=\"h-25\">\r\n            <div *ngIf=\"!authService.loggedIn()\" class=\"mt-5\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\">\r\n                <div class=\"row\">\r\n                    <div class=\"col\">\r\n                        <label>Looking for projects?</label>\r\n                        <button class=\"btn btn-secondary\" [routerLink]=\"['/register']\">\r\n                            <span>Create a Profile</span>\r\n                        </button>\r\n                    </div>\r\n                </div>\r\n                <!--<div class=\"row mt-lg-3\">-->\r\n                    <!--<div class=\"col\">-->\r\n                        <!--<label>Employers looking to create Projects?</label>-->\r\n                        <!--<button class=\"btn btn-outline-secondary\" [routerLink]=\"['/registerBusiness']\">-->\r\n                            <!--<span>Register here!</span>-->\r\n                        <!--</button>-->\r\n                    <!--</div>-->\r\n                <!--</div>-->\r\n            </div>\r\n            <div *ngIf=\"authService.loggedIn()\" class=\"row mb-3 mt-5\">\r\n                <div class=\"col\">\r\n                    <h3>Local Talent</h3>\r\n                    <div id=\"localTalentScroll\">\r\n\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>"
+module.exports = "<div class=\"text-center jumbotron\">\r\n    <!--<div class=\"h-25 text-left mb-md-5 h1\">TalentFinder</div>-->\r\n    <div class=\"container-fluid\">\r\n        <div class=\"h-50\">\r\n            <form class=\"d-inline\" (submit)=\"onSearchSubmit()\">\r\n                <div class=\"row container mr-auto ml-auto text-left\">\r\n                    <div class=\"col-sm-5 form-group w-100\">\r\n                        <label class=\"font-weight-bold \" for=\"skillInput\">EXPERTISE</label>\r\n                        <input type=\"text\" id=\"skillInput\" name=\"skillInput\" [(ngModel)]=\"skillInput\" class=\"form-control form-rounded\">\r\n                        <!--<label >EXPERTISE</label>-->\r\n                        <!--<mat-form-field class=\"example-full-width\">-->\r\n                            <!--<input type=\"text\" placeholder=\"Pick one\" aria-label=\"Number\" matInput [formControl]=\"myControl\" [matAutocomplete]=\"auto\">-->\r\n                            <!--<mat-autocomplete #auto=\"matAutocomplete\">-->\r\n                                <!--<mat-option *ngFor=\"let option of filteredOptions | async\" [value]=\"option\">-->\r\n                                    <!--{{option}}-->\r\n                                <!--</mat-option>-->\r\n                            <!--</mat-autocomplete>-->\r\n                        <!--</mat-form-field>-->\r\n                    </div>\r\n                    <div class=\"col-sm-5 form-group w-100\">\r\n                        <label class=\"font-weight-bold\" for=\"whereInput\">WHERE</label>\r\n                        <input type=\"text\" id=\"whereInput\" name=\"whereInput\" [(ngModel)]=\"whereInput\" class=\"form-control form-rounded\">\r\n                    </div>\r\n                    <div class=\"col-sm-2 form-group w-100\">\r\n                        <button type=\"submit\" class=\"w-100 btn btn-primary\" style=\"margin-top:2.0rem !important;\">Find Talent</button>\r\n                    </div>\r\n                </div>\r\n            </form>\r\n        </div>\r\n        <div class=\"h-25\">\r\n            <div *ngIf=\"!authService.loggedIn()\" class=\"mt-5\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\">\r\n                <div class=\"row\">\r\n                    <div class=\"col\">\r\n                        <label class=\"mr-1\">Looking for projects?</label>\r\n                        <button class=\"btn btn-secondary\" [routerLink]=\"['/register']\">\r\n                            <span>Create a Profile</span>\r\n                        </button>\r\n                    </div>\r\n                </div>\r\n                <!--<div class=\"row mt-lg-3\">-->\r\n                    <!--<div class=\"col\">-->\r\n                        <!--<label>Employers looking to create Projects?</label>-->\r\n                        <!--<button class=\"btn btn-outline-secondary\" [routerLink]=\"['/registerBusiness']\">-->\r\n                            <!--<span>Register here!</span>-->\r\n                        <!--</button>-->\r\n                    <!--</div>-->\r\n                <!--</div>-->\r\n            </div>\r\n            <div *ngIf=\"authService.loggedIn()\" class=\"row mb-3 mt-5\">\r\n                <div class=\"col\">\r\n                    <h3>Local Talent</h3>\r\n                    <div id=\"localTalentScroll\">\r\n\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>"
 
 /***/ }),
 
@@ -352,9 +355,6 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 var HomeComponent = /** @class */ (function () {
-    // myControl = new FormControl();
-    // options: string[] = ['One', 'Two', 'Three'];
-    // filteredOptions: Observable<string[]>;
     function HomeComponent(router, validateService, authService, dataService, searchService, toasterService) {
         this.router = router;
         this.validateService = validateService;
@@ -550,7 +550,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-expand-lg navbar-dark bg-primary floating-action-navbar\">\r\n    <a class=\"navbar-brand\" [routerLink]=\"['/']\">TalentFinder</a>\r\n    <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\r\n        <span class=\"navbar-toggler-icon\"></span>\r\n    </button>\r\n\r\n    <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\r\n        <ul class=\"navbar-nav ml-auto\">\r\n            <li class=\"nav-item text-right\" *ngIf=\"authService.loggedIn()\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\">\r\n                <a class=\"nav-link\" [routerLink]=\"['/dashboard']\">Dashboard</a>\r\n            </li>\r\n            <li class=\"nav-item text-right\" *ngIf=\"authService.loggedIn()\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\">\r\n                <a class=\"nav-link\" [routerLink]=\"['/profile']\">Profile</a>\r\n            </li>\r\n            <li class=\"nav-item text-right\" *ngIf=\"!authService.loggedIn()\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\">\r\n                <a class=\"nav-link\" [routerLink]=\"['/login']\">Login</a>\r\n            </li>\r\n            <li class=\"nav-item text-right\" *ngIf=\"!authService.loggedIn()\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\">\r\n                <a class=\"nav-link\" [routerLink]=\"['/register']\">Register</a>\r\n            </li>\r\n            <li class=\"nav-item text-right\" *ngIf=\"authService.loggedIn()\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\">\r\n                <a class=\"nav-link\" (click)=\"onLogoutClick()\" href=\"#\">Logout</a>\r\n            </li>\r\n        </ul>\r\n    </div>\r\n</nav>\r\n"
+module.exports = "<nav class=\"navbar navbar-expand-lg navbar-dark bg-primary floating-action-navbar\">\r\n    <a class=\"navbar-brand\" [routerLink]=\"['/']\">TalentFinder</a>\r\n    <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\r\n        <span class=\"navbar-toggler-icon\"></span>\r\n    </button>\r\n\r\n    <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\r\n        <ul class=\"navbar-nav ml-auto\">\r\n            <li class=\"nav-item text-right\" *ngIf=\"loggedIn()\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\">\r\n                <a class=\"nav-link\" [routerLink]=\"['/dashboard']\">Dashboard</a>\r\n            </li>\r\n            <li class=\"nav-item text-right\" *ngIf=\"loggedIn()\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\">\r\n                <a class=\"nav-link\" [routerLink]=\"['/profile']\">Profile</a>\r\n            </li>\r\n            <li class=\"nav-item text-right\" *ngIf=\"!loggedIn()\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\">\r\n                <a class=\"nav-link\" [routerLink]=\"['/login']\">Login</a>\r\n            </li>\r\n            <li class=\"nav-item text-right\" *ngIf=\"!loggedIn()\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\">\r\n                <a class=\"nav-link\" [routerLink]=\"['/register']\">Register</a>\r\n            </li>\r\n            <li class=\"nav-item text-right\" *ngIf=\"loggedIn()\">\r\n                <a class=\"nav-link\" (click)=\"onLogoutClick()\" href=\"#\">Logout</a>\r\n            </li>\r\n        </ul>\r\n    </div>\r\n</nav>\r\n"
 
 /***/ }),
 
@@ -587,6 +587,9 @@ var NavbarComponent = /** @class */ (function () {
         this.router = router;
         this.toasterService = toasterService;
     }
+    NavbarComponent.prototype.loggedIn = function () {
+        return this.authService.loggedIn();
+    };
     NavbarComponent.prototype.onLogoutClick = function () {
         var _this = this;
         this.authService.logout();
@@ -950,7 +953,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container-fluid\">\r\n    <form class=\"p-3 d-inline\" (submit)=\"onSearchSubmit()\">\r\n        <div class=\"row container mr-auto ml-auto text-left\">\r\n            <div class=\"col-sm-5 form-group w-100\">\r\n                <label class=\"font-weight-bold \" for=\"skillInput\">EXPERTISE</label>\r\n                <input type=\"text\" id=\"skillInput\" name=\"skillInput\" [(ngModel)]=\"skillInput\" class=\"form-control form-rounded\">\r\n            </div>\r\n            <div class=\"col-sm-5 form-group w-100\">\r\n                <label class=\"font-weight-bold\" for=\"whereInput\">WHERE</label>\r\n                <input type=\"text\" id=\"whereInput\" name=\"whereInput\" [(ngModel)]=\"whereInput\" class=\"form-control form-rounded\">\r\n            </div>\r\n            <div class=\"col-sm-2 form-group w-100\">\r\n                <button type=\"submit\" class=\"w-100 btn btn-primary\" style=\"margin-top:2.0rem !important;\">Find Talent</button>\r\n            </div>\r\n        </div>\r\n    </form>\r\n    <div class=\"\">\r\n        <div class=\"mt-5\">\r\n            <div *ngIf=\"viewArrayProfile==true\" class=\"\">\r\n                <ul class=\"list-group\" *ngFor=\"let data of dataArray\">\r\n                    <button class=\"list-group-item list-group-item-action\" (click)=\"showProfile(data)\">\r\n                        <span>Name: {{data.firstName}} {{data.lastName}}</span>\r\n                        <br>\r\n                        <!--<span>Email: {{data.email}}</span>-->\r\n                        <!--<br>-->\r\n                        <span>Skill: {{data.skill}}</span>\r\n                        <br>\r\n                        <span>City: {{data.city}}</span>\r\n                    </button>\r\n                </ul>\r\n                <div>\r\n                    <ul class=\"pagination pagination-lg\">\r\n                        <button class=\"list-group-item list-group-item-action page-link\" *ngIf=\"currentPage>1\" (click)=\"onChangePageBack()\">\r\n                            <span>&laquo; Previous</span>\r\n                        </button>\r\n                        <button class=\"list-group-item list-group-item-action page-link\" *ngIf=\"currentPage<numberOfPages\" (click)=\"onChangePage()\">\r\n                            <span>Next &raquo;</span>\r\n                        </button>\r\n                    </ul>\r\n                </div>\r\n                <div class=\"container\" *ngIf=\"dataArrayLength==0\">\r\n                    <p class=\"lead\">No users found.</p>\r\n                </div>\r\n            </div>\r\n            <div *ngIf=\"viewArrayProfile==false\" class=\"card border-primary\">\r\n                <div class=\"card-body\">\r\n                    <button class=\"btn btn-secondary\" (click)=\"returnSearch()\">&laquo; Return</button>\r\n                    <h2>{{profile.firstName}} {{profile.lastName}}</h2>\r\n                    <br>\r\n                    <span>Email: {{profile.email}}</span>\r\n                    <br>\r\n                    <span>Skill: {{profile.skill}}</span>\r\n                    <br>\r\n                    <span>City: {{profile.city}}</span>\r\n                    <br>\r\n                    <span>Experience: {{profile.experience}}</span>\r\n                    <br>\r\n                    <span>Volunteer: {{profile.volunteer}}</span>\r\n                    <br>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>"
+module.exports = "<div class=\"container-fluid\">\r\n    <form class=\"p-3 d-inline\" (submit)=\"onSearchSubmit()\">\r\n        <div class=\"row container mr-auto text-left\">\r\n            <div class=\"col-sm-5 form-group\">\r\n                <label class=\"font-weight-bold \" for=\"skillInput\">EXPERTISE</label>\r\n                <input type=\"text\" id=\"skillInput\" name=\"skillInput\" [(ngModel)]=\"skillInput\" class=\"form-control form-rounded\">\r\n            </div>\r\n            <div class=\"col-sm-5 form-group\">\r\n                <label class=\"font-weight-bold\" for=\"whereInput\">WHERE</label>\r\n                <input type=\"text\" id=\"whereInput\" name=\"whereInput\" [(ngModel)]=\"whereInput\" class=\"form-control form-rounded\">\r\n            </div>\r\n            <div class=\"col-sm-2 form-group\">\r\n                <button type=\"submit\" class=\"btn btn-primary\" style=\"margin-top:2.0rem !important;\">Find Talent</button>\r\n            </div>\r\n        </div>\r\n    </form>\r\n    <div class=\"row mt-5\">\r\n        <div class=\"col-6\">\r\n            <div class=\"\">\r\n                <ul class=\"list-group\" *ngFor=\"let data of dataArray\">\r\n                    <button class=\"list-group-item list-group-item-action\" (click)=\"showProfile(data)\">\r\n                        <div>\r\n                            <span>Name: {{data.lastName}}, {{data.firstName}}</span>\r\n                        </div>\r\n                        <div>\r\n                            <span>Skill: {{data.skill}}</span>\r\n                        </div>\r\n                        <div>\r\n                            <span>City: {{data.city}}</span>\r\n                        </div>\r\n                    </button>\r\n                </ul>\r\n                <div>\r\n                    <ul class=\"pagination pagination-lg\">\r\n                        <button class=\"list-group-item list-group-item-action page-link\" *ngIf=\"currentPage>1\" (click)=\"onChangePageBack()\">\r\n                            <span>&laquo; Previous</span>\r\n                        </button>\r\n                        <button class=\"list-group-item list-group-item-action page-link\" *ngIf=\"currentPage<numberOfPages\" (click)=\"onChangePage()\">\r\n                            <span>Next &raquo;</span>\r\n                        </button>\r\n                    </ul>\r\n                </div>\r\n                <div class=\"container\" *ngIf=\"dataArrayLength==0\">\r\n                    <p class=\"lead\">No users found.</p>\r\n                </div>\r\n            </div>\r\n        </div>\r\n        <div *ngIf=\"viewArrayProfile==false\" class=\"col-6\">\r\n            <div class=\"card border-primary\">\r\n                <div class=\"card-body\" style=\"height:600px; max-height:600px;\">\r\n                    <div class=\"row\">\r\n                        <div class=\"col\">\r\n                            <h2>{{profile.lastName}}, {{profile.firstName}}</h2>\r\n                        </div>\r\n                        <div class=\"col\">\r\n                            <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"returnSearch()\">\r\n                                <span aria-hidden=\"true\">&times;</span>\r\n                            </button>\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"row\">\r\n                        <div class=\"col\">\r\n                            <span>Status: </span>\r\n                            <span>Online</span>\r\n                        </div>\r\n                        <div class=\"col\">\r\n                            <button class=\"float-right btn btn-primary\">\r\n                                <span>Contact Me</span>\r\n                            </button>\r\n                        </div>\r\n                    </div>\r\n                    <div>\r\n                        <span>Email: {{profile.email}}</span>\r\n                    </div>\r\n                    <div>\r\n                        <span>Skill: {{profile.skill}}</span>\r\n                    </div>\r\n                    <div>\r\n                        <span>City: {{profile.city}}</span>\r\n                    </div>\r\n                    <div>\r\n                        <span>Experience: {{profile.experience}}</span>\r\n                    </div>\r\n                    <div>\r\n                        <span>Volunteer: {{profile.volunteer}}</span>\r\n                    </div>\r\n                    <div>\r\n                        <span>Availability:</span>\r\n                        <table></table>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>"
 
 /***/ }),
 
@@ -1169,6 +1172,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
 /* harmony import */ var _auth0_angular_jwt__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @auth0/angular-jwt */ "./node_modules/@auth0/angular-jwt/index.js");
+/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../environments/environment */ "./src/environments/environment.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1181,6 +1185,7 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
+
 var AuthService = /** @class */ (function () {
     function AuthService(http) {
         this.http = http;
@@ -1189,12 +1194,11 @@ var AuthService = /** @class */ (function () {
     AuthService.prototype.tokenGetter = function () {
         return localStorage.getItem('access_token');
     };
-    // http://localhost:8080/
     AuthService.prototype.registerUser = function (user) {
-        return this.http.post('users/register', user);
+        return this.http.post(_environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].serverUrl + 'register', user);
     };
     AuthService.prototype.authenticateUser = function (user) {
-        return this.http.post('users/authenticate', user);
+        return this.http.post(_environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].serverUrl + 'authenticate', user);
     };
     AuthService.prototype.storeUserData = function (token, user) {
         localStorage.setItem('access_token', token);
@@ -1205,12 +1209,12 @@ var AuthService = /** @class */ (function () {
     AuthService.prototype.getProfile = function () {
         this.loadToken();
         var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]().set('Authorization', this.tokenGetter());
-        return this.http.get('users/profile', { headers: headers });
+        return this.http.get(_environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].serverUrl + 'profile', { headers: headers });
     };
     AuthService.prototype.updateProfile = function (user) {
         this.loadToken();
         var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]().set('Authorization', this.tokenGetter());
-        return this.http.put('users/updateProfile', user, { headers: headers });
+        return this.http.put(_environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].serverUrl + 'updateProfile', user, { headers: headers });
     };
     AuthService.prototype.loadToken = function () {
         var token = localStorage.getItem('access_token');
@@ -1283,6 +1287,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SearchService", function() { return SearchService; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../environments/environment */ "./src/environments/environment.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1294,6 +1299,7 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 };
 
 
+
 var SearchService = /** @class */ (function () {
     function SearchService(http) {
         this.http = http;
@@ -1302,11 +1308,11 @@ var SearchService = /** @class */ (function () {
     }
     SearchService.prototype.searchUser = function (search) {
         var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({ 'Content-Type': 'application/json' });
-        return this.http.post('users/search', search, { headers: headers });
+        return this.http.post(_environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].serverUrl + 'search', search, { headers: headers });
     };
     SearchService.prototype.getRecommendedJobs = function () {
         var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({ 'Content-Type': 'application/json' });
-        return this.http.post('users/search', '', { headers: headers });
+        return this.http.post(_environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].serverUrl + 'search', '', { headers: headers });
     };
     SearchService.prototype.getAddress = function () {
         return this.http.get('https://ipinfo.io/geo');
