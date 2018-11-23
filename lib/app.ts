@@ -5,6 +5,7 @@ import { Routes } from "./routes/users";
 import * as mongoose from "mongoose";
 import * as cors from "cors";
 import { UserController } from "./contollers/userController";
+import * as path from "path";
 
 class App {
     public userController: UserController = new UserController();
@@ -17,7 +18,6 @@ class App {
         this.config();
         this.routePrv.routes(this.app);
         this.mongoSetup();
-        this.app.use(express.static('public'));
     }
 
     private config(): void{
@@ -25,7 +25,7 @@ class App {
         this.app.use(bodyParser.json());
         //support application/x-www-form-urlencoded post data
         // this.app.use(bodyParser.urlencoded({ extended: false }));
-        // this.app.use(express.static('public'));
+        this.app.use('/static', express.static(path.join(__dirname, 'public')));
         this.app.use(cors());
         this.app.use(this.userController.initialize());
     }

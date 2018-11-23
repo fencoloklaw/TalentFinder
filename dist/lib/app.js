@@ -7,6 +7,7 @@ const users_1 = require("./routes/users");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const userController_1 = require("./contollers/userController");
+const path = require("path");
 class App {
     constructor() {
         this.userController = new userController_1.UserController();
@@ -16,14 +17,13 @@ class App {
         this.config();
         this.routePrv.routes(this.app);
         this.mongoSetup();
-        this.app.use(express.static('public'));
     }
     config() {
         // support application/json type post data
         this.app.use(bodyParser.json());
         //support application/x-www-form-urlencoded post data
         // this.app.use(bodyParser.urlencoded({ extended: false }));
-        // this.app.use(express.static('public'));
+        this.app.use('/static', express.static(path.join(__dirname, 'public')));
         this.app.use(cors());
         this.app.use(this.userController.initialize());
     }
