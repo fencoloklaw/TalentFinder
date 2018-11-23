@@ -16,6 +16,7 @@ class App {
         this.config();
         this.routePrv.routes(this.app);
         this.mongoSetup();
+        this.app.use(express.static('public'));
     }
     config() {
         // support application/json type post data
