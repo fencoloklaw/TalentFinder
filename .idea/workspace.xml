@@ -6,11 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="df7d6c09-78c7-4447-9099-d5e2c5555a71" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/lib/routes/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/lib/routes/users.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/lib/routes/users.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/lib/routes/users.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/lib/server.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/lib/server.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/routes/users.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/routes/users.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/server.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,7 +36,7 @@
             <entry file="file://$PROJECT_DIR$/lib/routes/users.ts">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="357">
-                  <caret line="66" selection-start-line="66" selection-end-line="71" selection-end-column="17" />
+                  <caret line="66" column="25" selection-start-line="66" selection-start-column="25" selection-end-line="66" selection-end-column="25" />
                   <folding>
                     <element signature="e#24#66#0" expanded="true" />
                   </folding>
@@ -51,8 +47,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/lib/app.ts">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="340">
-                  <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+                <state relative-caret-position="372">
+                  <caret line="33" column="49" lean-forward="true" selection-start-line="33" selection-start-column="49" selection-end-line="33" selection-end-column="49" />
                   <folding>
                     <element signature="e#14#49#0" expanded="true" />
                   </folding>
@@ -481,12 +477,12 @@
       <workItem from="1542700734519" duration="239000" />
       <workItem from="1542706446825" duration="754000" />
       <workItem from="1542943056457" duration="2222000" />
-      <workItem from="1542948174852" duration="7305000" />
+      <workItem from="1542948174852" duration="7777000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="189387000" />
+    <option name="totallyTimeSpent" value="189859000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -831,8 +827,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/app.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+        <state relative-caret-position="372">
+          <caret line="33" column="49" lean-forward="true" selection-start-line="33" selection-start-column="49" selection-end-line="33" selection-end-column="49" />
           <folding>
             <element signature="e#14#49#0" expanded="true" />
           </folding>
@@ -842,7 +838,7 @@
     <entry file="file://$PROJECT_DIR$/lib/routes/users.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
-          <caret line="66" selection-start-line="66" selection-end-line="71" selection-end-column="17" />
+          <caret line="66" column="25" selection-start-line="66" selection-start-column="25" selection-end-line="66" selection-end-column="25" />
           <folding>
             <element signature="e#24#66#0" expanded="true" />
           </folding>

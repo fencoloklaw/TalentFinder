@@ -55,12 +55,12 @@ class Routes {
             console.log(req.body);
             this.userController.getMatchingUsers(req, res);
         });
-        // app.route('/')
-        //     .get((req: Request, res: Response) => {
-        //         res.status(200).send({
-        //             message: 'GET request successfulll!!!!'
-        //         })
-        //     })
+        app.route('/users')
+            .get((req, res) => {
+            res.status(200).send({
+                message: 'GET request successfulll!!!!'
+            });
+        });
         // // Contact
         // app.route('/contact')
         // // GET endpoint
