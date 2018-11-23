@@ -9,15 +9,15 @@ class Routes {
         this.config = new database_1.DatabaseConfig();
     }
     routes(app) {
-        app.route('/register')
+        app.route('/users/register')
             .post((req, res) => {
             this.userController.addUser(req.body, res);
         });
-        app.route('/authenticate')
+        app.route('/users/authenticate')
             .post((req, res) => {
             this.userController.getUserByEmail(req, res);
         });
-        app.route('/profile')
+        app.route('/users/profile')
             .get(this.userController.authenticate('jwt'), (req, res) => {
             res.json({ user: req.user });
         });
@@ -31,7 +31,7 @@ class Routes {
         //             res.json({user:data});
         //         });
         //     });
-        app.route('/updateProfile')
+        app.route('/users/updateProfile')
             .put(passport.authenticate('jwt', { session: false }), (req, res) => {
             this.userController.updateUser(req, res);
         });
@@ -50,17 +50,17 @@ class Routes {
         //             });
         //         });
         //     });
-        app.route('/search')
+        app.route('/users/search')
             .post((req, res) => {
             console.log(req.body);
             this.userController.getMatchingUsers(req, res);
         });
-        app.route('/')
-            .get((req, res) => {
-            res.status(200).send({
-                message: 'GET request successfulll!!!!'
-            });
-        });
+        // app.route('/')
+        //     .get((req: Request, res: Response) => {
+        //         res.status(200).send({
+        //             message: 'GET request successfulll!!!!'
+        //         })
+        //     })
         // // Contact
         // app.route('/contact')
         // // GET endpoint

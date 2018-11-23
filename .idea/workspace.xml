@@ -4,7 +4,14 @@
     <bookmark url="file://$PROJECT_DIR$/angular-src/src/app/services/search.service.ts" line="16" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="df7d6c09-78c7-4447-9099-d5e2c5555a71" name="Default" comment="" />
+    <list default="true" id="df7d6c09-78c7-4447-9099-d5e2c5555a71" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/lib/routes/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/lib/routes/users.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/lib/routes/users.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/lib/routes/users.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/lib/server.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/lib/server.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/routes/users.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/routes/users.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/server.ts" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,11 +36,11 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/lib/routes/users.ts">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="68">
-                  <caret line="8" selection-start-line="8" selection-end-line="8" selection-end-column="65" />
+                <state relative-caret-position="357">
+                  <caret line="66" selection-start-line="66" selection-end-line="71" selection-end-column="17" />
                   <folding>
                     <element signature="e#24#66#0" expanded="true" />
                   </folding>
@@ -42,46 +49,12 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/public/index.html">
+            <entry file="file://$PROJECT_DIR$/lib/app.ts">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="17">
-                  <caret line="1" column="6" lean-forward="true" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/public/main.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state>
+                <state relative-caret-position="340">
+                  <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
                   <folding>
-                    <element signature="n#style#0;n#button#0;n#div#2;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#button#0;n#div#2;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-                    <element signature="e#2039#2046#0" expanded="true" />
-                    <element signature="e#2300#2307#0" expanded="true" />
-                    <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-                    <element signature="e#3250#3257#1" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/angular-src/package.json">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="391">
-                  <caret line="23" column="34" lean-forward="true" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/lib/contollers/userController.ts">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="558">
-                  <caret line="54" column="13" selection-start-line="54" selection-start-column="13" selection-end-line="54" selection-end-column="13" />
-                  <folding>
-                    <element signature="e#0#37#0" expanded="true" />
+                    <element signature="e#14#49#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -90,8 +63,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/lib/server.ts">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="323">
-                  <caret line="19" column="3" lean-forward="true" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
+                <state relative-caret-position="289">
+                  <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
                   <folding>
                     <element signature="e#17#41#0" expanded="true" />
                   </folding>
@@ -106,7 +79,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$USER_HOME$/Desktop/routes/users.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state>
+                <state relative-caret-position="97">
                   <caret line="82" column="75" selection-start-line="82" selection-start-column="75" selection-end-line="82" selection-end-column="75" />
                 </state>
               </provider>
@@ -115,7 +88,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$USER_HOME$/Desktop/models/user.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1258">
+                <state relative-caret-position="539">
                   <caret line="74" column="42" selection-start-line="74" selection-start-column="35" selection-end-line="74" selection-end-column="42" />
                 </state>
               </provider>
@@ -193,12 +166,11 @@
     </replaceStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/angular-src" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/angular-src/src/app/components/profile/profile.component.html" />
         <option value="$PROJECT_DIR$/angular-src/src/app/app.component.html" />
         <option value="$PROJECT_DIR$/angular-src/angular-cli.json" />
         <option value="$PROJECT_DIR$/angular-src/src/app/components/profile/profile.component.ts" />
@@ -246,9 +218,10 @@
         <option value="$PROJECT_DIR$/lib/contollers/userController.ts" />
         <option value="$PROJECT_DIR$/tsconfig.json" />
         <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/angular-src/package.json" />
         <option value="$PROJECT_DIR$/lib/server.ts" />
         <option value="$PROJECT_DIR$/lib/app.ts" />
-        <option value="$PROJECT_DIR$/angular-src/package.json" />
+        <option value="$PROJECT_DIR$/lib/routes/users.ts" />
       </list>
     </option>
   </component>
@@ -280,11 +253,6 @@
             <path>
               <item name="TalentFinder" type="b2602c69:ProjectViewProjectNode" />
               <item name="TalentFinder" type="462c0819:PsiDirectoryNode" />
-              <item name="angular-src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TalentFinder" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TalentFinder" type="462c0819:PsiDirectoryNode" />
               <item name="dist" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -297,6 +265,12 @@
               <item name="TalentFinder" type="b2602c69:ProjectViewProjectNode" />
               <item name="TalentFinder" type="462c0819:PsiDirectoryNode" />
               <item name="lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TalentFinder" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TalentFinder" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="routes" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TalentFinder" type="b2602c69:ProjectViewProjectNode" />
@@ -344,7 +318,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="npm.prod serve --env=prod">
+  <component name="RunManager" selected="npm.angular">
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
@@ -507,18 +481,18 @@
       <workItem from="1542700734519" duration="239000" />
       <workItem from="1542706446825" duration="754000" />
       <workItem from="1542943056457" duration="2222000" />
-      <workItem from="1542948174852" duration="5652000" />
+      <workItem from="1542948174852" duration="7305000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="187734000" />
+    <option name="totallyTimeSpent" value="189387000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26066098" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26066098" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -534,7 +508,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="TypeScript" order="7" weight="0.32827735" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.4936034" visible="true" weight="0.32792208" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.4936034" visible="true" weight="0.32792208" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5042644" side_tool="true" weight="0.32899022" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.32899022" />
       <window_info anchor="bottom" id="Messages" order="11" />
@@ -719,20 +693,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Desktop/routes/users.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="82" column="75" selection-start-line="82" selection-start-column="75" selection-end-line="82" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/models/user.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1258">
-          <caret line="74" column="42" selection-start-line="74" selection-start-column="35" selection-end-line="74" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Desktop/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="697">
@@ -743,27 +703,10 @@
     <entry file="file://$PROJECT_DIR$/public/polyfills.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/contollers/userController.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
-          <caret line="54" column="13" selection-start-line="54" selection-start-column="13" selection-end-line="54" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tsconfig.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="6" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/config/passport.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="46" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="46" />
         </state>
       </provider>
     </entry>
@@ -792,55 +735,13 @@
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="30" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dist/lib/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-124" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dist/lib/server.js">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/server.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="3" lean-forward="true" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
-          <folding>
-            <element signature="e#17#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/app.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="26" column="68" selection-start-line="26" selection-start-column="68" selection-end-line="26" selection-end-column="68" />
-          <folding>
-            <element signature="e#14#49#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/angular-src/src/app/services/auth.service.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
           <caret line="35" column="22" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/routes/users.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="8" selection-start-line="8" selection-end-line="8" selection-end-column="65" />
-          <folding>
-            <element signature="e#24#66#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -868,10 +769,83 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/Desktop/routes/users.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="82" column="75" selection-start-line="82" selection-start-column="75" selection-end-line="82" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/angular-src/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
-          <caret line="23" column="34" lean-forward="true" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
+          <caret line="23" column="34" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/models/user.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="539">
+          <caret line="74" column="42" selection-start-line="74" selection-start-column="35" selection-end-line="74" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/config/passport.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="46" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="30" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/lib/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-124" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/contollers/userController.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-680">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/server.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <element signature="e#17#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/app.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+          <folding>
+            <element signature="e#14#49#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/routes/users.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="66" selection-start-line="66" selection-end-line="71" selection-end-column="17" />
+          <folding>
+            <element signature="e#24#66#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

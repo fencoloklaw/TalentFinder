@@ -11,17 +11,17 @@ export class Routes {
 
     public routes(app): void {
 
-        app.route('/register')
+        app.route('/users/register')
             .post((req: Request, res: Response) => {
             this.userController.addUser(req.body, res);
         });
 
-        app.route('/authenticate')
+        app.route('/users/authenticate')
             .post((req: Request, res: Response) => {
                 this.userController.getUserByEmail(req, res);
             });
 
-        app.route('/profile')
+        app.route('/users/profile')
             .get(this.userController.authenticate('jwt'), (req, res) => {
                    res.json({user: req.user});
             });
@@ -36,7 +36,7 @@ export class Routes {
         //             res.json({user:data});
         //         });
         //     });
-        app.route('/updateProfile')
+        app.route('/users/updateProfile')
             .put(passport.authenticate('jwt', {session: false}), (req: Request, res: Response) => {
                 this.userController.updateUser(req, res);
             });
@@ -56,7 +56,7 @@ export class Routes {
         //         });
         //     });
 
-        app.route('/search')
+        app.route('/users/search')
             .post((req: Request, res: Response) => {
                 console.log(req.body);
                this.userController.getMatchingUsers(req, res);
@@ -64,12 +64,12 @@ export class Routes {
 
 
 
-        app.route('/')
-            .get((req: Request, res: Response) => {
-                res.status(200).send({
-                    message: 'GET request successfulll!!!!'
-                })
-            })
+        // app.route('/')
+        //     .get((req: Request, res: Response) => {
+        //         res.status(200).send({
+        //             message: 'GET request successfulll!!!!'
+        //         })
+        //     })
 
         // // Contact
         // app.route('/contact')
