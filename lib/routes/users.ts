@@ -4,12 +4,21 @@ import { UserController } from "../contollers/userController";
 import * as jwt from 'jsonwebtoken';
 import * as passport from 'passport';
 import {DatabaseConfig} from "../../config/database";
+import * as path from "path";
 
 export class Routes {
     public userController: UserController = new UserController();
     public config: DatabaseConfig = new DatabaseConfig();
 
     public routes(app): void {
+
+        app.get('/', (req, res) => {
+            res.send('Invalid Endpoint');
+        });
+
+        app.get('*', (req, res) => {
+            res.sendFile(path.join(__dirname, '../public/index.html'));
+        });
 
         app.route('/users/register')
             .post((req: Request, res: Response) => {

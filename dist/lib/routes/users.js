@@ -3,12 +3,19 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const userController_1 = require("../contollers/userController");
 const passport = require("passport");
 const database_1 = require("../../config/database");
+const path = require("path");
 class Routes {
     constructor() {
         this.userController = new userController_1.UserController();
         this.config = new database_1.DatabaseConfig();
     }
     routes(app) {
+        app.get('/', (req, res) => {
+            res.send('Invalid Endpoint');
+        });
+        app.get('*', (req, res) => {
+            res.sendFile(path.join(__dirname, '../public/index.html'));
+        });
         app.route('/users/register')
             .post((req, res) => {
             this.userController.addUser(req.body, res);
