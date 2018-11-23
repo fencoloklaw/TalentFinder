@@ -1172,7 +1172,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
 /* harmony import */ var _auth0_angular_jwt__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @auth0/angular-jwt */ "./node_modules/@auth0/angular-jwt/index.js");
-/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../environments/environment */ "./src/environments/environment.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1185,7 +1184,6 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
-
 var AuthService = /** @class */ (function () {
     function AuthService(http) {
         this.http = http;
@@ -1195,10 +1193,10 @@ var AuthService = /** @class */ (function () {
         return localStorage.getItem('access_token');
     };
     AuthService.prototype.registerUser = function (user) {
-        return this.http.post(_environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].serverUrl + 'register', user);
+        return this.http.post('/users/register', user);
     };
     AuthService.prototype.authenticateUser = function (user) {
-        return this.http.post(_environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].serverUrl + 'authenticate', user);
+        return this.http.post('/users/authenticate', user);
     };
     AuthService.prototype.storeUserData = function (token, user) {
         localStorage.setItem('access_token', token);
@@ -1209,12 +1207,12 @@ var AuthService = /** @class */ (function () {
     AuthService.prototype.getProfile = function () {
         this.loadToken();
         var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]().set('Authorization', this.tokenGetter());
-        return this.http.get(_environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].serverUrl + 'profile', { headers: headers });
+        return this.http.get('/users/profile', { headers: headers });
     };
     AuthService.prototype.updateProfile = function (user) {
         this.loadToken();
         var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]().set('Authorization', this.tokenGetter());
-        return this.http.put(_environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].serverUrl + 'updateProfile', user, { headers: headers });
+        return this.http.put('/users/updateProfile', user, { headers: headers });
     };
     AuthService.prototype.loadToken = function () {
         var token = localStorage.getItem('access_token');
@@ -1287,7 +1285,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SearchService", function() { return SearchService; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
-/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../environments/environment */ "./src/environments/environment.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1299,7 +1296,6 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 };
 
 
-
 var SearchService = /** @class */ (function () {
     function SearchService(http) {
         this.http = http;
@@ -1308,11 +1304,11 @@ var SearchService = /** @class */ (function () {
     }
     SearchService.prototype.searchUser = function (search) {
         var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({ 'Content-Type': 'application/json' });
-        return this.http.post(_environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].serverUrl + 'search', search, { headers: headers });
+        return this.http.post('/users/search', search, { headers: headers });
     };
     SearchService.prototype.getRecommendedJobs = function () {
         var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({ 'Content-Type': 'application/json' });
-        return this.http.post(_environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].serverUrl + 'search', '', { headers: headers });
+        return this.http.post('/users/search', '', { headers: headers });
     };
     SearchService.prototype.getAddress = function () {
         return this.http.get('https://ipinfo.io/geo');
