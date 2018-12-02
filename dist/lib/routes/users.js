@@ -59,7 +59,6 @@ class Routes {
         //     });
         app.route('/users/search')
             .post((req, res) => {
-            console.log(req.body);
             this.userController.getMatchingUsers(req, res);
         });
         app.route('/users')

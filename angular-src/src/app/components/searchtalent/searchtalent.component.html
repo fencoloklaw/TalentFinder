@@ -1,20 +1,43 @@
 <div class="container-fluid">
     <form class="p-3 d-inline" (submit)="onSearchSubmit()">
         <div class="row container mr-auto text-left">
-            <div class="col-sm-5 form-group">
+            <div class="col-5 form-group">
                 <label class="font-weight-bold " for="skillInput">EXPERTISE</label>
                 <input type="text" id="skillInput" name="skillInput" [(ngModel)]="skillInput" class="form-control form-rounded">
             </div>
-            <div class="col-sm-5 form-group">
+            <div class="col-5 form-group">
                 <label class="font-weight-bold" for="whereInput">WHERE</label>
                 <input type="text" id="whereInput" name="whereInput" [(ngModel)]="whereInput" class="form-control form-rounded">
             </div>
-            <div class="col-sm-2 form-group">
+            <div class="col-2 form-group">
                 <button type="submit" class="btn btn-primary" style="margin-top:2.0rem !important;">Find Talent</button>
             </div>
         </div>
     </form>
     <div class="row mt-5">
+        <div class="col-2">
+            <div>
+                <span><b>My Recent Search</b></span>
+            </div>
+            <div class="col">
+                <label class="row">Filter</label>
+                <div class="row">
+                    <button>filter1</button>
+                </div>
+            </div>
+            <div class="col">
+                <label class="row">Filter</label>
+                <div class="row">
+                    <button>filter2</button>
+                </div>
+                <div class="row">
+                    <button>filter3</button>
+                </div>
+                <div class="row">
+                    <button>filter4</button>
+                </div>
+            </div>
+        </div>
         <div class="col-6">
             <div class="">
                 <ul class="list-group" *ngFor="let data of dataArray">
@@ -45,7 +68,7 @@
                 </div>
             </div>
         </div>
-        <div *ngIf="viewArrayProfile==false" class="col-6">
+        <div *ngIf="viewArrayProfile==false" class="col-4">
             <div class="card border-primary">
                 <div class="card-body" style="height:600px; max-height:600px;">
                     <div class="row">

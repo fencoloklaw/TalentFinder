@@ -18,11 +18,11 @@ export class AuthService{
     }
 
     registerUser(user): Observable<any> {
-        return this.http.post('/users/register', user);
+        return this.http.post(environment.serverUrl + '/users/register', user);
     }
 
     authenticateUser(user):Observable<any> {
-        return this.http.post('/users/authenticate', user);
+        return this.http.post(environment.serverUrl + '/users/authenticate', user);
     }
 
     storeUserData(token, user) {
@@ -35,13 +35,13 @@ export class AuthService{
     getProfile():Observable<any> {
         this.loadToken();
         let headers = new HttpHeaders().set('Authorization', this.tokenGetter());
-        return this.http.get('/users/profile', {headers});
+        return this.http.get(environment.serverUrl + '/users/profile', {headers});
     }
 
     updateProfile(user):Observable<any>{
         this.loadToken();
         let headers = new HttpHeaders().set('Authorization', this.tokenGetter());
-        return this.http.put('/users/updateProfile',  user,{headers});
+        return this.http.put(environment.serverUrl + '/users/updateProfile',  user,{headers});
     }
 
     loadToken() {

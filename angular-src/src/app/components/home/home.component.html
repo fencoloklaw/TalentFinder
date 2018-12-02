@@ -1,59 +1,47 @@
 <div class="text-center jumbotron">
-    <!--<div class="h-25 text-left mb-md-5 h1">TalentFinder</div>-->
-    <div class="container-fluid">
-        <div class="h-50">
-            <form class="d-inline" (submit)="onSearchSubmit()">
-                <div class="row container mr-auto ml-auto text-left">
-                    <div class="col-sm-5 form-group w-100">
-                        <label class="font-weight-bold " for="skillInput">EXPERTISE</label>
-                        <input type="text" id="skillInput" name="skillInput" [(ngModel)]="skillInput" class="form-control form-rounded">
-                        <!--<label >EXPERTISE</label>-->
-                        <!--<mat-form-field class="example-full-width">-->
-                            <!--<input type="text" placeholder="Pick one" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto">-->
-                            <!--<mat-autocomplete #auto="matAutocomplete">-->
-                                <!--<mat-option *ngFor="let option of filteredOptions | async" [value]="option">-->
-                                    <!--{{option}}-->
-                                <!--</mat-option>-->
-                            <!--</mat-autocomplete>-->
-                        <!--</mat-form-field>-->
-                    </div>
-                    <div class="col-sm-5 form-group w-100">
-                        <label class="font-weight-bold" for="whereInput">WHERE</label>
-                        <input type="text" id="whereInput" name="whereInput" [(ngModel)]="whereInput" class="form-control form-rounded">
-                    </div>
-                    <div class="col-sm-2 form-group w-100">
-                        <button type="submit" class="w-100 btn btn-primary" style="margin-top:2.0rem !important;">Find Talent</button>
-                    </div>
+    <div class="container">
+        <form (submit)="onSearchSubmit()">
+            <div class="row h1">
+                <span class="mr-auto ml-auto">EveryJob.ca</span>
+            </div>
+            <div class="row text-left">
+                <div class=" ml-auto col-sm-5 form-group w-100">
+                    <label class="font-weight-bold " for="skillInput">EXPERTISE</label>
+                    <input type="text" id="skillInput" name="skillInput" [(ngModel)]="skillInput" class="form-control form-rounded">
                 </div>
-            </form>
-        </div>
-        <div class="h-25">
+                <div class="mr-auto col-sm-5 form-group w-100">
+                    <label class="font-weight-bold" for="whereInput">WHERE</label>
+                    <input type="text" id="whereInput" name="whereInput" [(ngModel)]="whereInput" class="form-control form-rounded">
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="form-group ml-auto mr-3">
+                    <button type="submit" class="btn btn-primary">Find Talent</button>
+                </div>
+                <div class="form-group mr-auto ml-3">
+                    <button type="submit" class="btn btn-primary">Find Jobs</button>
+                </div>
+            </div>
+        </form>
+        <div>
             <div *ngIf="!authService.loggedIn()" class="mt-5" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
                 <div class="row">
                     <div class="col">
-                        <label class="mr-1">Looking for projects?</label>
-                        <button class="btn btn-secondary" [routerLink]="['/register']">
-                            <span>Create a Profile</span>
+                        <button class="btn btn-secondary" [routerLink]="['/']">
+                            <span>Upload a Resume</span>
                         </button>
                     </div>
                 </div>
-                <!--<div class="row mt-lg-3">-->
-                    <!--<div class="col">-->
-                        <!--<label>Employers looking to create Projects?</label>-->
-                        <!--<button class="btn btn-outline-secondary" [routerLink]="['/registerBusiness']">-->
-                            <!--<span>Register here!</span>-->
-                        <!--</button>-->
-                    <!--</div>-->
-                <!--</div>-->
-            </div>
-            <div *ngIf="authService.loggedIn()" class="row mb-3 mt-5">
-                <div class="col">
-                    <h3>Local Talent</h3>
-                    <div id="localTalentScroll">
-
+                <div class="row">
+                    <div class="col">
+                        <button class="btn btn-secondary" [routerLink]="['/']">
+                            <span>Post a Job</span>
+                        </button>
                     </div>
                 </div>
             </div>
+            <!--<div *ngIf="authService.loggedIn()" class="row mb-3 mt-5">-->
+            <!--</div>-->
         </div>
     </div>
 </div>

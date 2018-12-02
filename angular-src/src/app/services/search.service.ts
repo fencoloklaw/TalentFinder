@@ -14,12 +14,12 @@ export class SearchService {
 
     searchUser(search): Observable<any> {
         let headers = new HttpHeaders({'Content-Type':'application/json'});
-        return this.http.post('/users/search', search, {headers: headers});
+        return this.http.post(environment.serverUrl + '/users/search', search, {headers: headers});
     }
 
     getRecommendedJobs(): Observable<any>{
         let headers = new HttpHeaders({'Content-Type':'application/json'});
-        return this.http.post('/users/search', '', {headers: headers});
+        return this.http.post(environment.serverUrl + '/users/search', '', {headers: headers});
     }
 
     getAddress() : Observable<any>{

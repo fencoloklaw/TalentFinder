@@ -67,7 +67,6 @@ export class Routes {
 
         app.route('/users/search')
             .post((req: Request, res: Response) => {
-                console.log(req.body);
                this.userController.getMatchingUsers(req, res);
             });
 
