@@ -1,3 +1,8 @@
+.form-group.required .control-label:after {
+    content: " *";
+    color:red;
+}
+
 @import url("https://fonts.googleapis.com/css?family=Raleway:400,700");
 .page-header {
     padding-bottom: 9px;

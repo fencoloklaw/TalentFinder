@@ -1,0 +1,39 @@
+<div class="container">
+  <h1 class="page-header">Post a Job Post</h1>
+  <form>
+    <fieldset>
+      <div class="row mb-3 form-group required">
+        <label class="control-label">Company Name</label>
+        <input type="text" [(ngModel)]="companyName" name="companyName" class="form-control" required>
+      </div>
+      <div class="row mb-3 form-group required">
+        <label class="control-label">Expertise</label>
+        <input type="text" [(ngModel)]="expertise" name="expertise" class="form-control" required>
+      </div>
+      <div class="row mb-3 form-group required">
+        <label class="control-label">Estimated Frequency</label>
+        <input type="text" [(ngModel)]="estimatedFrequency" name="estimatedFrequency" class="form-control" required>
+      </div>
+      <div class="row form-group required">
+        <label class="control-label">Job Description</label>
+        <textarea rows="5" [(ngModel)]="jobDescription" name="jobDescription" class="form-control" maxlength="1000" required>
+        </textarea>
+      </div>
+      <div class="row mb-3 form-group">
+        <label class="control-label">Optional Questions</label>
+        <input type="text" [(ngModel)]="optionalQuestion1" name="optionalQuestion1" class="form-control">
+      </div>
+      <div class="row mb-3 form-group">
+        <label class="control-label">Optional Questions</label>
+        <input type="text" [(ngModel)]="optionalQuestion2" name="optionalQuestion2" class="form-control">
+      </div>
+      <div class="row mb-3 form-group">
+        <label class="control-label">Optional Questions</label>
+        <input type="text" [(ngModel)]="optionalQuestion3" name="optionalQuestion3" class="form-control">
+      </div>
+      <div class="text-center">
+        <input type="submit" class="btn btn-block btn-primary" value="Post Job" (click)="onPostJobClick()">
+      </div>
+    </fieldset>
+  </form>
+</div>

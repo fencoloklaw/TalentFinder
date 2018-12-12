@@ -43,6 +43,7 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {HttpClientModule} from "@angular/common/http";
 import {ToasterService} from "./services/toaster.service";
 import { ToastrModule } from 'ngx-toastr';
+import { PostjobComponent } from './components/postjob/postjob.component';
 
 const appRoutes: Routes = [
     {path: '', component: HomeComponent},
@@ -50,7 +51,8 @@ const appRoutes: Routes = [
     {path: 'login', component: LoginComponent},
     {path: 'profile', component: ProfileComponent, canActivate: [AuthGuard]},
     {path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard]},
-    {path: 'searchtalent', component: SearchtalentComponent}
+    {path: 'searchtalent', component: SearchtalentComponent},
+    {path: 'postjob', component: PostjobComponent}
 ]
 
 @NgModule({
@@ -64,6 +66,7 @@ const appRoutes: Routes = [
         DashboardComponent,
         SearchtalentComponent,
         SchedulerComponent,
+        PostjobComponent,
     ],
     imports: [
         BrowserModule,
