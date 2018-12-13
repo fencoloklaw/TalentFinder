@@ -1,0 +1,118 @@
+<div class="container-fluid">
+  <form class="p-3 d-inline" (submit)="onSearchSubmit()">
+    <div class="row container mr-auto text-left">
+      <div class="col-5 form-group">
+        <label class="font-weight-bold " for="whatInput">WHAT</label>
+        <input type="text" id="whatInput" name="whatInput" [(ngModel)]="whatInput" class="form-control form-rounded">
+      </div>
+      <div class="col-5 form-group">
+        <label class="font-weight-bold" for="whereInput">WHERE</label>
+        <input type="text" id="whereInput" name="whereInput" [(ngModel)]="whereInput" class="form-control form-rounded">
+      </div>
+      <div class="col-2 form-group">
+        <button type="submit" class="btn btn-primary" style="margin-top:2.0rem !important;">Find Jobs</button>
+      </div>
+    </div>
+  </form>
+  <div class="row mt-5">
+    <div class="col-2">
+      <div>
+        <span><b>My Recent Search</b></span>
+      </div>
+      <div class="col">
+        <label class="row">Filter</label>
+        <div class="row">
+          <button>filter1</button>
+        </div>
+      </div>
+      <div class="col">
+        <label class="row">Filter</label>
+        <div class="row">
+          <button>filter2</button>
+        </div>
+        <div class="row">
+          <button>filter3</button>
+        </div>
+        <div class="row">
+          <button>filter4</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="">
+        <ul class="list-group" *ngFor="let data of dataArray">
+          <button class="list-group-item list-group-item-action" (click)="showProfile(data)">
+            <div>
+              <span>Name: {{data.lastName}}, {{data.firstName}}</span>
+            </div>
+            <div>
+              <span>Skill: {{data.skill}}</span>
+            </div>
+            <div>
+              <span>City: {{data.city}}</span>
+            </div>
+          </button>
+        </ul>
+        <div>
+          <ul class="pagination pagination-lg">
+            <button class="list-group-item list-group-item-action page-link" *ngIf="currentPage>1" (click)="onChangePageBack()">
+              <span>&laquo; Previous</span>
+            </button>
+            <button class="list-group-item list-group-item-action page-link" *ngIf="currentPage<numberOfPages" (click)="onChangePage()">
+              <span>Next &raquo;</span>
+            </button>
+          </ul>
+        </div>
+        <div class="container" *ngIf="dataArrayLength==0">
+          <p class="lead">No users found.</p>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="viewArrayProfile==false" class="col-4">
+      <div class="card border-primary">
+        <div class="card-body" style="height:600px; max-height:600px;">
+          <div class="row">
+            <div class="col">
+              <h2>{{profile.lastName}}, {{profile.firstName}}</h2>
+            </div>
+            <div class="col">
+              <button type="button" class="close" aria-label="Close" (click)="returnSearch()">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <span>Status: </span>
+              <span>Online</span>
+            </div>
+            <div class="col">
+              <button class="float-right btn btn-primary">
+                <span>Contact Me</span>
+              </button>
+            </div>
+          </div>
+          <div>
+            <span>Email: {{profile.email}}</span>
+          </div>
+          <div>
+            <span>Skill: {{profile.skill}}</span>
+          </div>
+          <div>
+            <span>City: {{profile.city}}</span>
+          </div>
+          <div>
+            <span>Experience: {{profile.experience}}</span>
+          </div>
+          <div>
+            <span>Volunteer: {{profile.volunteer}}</span>
+          </div>
+          <div>
+            <span>Availability:</span>
+            <table></table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

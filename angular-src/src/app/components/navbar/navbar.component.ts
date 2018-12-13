@@ -2,6 +2,7 @@ import {Component} from '@angular/core';
 import {AuthService} from '../../services/auth.service';
 import {Router} from '@angular/router';
 import {ToasterService} from "../../services/toaster.service";
+import {DataService} from "../../services/data.service";
 
 @Component({
     selector: 'app-navbar',
@@ -12,7 +13,12 @@ export class NavbarComponent {
 
     constructor(private authService: AuthService,
                 private router: Router,
-                private toasterService: ToasterService) {
+                private toasterService: ToasterService,
+                private dataService: DataService) {
+    }
+
+    employee() {
+        return this.dataService.employee;
     }
 
     loggedIn() {

@@ -1,0 +1,35 @@
+<div class="text-center jumbotron">
+  <div class="container">
+    <form (submit)="onSearchSubmit()">
+      <div class="row h1">
+        <span class="mr-auto ml-auto">EveryJob.ca</span>
+      </div>
+      <div class="row text-left">
+        <div class=" ml-auto col-sm-5 form-group w-100">
+          <label class="font-weight-bold " for="skillInput">WHAT</label>
+          <input type="text" id="skillInput" name="skillInput" [(ngModel)]="skillInput" class="form-control form-rounded">
+        </div>
+        <div class="mr-auto col-sm-5 form-group w-100">
+          <label class="font-weight-bold" for="whereInput">WHERE</label>
+          <input type="text" id="whereInput" name="whereInput" [(ngModel)]="whereInput" class="form-control form-rounded">
+        </div>
+      </div>
+      <div class="row text-center">
+        <div class="form-group mr-auto ml-auto">
+          <button type="submit" class="btn btn-primary">Find Jobs</button>
+        </div>
+      </div>
+    </form>
+    <div>
+      <div *ngIf="!authService.loggedIn()" class="mt-5" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+        <div class="row">
+          <div class="col">
+            <button class="btn btn-secondary" [routerLink]="['/']">
+              <span>Upload a Resume</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

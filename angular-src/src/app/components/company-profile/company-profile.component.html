@@ -1,0 +1,86 @@
+<div class="container-fluid" style="margin-top:100px;">
+  <form (submit)="onUpdateProfile()">
+    <h2 class="page-header">
+      <span>Company Profile</span>
+    </h2>
+    <div class="row mb-3">
+      <div class="col-3">
+        <img class="img-thumbnail" src="http://i0.kym-cdn.com/photos/images/newsfeed/000/581/296/c09.jpg">
+      </div>
+      <div class="col-6">
+        <div class="row mb-3">
+          <div class="col">
+            <input type="text" [(ngModel)]="lastName" name="lastName" class="form-control" placeholder="Last Name">
+          </div>
+          <div class="col">
+            <input type="text" [(ngModel)]="firstName" name="firstName" class="form-control" placeholder="First Name">
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col">
+            <input type="text" [(ngModel)]="city" name="city" class="form-control" placeholder="City">
+          </div>
+          <div class="col">
+            <label>Province/State :</label>
+            <select [(ngModel)]="region" name="region" class="form-control custom-select required">
+              <option value="Alberta">Alberta</option>
+              <option value="British Columbia">British Columbia</option>
+              <option value="Manitoba">Manitoba</option>
+              <option value="New Brunswick">New Brunswick</option>
+              <option value="Newfoundland and Labrador">Newfoundland and Labrador</option>
+              <option value="Nova Scotia">Nova Scotia</option>
+              <option value="Ontario">Ontario</option>
+              <option value="Prince Edward Island">Prince Edward Island</option>
+              <option value="Quebec">Quebec</option>
+              <option value="Saskatchewan">Saskatchewan</option>
+              <option value="Northwest Territories">Northwest Territories</option>
+              <option value="Nunavut">Nunavut</option>
+              <option value="Yukon">Yukon</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="col-3">
+        <img class="img-thumbnail float-right" src="https://www.patternfly.org/pattern-library/data-visualization/pie-chart/img/right-legend-pie-chart.png">
+      </div>
+    </div>
+    <div class="container">
+      <div class="row mb-3">
+        <div class="col">
+          <label><u>Skills</u></label>
+          <input type="text" [(ngModel)]="skill" name="skill" class="form-control">
+        </div>
+      </div>
+      <div class="row mb-3">
+        <div class="col">
+          <label><u>Summary</u></label>
+          <textarea class="form-control" rows="4" name="description" [(ngModel)]="description" placeholder="Introduction/Description"></textarea>
+        </div>
+      </div>
+      <div class="row mb-3">
+        <div class="col">
+          <label><u>Work History</u></label>
+          <textarea class="form-control" rows="4" placeholder="Past Experience" name="experience" [(ngModel)]="experience"></textarea>
+        </div>
+      </div>
+      <div class="row mb-3">
+        <div class="col">
+          <label><u>Certificates/Licenses</u></label>
+          <input type="text" [(ngModel)]="certificates" name="certificates" class="form-control">
+        </div>
+        <div class="col">
+          <label><u>Awards</u></label>
+          <input type="text" [(ngModel)]="awards" name="awards" class="form-control">
+        </div>
+      </div>
+      <div class="row mb-3">
+        <div class="col">
+          <label><u>Tests</u></label>
+        </div>
+      </div>
+      <div class="text-center">
+        <input type="submit" class="btn btn-block btn-primary" value="Update">
+      </div>
+    </div>
+  </form>
+</div>

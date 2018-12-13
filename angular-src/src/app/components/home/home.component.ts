@@ -27,6 +27,7 @@ export class HomeComponent implements OnInit{
 
     ngOnInit() {
 
+        this.dataService.employee = false;
         // this.filteredOptions = this.myControl.valueChanges
         //     .pipe(
         //         startWith(''),

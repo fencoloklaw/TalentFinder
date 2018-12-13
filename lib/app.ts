@@ -6,6 +6,7 @@ import * as mongoose from "mongoose";
 import * as cors from "cors";
 import { UserController } from "./contollers/userController";
 import * as path from "path";
+import * as passport from "passport";
 
 class App {
     public userController: UserController = new UserController();
@@ -20,14 +21,15 @@ class App {
         this.mongoSetup();
     }
 
-    private config(): void{
+    private config(): void {
         // support application/json type post data
         this.app.use(bodyParser.json());
         //support application/x-www-form-urlencoded post data
         // this.app.use(bodyParser.urlencoded({ extended: false }));
         this.app.use(express.static(path.join(__dirname, '../public')));
         this.app.use(cors());
-        this.app.use(this.userController.initialize());
+        // this.app.use(this.userController.initialize());
+        this.app.use(passport.initialize());
     }
 
     private mongoSetup(): void {

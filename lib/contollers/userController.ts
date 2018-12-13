@@ -121,8 +121,8 @@ export class UserController {
                 const token = jwt.sign(payload, this.config.secret, header);
                 res.status(200).json({
                     success: true,
-                    token:"JWT " + token,
-                    user: {
+                    token: token,
+                    user_info: {
                         _id: user._id,
                         email: user.email
                     }
@@ -168,9 +168,6 @@ export class UserController {
         return passport.initialize();
     };
 
-    public authenticate = (callback) => passport.authenticate("jwt", { session: false, failWithError: true }, callback);
-
-
     private getStrategy = (): Strategy => {
         const params = {
             jwtFromRequest: ExtractJwt.fromAuthHeaderWithScheme("jwt"),
@@ -178,7 +175,7 @@ export class UserController {
         };
 
         return new Strategy(params, (req, payload: any, done) => {
-           this.getUserById(req, done);
+            this.getUserById(req, done);
         });
     }
 }

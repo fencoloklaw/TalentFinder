@@ -44,6 +44,9 @@ import {HttpClientModule} from "@angular/common/http";
 import {ToasterService} from "./services/toaster.service";
 import { ToastrModule } from 'ngx-toastr';
 import { PostjobComponent } from './components/postjob/postjob.component';
+import { SearchjobsComponent } from './components/searchjobs/searchjobs.component';
+import { FindJobsComponent } from './components/find-jobs/find-jobs.component';
+import { CompanyProfileComponent } from './components/company-profile/company-profile.component';
 
 const appRoutes: Routes = [
     {path: '', component: HomeComponent},
@@ -52,8 +55,12 @@ const appRoutes: Routes = [
     {path: 'profile', component: ProfileComponent, canActivate: [AuthGuard]},
     {path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard]},
     {path: 'searchtalent', component: SearchtalentComponent},
-    {path: 'postjob', component: PostjobComponent}
-]
+    {path: 'postjob', component: PostjobComponent},
+    {path: 'searchjobs', component: SearchjobsComponent},
+    {path: 'findjobs', component: FindJobsComponent},
+    {path: 'companyProfile', component: CompanyProfileComponent},
+
+];
 
 @NgModule({
     declarations: [
@@ -67,6 +74,9 @@ const appRoutes: Routes = [
         SearchtalentComponent,
         SchedulerComponent,
         PostjobComponent,
+        SearchjobsComponent,
+        FindJobsComponent,
+        CompanyProfileComponent,
     ],
     imports: [
         BrowserModule,
