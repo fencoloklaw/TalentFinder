@@ -127,12 +127,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _services_toaster_service__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./services/toaster.service */ "./src/app/services/toaster.service.ts");
 /* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ngx-toastr */ "./node_modules/ngx-toastr/fesm5/ngx-toastr.js");
 /* harmony import */ var _components_postjob_postjob_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./components/postjob/postjob.component */ "./src/app/components/postjob/postjob.component.ts");
+/* harmony import */ var _components_searchjobs_searchjobs_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./components/searchjobs/searchjobs.component */ "./src/app/components/searchjobs/searchjobs.component.ts");
+/* harmony import */ var _components_find_jobs_find_jobs_component__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./components/find-jobs/find-jobs.component */ "./src/app/components/find-jobs/find-jobs.component.ts");
+/* harmony import */ var _components_company_profile_company_profile_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./components/company-profile/company-profile.component */ "./src/app/components/company-profile/company-profile.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
+
 
 
 
@@ -166,7 +172,10 @@ var appRoutes = [
     { path: 'profile', component: _components_profile_profile_component__WEBPACK_IMPORTED_MODULE_9__["ProfileComponent"], canActivate: [_guards_auth_guard__WEBPACK_IMPORTED_MODULE_14__["AuthGuard"]] },
     { path: 'dashboard', component: _components_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_10__["DashboardComponent"], canActivate: [_guards_auth_guard__WEBPACK_IMPORTED_MODULE_14__["AuthGuard"]] },
     { path: 'searchtalent', component: _components_searchtalent_searchtalent_component__WEBPACK_IMPORTED_MODULE_11__["SearchtalentComponent"] },
-    { path: 'postjob', component: _components_postjob_postjob_component__WEBPACK_IMPORTED_MODULE_25__["PostjobComponent"] }
+    { path: 'postjob', component: _components_postjob_postjob_component__WEBPACK_IMPORTED_MODULE_25__["PostjobComponent"] },
+    { path: 'searchjobs', component: _components_searchjobs_searchjobs_component__WEBPACK_IMPORTED_MODULE_26__["SearchjobsComponent"] },
+    { path: 'findjobs', component: _components_find_jobs_find_jobs_component__WEBPACK_IMPORTED_MODULE_27__["FindJobsComponent"] },
+    { path: 'companyProfile', component: _components_company_profile_company_profile_component__WEBPACK_IMPORTED_MODULE_28__["CompanyProfileComponent"] },
 ];
 var AppModule = /** @class */ (function () {
     function AppModule() {
@@ -184,6 +193,9 @@ var AppModule = /** @class */ (function () {
                 _components_searchtalent_searchtalent_component__WEBPACK_IMPORTED_MODULE_11__["SearchtalentComponent"],
                 _components_scheduler_scheduler_component__WEBPACK_IMPORTED_MODULE_19__["SchedulerComponent"],
                 _components_postjob_postjob_component__WEBPACK_IMPORTED_MODULE_25__["PostjobComponent"],
+                _components_searchjobs_searchjobs_component__WEBPACK_IMPORTED_MODULE_26__["SearchjobsComponent"],
+                _components_find_jobs_find_jobs_component__WEBPACK_IMPORTED_MODULE_27__["FindJobsComponent"],
+                _components_company_profile_company_profile_component__WEBPACK_IMPORTED_MODULE_28__["CompanyProfileComponent"],
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
@@ -223,6 +235,69 @@ var AppModule = /** @class */ (function () {
         })
     ], AppModule);
     return AppModule;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/components/company-profile/company-profile.component.css":
+/*!**************************************************************************!*\
+  !*** ./src/app/components/company-profile/company-profile.component.css ***!
+  \**************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/components/company-profile/company-profile.component.html":
+/*!***************************************************************************!*\
+  !*** ./src/app/components/company-profile/company-profile.component.html ***!
+  \***************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"container-fluid\" style=\"margin-top:100px;\">\r\n  <form (submit)=\"onUpdateProfile()\">\r\n    <h2 class=\"page-header\">\r\n      <span>Company Profile</span>\r\n    </h2>\r\n    <div class=\"row mb-3\">\r\n      <div class=\"col-3\">\r\n        <img class=\"img-thumbnail\" src=\"http://i0.kym-cdn.com/photos/images/newsfeed/000/581/296/c09.jpg\">\r\n      </div>\r\n      <div class=\"col-6\">\r\n        <div class=\"row mb-3\">\r\n          <div class=\"col\">\r\n            <input type=\"text\" [(ngModel)]=\"lastName\" name=\"lastName\" class=\"form-control\" placeholder=\"Last Name\">\r\n          </div>\r\n          <div class=\"col\">\r\n            <input type=\"text\" [(ngModel)]=\"firstName\" name=\"firstName\" class=\"form-control\" placeholder=\"First Name\">\r\n          </div>\r\n        </div>\r\n        <div class=\"row mb-3\">\r\n          <div class=\"col\">\r\n            <input type=\"text\" [(ngModel)]=\"city\" name=\"city\" class=\"form-control\" placeholder=\"City\">\r\n          </div>\r\n          <div class=\"col\">\r\n            <label>Province/State :</label>\r\n            <select [(ngModel)]=\"region\" name=\"region\" class=\"form-control custom-select required\">\r\n              <option value=\"Alberta\">Alberta</option>\r\n              <option value=\"British Columbia\">British Columbia</option>\r\n              <option value=\"Manitoba\">Manitoba</option>\r\n              <option value=\"New Brunswick\">New Brunswick</option>\r\n              <option value=\"Newfoundland and Labrador\">Newfoundland and Labrador</option>\r\n              <option value=\"Nova Scotia\">Nova Scotia</option>\r\n              <option value=\"Ontario\">Ontario</option>\r\n              <option value=\"Prince Edward Island\">Prince Edward Island</option>\r\n              <option value=\"Quebec\">Quebec</option>\r\n              <option value=\"Saskatchewan\">Saskatchewan</option>\r\n              <option value=\"Northwest Territories\">Northwest Territories</option>\r\n              <option value=\"Nunavut\">Nunavut</option>\r\n              <option value=\"Yukon\">Yukon</option>\r\n            </select>\r\n          </div>\r\n        </div>\r\n      </div>\r\n      <div class=\"col-3\">\r\n        <img class=\"img-thumbnail float-right\" src=\"https://www.patternfly.org/pattern-library/data-visualization/pie-chart/img/right-legend-pie-chart.png\">\r\n      </div>\r\n    </div>\r\n    <div class=\"container\">\r\n      <div class=\"row mb-3\">\r\n        <div class=\"col\">\r\n          <label><u>Skills</u></label>\r\n          <input type=\"text\" [(ngModel)]=\"skill\" name=\"skill\" class=\"form-control\">\r\n        </div>\r\n      </div>\r\n      <div class=\"row mb-3\">\r\n        <div class=\"col\">\r\n          <label><u>Summary</u></label>\r\n          <textarea class=\"form-control\" rows=\"4\" name=\"description\" [(ngModel)]=\"description\" placeholder=\"Introduction/Description\"></textarea>\r\n        </div>\r\n      </div>\r\n      <div class=\"row mb-3\">\r\n        <div class=\"col\">\r\n          <label><u>Work History</u></label>\r\n          <textarea class=\"form-control\" rows=\"4\" placeholder=\"Past Experience\" name=\"experience\" [(ngModel)]=\"experience\"></textarea>\r\n        </div>\r\n      </div>\r\n      <div class=\"row mb-3\">\r\n        <div class=\"col\">\r\n          <label><u>Certificates/Licenses</u></label>\r\n          <input type=\"text\" [(ngModel)]=\"certificates\" name=\"certificates\" class=\"form-control\">\r\n        </div>\r\n        <div class=\"col\">\r\n          <label><u>Awards</u></label>\r\n          <input type=\"text\" [(ngModel)]=\"awards\" name=\"awards\" class=\"form-control\">\r\n        </div>\r\n      </div>\r\n      <div class=\"row mb-3\">\r\n        <div class=\"col\">\r\n          <label><u>Tests</u></label>\r\n        </div>\r\n      </div>\r\n      <div class=\"text-center\">\r\n        <input type=\"submit\" class=\"btn btn-block btn-primary\" value=\"Update\">\r\n      </div>\r\n    </div>\r\n  </form>\r\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/components/company-profile/company-profile.component.ts":
+/*!*************************************************************************!*\
+  !*** ./src/app/components/company-profile/company-profile.component.ts ***!
+  \*************************************************************************/
+/*! exports provided: CompanyProfileComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CompanyProfileComponent", function() { return CompanyProfileComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var CompanyProfileComponent = /** @class */ (function () {
+    function CompanyProfileComponent() {
+    }
+    CompanyProfileComponent.prototype.ngOnInit = function () {
+    };
+    CompanyProfileComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-company-profile',
+            template: __webpack_require__(/*! ./company-profile.component.html */ "./src/app/components/company-profile/company-profile.component.html"),
+            styles: [__webpack_require__(/*! ./company-profile.component.css */ "./src/app/components/company-profile/company-profile.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], CompanyProfileComponent);
+    return CompanyProfileComponent;
 }());
 
 
@@ -303,6 +378,122 @@ var DashboardComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/components/find-jobs/find-jobs.component.css":
+/*!**************************************************************!*\
+  !*** ./src/app/components/find-jobs/find-jobs.component.css ***!
+  \**************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/components/find-jobs/find-jobs.component.html":
+/*!***************************************************************!*\
+  !*** ./src/app/components/find-jobs/find-jobs.component.html ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"text-center jumbotron\">\r\n  <div class=\"container\">\r\n    <form (submit)=\"onSearchSubmit()\">\r\n      <div class=\"row h1\">\r\n        <span class=\"mr-auto ml-auto\">EveryJob.ca</span>\r\n      </div>\r\n      <div class=\"row text-left\">\r\n        <div class=\" ml-auto col-sm-5 form-group w-100\">\r\n          <label class=\"font-weight-bold \" for=\"skillInput\">WHAT</label>\r\n          <input type=\"text\" id=\"skillInput\" name=\"skillInput\" [(ngModel)]=\"skillInput\" class=\"form-control form-rounded\">\r\n        </div>\r\n        <div class=\"mr-auto col-sm-5 form-group w-100\">\r\n          <label class=\"font-weight-bold\" for=\"whereInput\">WHERE</label>\r\n          <input type=\"text\" id=\"whereInput\" name=\"whereInput\" [(ngModel)]=\"whereInput\" class=\"form-control form-rounded\">\r\n        </div>\r\n      </div>\r\n      <div class=\"row text-center\">\r\n        <div class=\"form-group mr-auto ml-auto\">\r\n          <button type=\"submit\" class=\"btn btn-primary\">Find Jobs</button>\r\n        </div>\r\n      </div>\r\n    </form>\r\n    <div>\r\n      <div *ngIf=\"!authService.loggedIn()\" class=\"mt-5\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\">\r\n        <div class=\"row\">\r\n          <div class=\"col\">\r\n            <button class=\"btn btn-secondary\" [routerLink]=\"['/']\">\r\n              <span>Upload a Resume</span>\r\n            </button>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/components/find-jobs/find-jobs.component.ts":
+/*!*************************************************************!*\
+  !*** ./src/app/components/find-jobs/find-jobs.component.ts ***!
+  \*************************************************************/
+/*! exports provided: FindJobsComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FindJobsComponent", function() { return FindJobsComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _services_validate_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../services/validate.service */ "./src/app/services/validate.service.ts");
+/* harmony import */ var _services_auth_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../services/auth.service */ "./src/app/services/auth.service.ts");
+/* harmony import */ var _services_data_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../services/data.service */ "./src/app/services/data.service.ts");
+/* harmony import */ var _services_search_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../services/search.service */ "./src/app/services/search.service.ts");
+/* harmony import */ var _services_toaster_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../services/toaster.service */ "./src/app/services/toaster.service.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+
+var FindJobsComponent = /** @class */ (function () {
+    function FindJobsComponent(router, validateService, authService, dataService, searchService, toasterService) {
+        this.router = router;
+        this.validateService = validateService;
+        this.authService = authService;
+        this.dataService = dataService;
+        this.searchService = searchService;
+        this.toasterService = toasterService;
+    }
+    FindJobsComponent.prototype.ngOnInit = function () {
+        this.dataService.employee = true;
+        this.whatInput = "";
+        this.whereInput = "";
+        this.whereInput = this.searchService.city;
+        if (this.whereInput == "") {
+            this.findLocation();
+        }
+    };
+    FindJobsComponent.prototype.onSearchSubmit = function () {
+        if (this.validateService.validateNotNull(this.whereInput)) {
+            this.dataService.whatData = this.whatInput;
+            this.dataService.whereData = this.whereInput;
+            this.router.navigate(['searchjobs']);
+        }
+        else {
+            this.toasterService.warning('Where field has no value');
+        }
+    };
+    FindJobsComponent.prototype.findLocation = function () {
+        var _this = this;
+        this.searchService.getAddress()
+            .subscribe(function (res) {
+            if (res) {
+                _this.whereInput = res.city;
+                _this.searchService.setAddress(res);
+            }
+            else {
+                return "";
+            }
+        });
+    };
+    FindJobsComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-find-jobs',
+            template: __webpack_require__(/*! ./find-jobs.component.html */ "./src/app/components/find-jobs/find-jobs.component.html"),
+            styles: [__webpack_require__(/*! ./find-jobs.component.css */ "./src/app/components/find-jobs/find-jobs.component.css")]
+        }),
+        __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"],
+            _services_validate_service__WEBPACK_IMPORTED_MODULE_2__["ValidateService"],
+            _services_auth_service__WEBPACK_IMPORTED_MODULE_3__["AuthService"],
+            _services_data_service__WEBPACK_IMPORTED_MODULE_4__["DataService"],
+            _services_search_service__WEBPACK_IMPORTED_MODULE_5__["SearchService"],
+            _services_toaster_service__WEBPACK_IMPORTED_MODULE_6__["ToasterService"]])
+    ], FindJobsComponent);
+    return FindJobsComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/components/home/home.component.css":
 /*!****************************************************!*\
   !*** ./src/app/components/home/home.component.css ***!
@@ -321,7 +512,7 @@ module.exports = "@media (max-width: 600px) {\r\n    .column {\r\n        float:
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"text-center jumbotron\">\r\n    <div class=\"container\">\r\n        <form (submit)=\"onSearchSubmit()\">\r\n            <div class=\"row h1\">\r\n                <span class=\"mr-auto ml-auto\">EveryJob.ca</span>\r\n            </div>\r\n            <div class=\"row text-left\">\r\n                <div class=\" ml-auto col-sm-5 form-group w-100\">\r\n                    <label class=\"font-weight-bold \" for=\"skillInput\">EXPERTISE</label>\r\n                    <input type=\"text\" id=\"skillInput\" name=\"skillInput\" [(ngModel)]=\"skillInput\" class=\"form-control form-rounded\">\r\n                </div>\r\n                <div class=\"mr-auto col-sm-5 form-group w-100\">\r\n                    <label class=\"font-weight-bold\" for=\"whereInput\">WHERE</label>\r\n                    <input type=\"text\" id=\"whereInput\" name=\"whereInput\" [(ngModel)]=\"whereInput\" class=\"form-control form-rounded\">\r\n                </div>\r\n            </div>\r\n            <div class=\"row text-center\">\r\n                <div class=\"form-group ml-auto mr-3\">\r\n                    <button type=\"submit\" class=\"btn btn-primary\">Find Talent</button>\r\n                </div>\r\n                <div class=\"form-group mr-auto ml-3\">\r\n                    <button type=\"submit\" class=\"btn btn-primary\">Find Jobs</button>\r\n                </div>\r\n            </div>\r\n        </form>\r\n        <div>\r\n            <div *ngIf=\"!authService.loggedIn()\" class=\"mt-5\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\">\r\n                <div class=\"row\">\r\n                    <div class=\"col\">\r\n                        <button class=\"btn btn-secondary\" [routerLink]=\"['/']\">\r\n                            <span>Upload a Resume</span>\r\n                        </button>\r\n                    </div>\r\n                </div>\r\n                <div class=\"row\">\r\n                    <div class=\"col\">\r\n                        <button class=\"btn btn-secondary\" [routerLink]=\"['/']\">\r\n                            <span>Post a Job</span>\r\n                        </button>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n            <!--<div *ngIf=\"authService.loggedIn()\" class=\"row mb-3 mt-5\">-->\r\n            <!--</div>-->\r\n        </div>\r\n    </div>\r\n</div>"
+module.exports = "<div class=\"text-center jumbotron\">\r\n    <div class=\"container\">\r\n        <form (submit)=\"onSearchSubmit()\">\r\n            <div class=\"row h1\">\r\n                <span class=\"mr-auto ml-auto\">EveryJob.ca</span>\r\n            </div>\r\n            <div class=\"row text-left\">\r\n                <div class=\" ml-auto col-sm-5 form-group w-100\">\r\n                    <label class=\"font-weight-bold \" for=\"skillInput\">EXPERTISE</label>\r\n                    <input type=\"text\" id=\"skillInput\" name=\"skillInput\" [(ngModel)]=\"skillInput\" class=\"form-control form-rounded\">\r\n                </div>\r\n                <div class=\"mr-auto col-sm-5 form-group w-100\">\r\n                    <label class=\"font-weight-bold\" for=\"whereInput\">WHERE</label>\r\n                    <input type=\"text\" id=\"whereInput\" name=\"whereInput\" [(ngModel)]=\"whereInput\" class=\"form-control form-rounded\">\r\n                </div>\r\n            </div>\r\n            <div class=\"row text-center\">\r\n                <div class=\"form-group ml-auto mr-auto\">\r\n                    <button type=\"submit\" class=\"btn btn-primary\">Find Talent</button>\r\n                </div>\r\n            </div>\r\n        </form>\r\n        <div>\r\n            <div *ngIf=\"!authService.loggedIn()\" class=\"mt-5\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\">\r\n                <div class=\"row\">\r\n                    <div class=\"col\">\r\n                        <button class=\"btn btn-secondary\" [routerLink]=\"['/']\">\r\n                            <span>Post a Job</span>\r\n                        </button>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n            <!--<div *ngIf=\"authService.loggedIn()\" class=\"row mb-3 mt-5\">-->\r\n            <!--</div>-->\r\n        </div>\r\n    </div>\r\n</div>"
 
 /***/ }),
 
@@ -368,6 +559,7 @@ var HomeComponent = /** @class */ (function () {
         this.toasterService = toasterService;
     }
     HomeComponent.prototype.ngOnInit = function () {
+        this.dataService.employee = false;
         // this.filteredOptions = this.myControl.valueChanges
         //     .pipe(
         //         startWith(''),
@@ -554,7 +746,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-expand-lg navbar-dark bg-primary floating-action-navbar\">\r\n    <a class=\"navbar-brand\" [routerLink]=\"['/']\">EveryJob.ca</a>\r\n    <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\r\n        <span class=\"navbar-toggler-icon\"></span>\r\n    </button>\r\n\r\n    <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\r\n        <ul class=\"navbar-nav mr-auto\">\r\n            <li class=\"nav-item text-right\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\">\r\n                <a class=\"nav-link\" [routerLink]=\"['/']\">Find Job</a>\r\n            </li>\r\n            <li class=\"nav-item text-right\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\">\r\n                <a class=\"nav-link\" [routerLink]=\"['/postjob']\">Post Job</a>\r\n            </li>\r\n            <li class=\"nav-item text-right\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\">\r\n                <a class=\"nav-link\" [routerLink]=\"['/']\">Find Pro</a>\r\n            </li>\r\n        </ul>\r\n        <ul class=\"navbar-nav ml-auto\">\r\n            <li class=\"nav-item text-right\" *ngIf=\"loggedIn()\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\">\r\n                <a class=\"nav-link\" [routerLink]=\"['/dashboard']\">Dashboard</a>\r\n            </li>\r\n            <li class=\"nav-item text-right\" *ngIf=\"loggedIn()\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\">\r\n                <a class=\"nav-link\" [routerLink]=\"['/profile']\">Profile</a>\r\n            </li>\r\n            <li class=\"nav-item text-right\" *ngIf=\"!loggedIn()\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\">\r\n                <a class=\"nav-link\" [routerLink]=\"['/login']\">Login</a>\r\n            </li>\r\n            <li class=\"nav-item text-right\" *ngIf=\"!loggedIn()\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\">\r\n                <a class=\"nav-link\" [routerLink]=\"['/register']\">Register</a>\r\n            </li>\r\n            <li class=\"nav-item text-right\" *ngIf=\"loggedIn()\">\r\n                <a class=\"nav-link\" (click)=\"onLogoutClick()\" href=\"#\">Logout</a>\r\n            </li>\r\n        </ul>\r\n    </div>\r\n</nav>\r\n"
+module.exports = "<nav class=\"navbar navbar-expand-lg navbar-dark bg-primary floating-action-navbar\">\r\n    <a class=\"navbar-brand\" [routerLink]=\"['/']\">EveryJob.ca</a>\r\n    <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\r\n        <span class=\"navbar-toggler-icon\"></span>\r\n    </button>\r\n\r\n    <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\r\n        <ul class=\"navbar-nav mr-auto\">\r\n            <li class=\"nav-item text-right\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\">\r\n                <a class=\"nav-link\" [routerLink]=\"['/findjobs']\">Find Job</a>\r\n            </li>\r\n            <li class=\"nav-item text-right\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\">\r\n                <a class=\"nav-link\" [routerLink]=\"['/postjob']\">Post Job</a>\r\n            </li>\r\n            <li class=\"nav-item text-right\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\">\r\n                <a class=\"nav-link\" [routerLink]=\"['/']\">Find Pro</a>\r\n            </li>\r\n        </ul>\r\n        <ul class=\"navbar-nav ml-auto\">\r\n            <li class=\"nav-item text-right\" *ngIf=\"loggedIn()\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\">\r\n                <a class=\"nav-link\" [routerLink]=\"['/dashboard']\">Dashboard</a>\r\n            </li>\r\n            <li class=\"nav-item text-right\" *ngIf=\"loggedIn()&&employee()\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\">\r\n                <a class=\"nav-link\" [routerLink]=\"['/profile']\">Profile</a>\r\n            </li>\r\n            <li class=\"nav-item text-right\" *ngIf=\"loggedIn()&&!employee()\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\">\r\n                <a class=\"nav-link\" [routerLink]=\"['/companyProfile']\">Company Profile</a>\r\n            </li>\r\n            <li class=\"nav-item text-right\" *ngIf=\"!loggedIn()\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\">\r\n                <a class=\"nav-link\" [routerLink]=\"['/login']\">Login</a>\r\n            </li>\r\n            <li class=\"nav-item text-right\" *ngIf=\"!loggedIn()\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\">\r\n                <a class=\"nav-link\" [routerLink]=\"['/register']\">Register</a>\r\n            </li>\r\n            <li class=\"nav-item text-right\" *ngIf=\"loggedIn()\">\r\n                <a class=\"nav-link\" (click)=\"onLogoutClick()\" href=\"#\">Logout</a>\r\n            </li>\r\n        </ul>\r\n    </div>\r\n</nav>\r\n"
 
 /***/ }),
 
@@ -572,6 +764,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _services_auth_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../services/auth.service */ "./src/app/services/auth.service.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var _services_toaster_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../services/toaster.service */ "./src/app/services/toaster.service.ts");
+/* harmony import */ var _services_data_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../services/data.service */ "./src/app/services/data.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -585,12 +778,17 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
+
 var NavbarComponent = /** @class */ (function () {
-    function NavbarComponent(authService, router, toasterService) {
+    function NavbarComponent(authService, router, toasterService, dataService) {
         this.authService = authService;
         this.router = router;
         this.toasterService = toasterService;
+        this.dataService = dataService;
     }
+    NavbarComponent.prototype.employee = function () {
+        return this.dataService.employee;
+    };
     NavbarComponent.prototype.loggedIn = function () {
         return this.authService.loggedIn();
     };
@@ -610,7 +808,8 @@ var NavbarComponent = /** @class */ (function () {
         }),
         __metadata("design:paramtypes", [_services_auth_service__WEBPACK_IMPORTED_MODULE_1__["AuthService"],
             _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"],
-            _services_toaster_service__WEBPACK_IMPORTED_MODULE_3__["ToasterService"]])
+            _services_toaster_service__WEBPACK_IMPORTED_MODULE_3__["ToasterService"],
+            _services_data_service__WEBPACK_IMPORTED_MODULE_4__["DataService"]])
     ], NavbarComponent);
     return NavbarComponent;
 }());
@@ -996,6 +1195,179 @@ var SchedulerComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [])
     ], SchedulerComponent);
     return SchedulerComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/components/searchjobs/searchjobs.component.css":
+/*!****************************************************************!*\
+  !*** ./src/app/components/searchjobs/searchjobs.component.css ***!
+  \****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/components/searchjobs/searchjobs.component.html":
+/*!*****************************************************************!*\
+  !*** ./src/app/components/searchjobs/searchjobs.component.html ***!
+  \*****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"container-fluid\">\r\n  <form class=\"p-3 d-inline\" (submit)=\"onSearchSubmit()\">\r\n    <div class=\"row container mr-auto text-left\">\r\n      <div class=\"col-5 form-group\">\r\n        <label class=\"font-weight-bold \" for=\"whatInput\">WHAT</label>\r\n        <input type=\"text\" id=\"whatInput\" name=\"whatInput\" [(ngModel)]=\"whatInput\" class=\"form-control form-rounded\">\r\n      </div>\r\n      <div class=\"col-5 form-group\">\r\n        <label class=\"font-weight-bold\" for=\"whereInput\">WHERE</label>\r\n        <input type=\"text\" id=\"whereInput\" name=\"whereInput\" [(ngModel)]=\"whereInput\" class=\"form-control form-rounded\">\r\n      </div>\r\n      <div class=\"col-2 form-group\">\r\n        <button type=\"submit\" class=\"btn btn-primary\" style=\"margin-top:2.0rem !important;\">Find Jobs</button>\r\n      </div>\r\n    </div>\r\n  </form>\r\n  <div class=\"row mt-5\">\r\n    <div class=\"col-2\">\r\n      <div>\r\n        <span><b>My Recent Search</b></span>\r\n      </div>\r\n      <div class=\"col\">\r\n        <label class=\"row\">Filter</label>\r\n        <div class=\"row\">\r\n          <button>filter1</button>\r\n        </div>\r\n      </div>\r\n      <div class=\"col\">\r\n        <label class=\"row\">Filter</label>\r\n        <div class=\"row\">\r\n          <button>filter2</button>\r\n        </div>\r\n        <div class=\"row\">\r\n          <button>filter3</button>\r\n        </div>\r\n        <div class=\"row\">\r\n          <button>filter4</button>\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <div class=\"col-6\">\r\n      <div class=\"\">\r\n        <ul class=\"list-group\" *ngFor=\"let data of dataArray\">\r\n          <button class=\"list-group-item list-group-item-action\" (click)=\"showProfile(data)\">\r\n            <div>\r\n              <span>Name: {{data.lastName}}, {{data.firstName}}</span>\r\n            </div>\r\n            <div>\r\n              <span>Skill: {{data.skill}}</span>\r\n            </div>\r\n            <div>\r\n              <span>City: {{data.city}}</span>\r\n            </div>\r\n          </button>\r\n        </ul>\r\n        <div>\r\n          <ul class=\"pagination pagination-lg\">\r\n            <button class=\"list-group-item list-group-item-action page-link\" *ngIf=\"currentPage>1\" (click)=\"onChangePageBack()\">\r\n              <span>&laquo; Previous</span>\r\n            </button>\r\n            <button class=\"list-group-item list-group-item-action page-link\" *ngIf=\"currentPage<numberOfPages\" (click)=\"onChangePage()\">\r\n              <span>Next &raquo;</span>\r\n            </button>\r\n          </ul>\r\n        </div>\r\n        <div class=\"container\" *ngIf=\"dataArrayLength==0\">\r\n          <p class=\"lead\">No users found.</p>\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <div *ngIf=\"viewArrayProfile==false\" class=\"col-4\">\r\n      <div class=\"card border-primary\">\r\n        <div class=\"card-body\" style=\"height:600px; max-height:600px;\">\r\n          <div class=\"row\">\r\n            <div class=\"col\">\r\n              <h2>{{profile.lastName}}, {{profile.firstName}}</h2>\r\n            </div>\r\n            <div class=\"col\">\r\n              <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"returnSearch()\">\r\n                <span aria-hidden=\"true\">&times;</span>\r\n              </button>\r\n            </div>\r\n          </div>\r\n          <div class=\"row\">\r\n            <div class=\"col\">\r\n              <span>Status: </span>\r\n              <span>Online</span>\r\n            </div>\r\n            <div class=\"col\">\r\n              <button class=\"float-right btn btn-primary\">\r\n                <span>Contact Me</span>\r\n              </button>\r\n            </div>\r\n          </div>\r\n          <div>\r\n            <span>Email: {{profile.email}}</span>\r\n          </div>\r\n          <div>\r\n            <span>Skill: {{profile.skill}}</span>\r\n          </div>\r\n          <div>\r\n            <span>City: {{profile.city}}</span>\r\n          </div>\r\n          <div>\r\n            <span>Experience: {{profile.experience}}</span>\r\n          </div>\r\n          <div>\r\n            <span>Volunteer: {{profile.volunteer}}</span>\r\n          </div>\r\n          <div>\r\n            <span>Availability:</span>\r\n            <table></table>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/components/searchjobs/searchjobs.component.ts":
+/*!***************************************************************!*\
+  !*** ./src/app/components/searchjobs/searchjobs.component.ts ***!
+  \***************************************************************/
+/*! exports provided: SearchjobsComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SearchjobsComponent", function() { return SearchjobsComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _services_validate_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../services/validate.service */ "./src/app/services/validate.service.ts");
+/* harmony import */ var _services_auth_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../services/auth.service */ "./src/app/services/auth.service.ts");
+/* harmony import */ var _services_search_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../services/search.service */ "./src/app/services/search.service.ts");
+/* harmony import */ var _services_data_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../services/data.service */ "./src/app/services/data.service.ts");
+/* harmony import */ var _services_toaster_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../services/toaster.service */ "./src/app/services/toaster.service.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+
+var SearchjobsComponent = /** @class */ (function () {
+    function SearchjobsComponent(router, validateService, authService, searchService, dataService, toasterService) {
+        this.router = router;
+        this.validateService = validateService;
+        this.authService = authService;
+        this.searchService = searchService;
+        this.dataService = dataService;
+        this.toasterService = toasterService;
+    }
+    SearchjobsComponent.prototype.ngOnInit = function () {
+        if ((this.validateService.validateNotNull(this.dataService.whatData)) && (this.validateService.validateNotNull(this.dataService.whereData))) {
+            this.whatInput = this.dataService.whatData;
+            this.whereInput = this.dataService.whereData;
+            this.onSearchSubmit();
+        }
+        else if (this.validateService.validateNotNull(this.dataService.whereData)) {
+            this.whatInput = "";
+            this.whereInput = this.dataService.whereData;
+            this.onSearchSubmit();
+        }
+        else if (this.validateService.validateNotNull(this.dataService.whatData)) {
+            this.whatInput = this.dataService.whatData;
+            this.whereInput = "";
+        }
+        else {
+            this.whatInput = "";
+            this.whereInput = "";
+            if (this.whereInput == "") {
+                this.findLocation();
+            }
+        }
+        this.viewArrayProfile = true;
+    };
+    SearchjobsComponent.prototype.onSearchSubmit = function () {
+        var _this = this;
+        var search = {
+            whatInput: this.whatInput,
+            whereInput: this.whereInput
+        };
+        if (this.validateService.validateNotNull(this.whereInput)) {
+            this.searchService.searchUser(search).subscribe(function (data) {
+                if (data.success) {
+                    _this.toasterService.success('Found Matches!');
+                    _this.searchData = data;
+                    _this.dataArrayLength = data.documents.length;
+                    _this.numberOfPages = Math.ceil(data.documents.length / 10);
+                    _this.currentPage = 1;
+                    _this.dataArray = data.documents.slice(_this.currentPage * 10 - 10, _this.currentPage * 10);
+                    _this.viewArrayProfile = true;
+                }
+                else {
+                    _this.toasterService.warning(data.msg);
+                }
+            });
+        }
+        else {
+            this.toasterService.warning('Where field has no value');
+        }
+    };
+    SearchjobsComponent.prototype.onChangePage = function () {
+        if (this.currentPage < this.numberOfPages) {
+            this.currentPage++;
+            this.dataArray = this.searchData.documents.slice(this.currentPage * 10 - 10, this.currentPage * 10);
+        }
+        else {
+            //do not display next
+        }
+    };
+    SearchjobsComponent.prototype.onChangePageBack = function () {
+        if (this.currentPage > 1) {
+            this.currentPage--;
+            this.dataArray = this.searchData.documents.slice(this.currentPage * 10 - 10, this.currentPage * 10);
+        }
+        else {
+            //do not display next
+        }
+    };
+    SearchjobsComponent.prototype.showProfile = function (data) {
+        this.viewArrayProfile = false;
+        this.profile = data;
+    };
+    SearchjobsComponent.prototype.returnSearch = function () {
+        this.viewArrayProfile = true;
+        this.dataArray = this.searchData.documents.slice(this.currentPage * 10 - 10, this.currentPage * 10);
+        this.profile = "";
+    };
+    SearchjobsComponent.prototype.findLocation = function () {
+        var _this = this;
+        this.searchService.getAddress().subscribe(function (res) {
+            if (res) {
+                _this.whereInput = res.city;
+                _this.searchService.setAddress(res);
+            }
+            else {
+                return "";
+            }
+        });
+    };
+    SearchjobsComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-searchjobs',
+            template: __webpack_require__(/*! ./searchjobs.component.html */ "./src/app/components/searchjobs/searchjobs.component.html"),
+            styles: [__webpack_require__(/*! ./searchjobs.component.css */ "./src/app/components/searchjobs/searchjobs.component.css")]
+        }),
+        __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"],
+            _services_validate_service__WEBPACK_IMPORTED_MODULE_2__["ValidateService"],
+            _services_auth_service__WEBPACK_IMPORTED_MODULE_3__["AuthService"],
+            _services_search_service__WEBPACK_IMPORTED_MODULE_4__["SearchService"],
+            _services_data_service__WEBPACK_IMPORTED_MODULE_5__["DataService"],
+            _services_toaster_service__WEBPACK_IMPORTED_MODULE_6__["ToasterService"]])
+    ], SearchjobsComponent);
+    return SearchjobsComponent;
 }());
 
 
