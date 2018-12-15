@@ -15,7 +15,6 @@ class UserController {
             passport.use("jwt", this.getStrategy());
             return passport.initialize();
         };
-        this.authenticate = (callback) => passport.authenticate("jwt", { session: false, failWithError: true }, callback);
         this.getStrategy = () => {
             const params = {
                 jwtFromRequest: passport_jwt_1.ExtractJwt.fromAuthHeaderWithScheme("jwt"),
@@ -128,8 +127,8 @@ class UserController {
                 const token = jwt.sign(payload, this.config.secret, header);
                 res.status(200).json({
                     success: true,
-                    token: "JWT " + token,
-                    user: {
+                    token: token,
+                    user_info: {
                         _id: user._id,
                         email: user.email
                     }

@@ -16,9 +16,9 @@ export class Routes {
             res.send('Invalid Endpoint');
         });
 
-        // app.get('*', (req, res) => {
-        //     res.sendFile(path.join(__dirname, '../public/index.html'));
-        // });
+        app.get('*', (req, res) => {
+            res.sendFile(path.join(__dirname, '../public/index.html'));
+        });
 
         app.route('/users/register')
             .post((req: Request, res: Response) => {
@@ -32,9 +32,9 @@ export class Routes {
 
         app.route('/users/profile')
             .get(passport.authenticate('jwt', { session: false }), (req, res) => {
-               // res.json({user: req.user});
-                console.log("hello");
-                res.json({req});
+               res.json({user: req.user});
+                // console.log("hello");
+                // res.json({req});
             });
                 // passport.authenticate('jwt', {session: false}), (req: any, res: Response) => {
                 // res.json({user: req.user});

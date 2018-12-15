@@ -8,6 +8,7 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const userController_1 = require("./contollers/userController");
 const path = require("path");
+const passport = require("passport");
 class App {
     constructor() {
         this.userController = new userController_1.UserController();
@@ -25,7 +26,8 @@ class App {
         // this.app.use(bodyParser.urlencoded({ extended: false }));
         this.app.use(express.static(path.join(__dirname, '../public')));
         this.app.use(cors());
-        this.app.use(this.userController.initialize());
+        // this.app.use(this.userController.initialize());
+        this.app.use(passport.initialize());
     }
     mongoSetup() {
         mongoose.Promise = global.Promise;
