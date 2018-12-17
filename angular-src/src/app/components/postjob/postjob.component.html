@@ -14,6 +14,10 @@
         <label class="control-label">Estimated Frequency</label>
         <input type="text" [(ngModel)]="estimatedFrequency" name="estimatedFrequency" class="form-control" required>
       </div>
+      <div class="row mb-3 form-group required">
+        <label class="control-label">Location</label>
+        <input type="text" [(ngModel)]="location" name="location" class="form-control" placeholder="Vancouver" required>
+      </div>
       <div class="row form-group required">
         <label class="control-label">Job Description</label>
         <textarea rows="5" [(ngModel)]="jobDescription" name="jobDescription" class="form-control" maxlength="1000" required>

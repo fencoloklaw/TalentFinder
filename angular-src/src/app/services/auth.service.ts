@@ -20,6 +20,9 @@ export class AuthService{
     registerUser(user): Observable<any> {
         return this.http.post(environment.serverUrl + '/users/register', user);
     }
+    createJobPost(jobPost): Observable<any> {
+        return this.http.post(environment.serverUrl + '/users/postjob', jobPost);
+    }
 
     authenticateUser(user):Observable<any> {
         return this.http.post(environment.serverUrl + '/users/authenticate', user);

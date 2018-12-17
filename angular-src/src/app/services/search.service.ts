@@ -17,6 +17,11 @@ export class SearchService {
         return this.http.post(environment.serverUrl + '/users/search', search, {headers: headers});
     }
 
+    searchJobPost(search): Observable<any> {
+        let headers = new HttpHeaders({'Content-Type':'application/json'});
+        return this.http.post(environment.serverUrl + '/users/searchJobs', search, {headers: headers});
+    }
+
     getRecommendedJobs(): Observable<any>{
         let headers = new HttpHeaders({'Content-Type':'application/json'});
         return this.http.post(environment.serverUrl + '/users/search', '', {headers: headers});

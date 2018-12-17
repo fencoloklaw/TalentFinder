@@ -3,11 +3,13 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const mongoose = require("mongoose");
 const bcrypt = require("bcryptjs");
 const userModel_1 = require("../models/userModel");
+const jobPostModel_1 = require("../models/jobPostModel");
 const jwt = require("jsonwebtoken");
 const database_1 = require("../../config/database");
 const passport_jwt_1 = require("passport-jwt");
 const passport = require("passport");
 const User = mongoose.model('User', userModel_1.UserSchema);
+const JobPost = mongoose.model('JobPost', jobPostModel_1.JobPostSchema);
 class UserController {
     constructor() {
         this.config = new database_1.DatabaseConfig();
@@ -72,6 +74,32 @@ class UserController {
             }
         });
     }
+    getMatchingJobs(req, res) {
+        // let query = {
+        //     $and: {$or:[{"expertise": new RegExp(req.body.whatInput, "i")},{"jobDescription": new RegExp(req.body.whatInput, "i")}]},
+        // {$or:["location": new RegExp(req.body.whereInput, "i")}]}},
+        // }
+        let query = {
+            $and: [
+                { $or: [{ "expertise": new RegExp(req.body.whatInput, "i") }, { "jobDescription": new RegExp(req.body.whatInput, "i") }] },
+                { $or: [{ "location": new RegExp(req.body.whereInput, "i") }] }
+            ]
+        };
+        JobPost.find(query, (err, jobPosts) => {
+            if (err) {
+                return res.status(500).send(err);
+            }
+            if (!jobPosts) {
+                return res.json({ success: false, msg: 'Jobs not found' });
+            }
+            else {
+                return res.status(200).json({
+                    success: true,
+                    documents: jobPosts
+                });
+            }
+        });
+    }
     addUser(newUser, res) {
         bcrypt.genSalt(10, (err, salt) => {
             bcrypt.hash(newUser.password, salt, (err, hash) => {
@@ -104,6 +132,26 @@ class UserController {
                     });
                 }
             });
+        });
+    }
+    addJobPost(newJobPost, res) {
+        let jobPost = new JobPost({
+            companyName: newJobPost.companyName,
+            expertise: newJobPost.expertise,
+            estimatedFrequency: newJobPost.estimatedFrequency,
+            location: newJobPost.location,
+            jobDescription: newJobPost.jobDescription,
+            optionalQuestion1: newJobPost.optionalQuestion1,
+            optionalQuestion2: newJobPost.optionalQuestion2,
+            optionalQuestion3: newJobPost.optionalQuestion3
+        });
+        jobPost.save((err, prod) => {
+            if (err) {
+                return res.status(500).send({ success: false, msg: 'Failed to save: ' + err });
+            }
+            if (prod) {
+                res.status(200).send({ success: true, msg: 'Job Posted' });
+            }
         });
     }
     comparePassword(candidatePassword, user, res) {

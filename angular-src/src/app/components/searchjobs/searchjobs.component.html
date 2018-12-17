@@ -41,15 +41,18 @@
     <div class="col-6">
       <div class="">
         <ul class="list-group" *ngFor="let data of dataArray">
-          <button class="list-group-item list-group-item-action" (click)="showProfile(data)">
+          <button class="list-group-item list-group-item-action" (click)="showJobPost(data)">
             <div>
-              <span>Name: {{data.lastName}}, {{data.firstName}}</span>
+              <span><b>Company Name: {{data.companyName}}</b></span>
             </div>
             <div>
-              <span>Skill: {{data.skill}}</span>
+              <span>Expertise: {{data.expertise}}</span>
             </div>
             <div>
-              <span>City: {{data.city}}</span>
+              <span>Estimated Frequency: {{data.estimatedFrequency}}</span>
+            </div>
+            <div>
+              <span>City: {{data.location}}</span>
             </div>
           </button>
         </ul>
@@ -64,16 +67,16 @@
           </ul>
         </div>
         <div class="container" *ngIf="dataArrayLength==0">
-          <p class="lead">No users found.</p>
+          <p class="lead">No Job Pots found.</p>
         </div>
       </div>
     </div>
-    <div *ngIf="viewArrayProfile==false" class="col-4">
+    <div *ngIf="viewArrayJobPosts==false" class="col-4">
       <div class="card border-primary">
         <div class="card-body" style="height:600px; max-height:600px;">
           <div class="row">
             <div class="col">
-              <h2>{{profile.lastName}}, {{profile.firstName}}</h2>
+              <h2>{{jobPost.companyName}}</h2>
             </div>
             <div class="col">
               <button type="button" class="close" aria-label="Close" (click)="returnSearch()">
@@ -93,23 +96,16 @@
             </div>
           </div>
           <div>
-            <span>Email: {{profile.email}}</span>
+            <span>Expertise: {{jobPost.expertise}}</span>
           </div>
           <div>
-            <span>Skill: {{profile.skill}}</span>
+            <span>Estimated Frequency: {{jobPost.estimatedFrequency}}</span>
           </div>
           <div>
-            <span>City: {{profile.city}}</span>
+            <span>City: {{jobPost.location}}</span>
           </div>
           <div>
-            <span>Experience: {{profile.experience}}</span>
-          </div>
-          <div>
-            <span>Volunteer: {{profile.volunteer}}</span>
-          </div>
-          <div>
-            <span>Availability:</span>
-            <table></table>
+            <span>Job Description: {{jobPost.jobDescription}}</span>
           </div>
         </div>
       </div>

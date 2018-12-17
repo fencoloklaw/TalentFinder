@@ -19,6 +19,14 @@ export class ValidateService {
         return re.test(email);
     }
 
+    validateJobPost(jobPost){
+        if (jobPost.companyName == undefined || jobPost.expertise == undefined || jobPost.estimatedFrequency == undefined || jobPost.jobDescription == undefined) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
     validateNotNull(value) {
         if (value == undefined || value == "") {
             return false;

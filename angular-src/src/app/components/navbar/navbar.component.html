@@ -26,6 +26,9 @@
             <li class="nav-item text-right" *ngIf="loggedIn()&&!employee()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
                 <a class="nav-link" [routerLink]="['/companyProfile']">Company Profile</a>
             </li>
+            <li class="nav-item text-right" *ngIf="loggedIn()&&!employee()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+                <a class="nav-link" [routerLink]="['/my-job-posts']">My Job Posts</a>
+            </li>
             <li class="nav-item text-right" *ngIf="!loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
                 <a class="nav-link" [routerLink]="['/login']">Login</a>
             </li>

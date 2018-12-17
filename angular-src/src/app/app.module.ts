@@ -47,6 +47,7 @@ import { PostjobComponent } from './components/postjob/postjob.component';
 import { SearchjobsComponent } from './components/searchjobs/searchjobs.component';
 import { FindJobsComponent } from './components/find-jobs/find-jobs.component';
 import { CompanyProfileComponent } from './components/company-profile/company-profile.component';
+import { MyJobPostsComponent } from './components/my-job-posts/my-job-posts.component';
 
 const appRoutes: Routes = [
     {path: '', component: HomeComponent},
@@ -59,6 +60,7 @@ const appRoutes: Routes = [
     {path: 'searchjobs', component: SearchjobsComponent},
     {path: 'findjobs', component: FindJobsComponent},
     {path: 'companyProfile', component: CompanyProfileComponent},
+    {path: 'my-job-posts', component: MyJobPostsComponent},
 
 ];
 
@@ -77,6 +79,7 @@ const appRoutes: Routes = [
         SearchjobsComponent,
         FindJobsComponent,
         CompanyProfileComponent,
+        MyJobPostsComponent,
     ],
     imports: [
         BrowserModule,

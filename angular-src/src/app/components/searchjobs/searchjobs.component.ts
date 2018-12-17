@@ -12,16 +12,15 @@ import {ToasterService} from "../../services/toaster.service";
   styleUrls: ['./searchjobs.component.css']
 })
 export class SearchjobsComponent implements OnInit {
-    viewArrayProfile: boolean;
+    viewArrayJobPosts: boolean;
     whatInput: String;
     whereInput: String;
-    user: Object;
     searchData : any;
     dataArray : any;
     dataArrayLength : Number;
     numberOfPages: Number;
     currentPage: any;
-    profile: any;
+    jobPost: any;
     constructor(private router: Router,
                 private validateService: ValidateService,
                 private authService: AuthService,
@@ -51,7 +50,7 @@ export class SearchjobsComponent implements OnInit {
                 this.findLocation();
             }
         }
-        this.viewArrayProfile = true;
+        this.viewArrayJobPosts = true;
     }
 
     onSearchSubmit() {
@@ -61,7 +60,7 @@ export class SearchjobsComponent implements OnInit {
         };
 
         if (this.validateService.validateNotNull(this.whereInput)) {
-            this.searchService.searchUser(search).subscribe(data => {
+            this.searchService.searchJobPost(search).subscribe(data => {
                 if (data.success) {
                     this.toasterService.success('Found Matches!');
                     this.searchData = data;
@@ -69,7 +68,7 @@ export class SearchjobsComponent implements OnInit {
                     this.numberOfPages = Math.ceil(data.documents.length/10);
                     this.currentPage = 1;
                     this.dataArray = data.documents.slice(this.currentPage*10 - 10, this.currentPage*10);
-                    this.viewArrayProfile = true;
+                    this.viewArrayJobPosts = true;
                 }
                 else {
                     this.toasterService.warning(data.msg);
@@ -101,15 +100,15 @@ export class SearchjobsComponent implements OnInit {
         }
     }
 
-    showProfile(data){
-        this.viewArrayProfile = false;
-        this.profile = data;
+    showJobPost(data){
+        this.viewArrayJobPosts = false;
+        this.jobPost = data;
     }
 
     returnSearch(){
-        this.viewArrayProfile = true;
+        this.viewArrayJobPosts = true;
         this.dataArray = this.searchData.documents.slice(this.currentPage * 10 - 10, this.currentPage * 10);
-        this.profile = "";
+        this.jobPost = "";
     }
 
     findLocation():void {

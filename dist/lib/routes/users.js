@@ -20,6 +20,10 @@ class Routes {
             .post((req, res) => {
             this.userController.addUser(req.body, res);
         });
+        app.route('/users/postjob')
+            .post((req, res) => {
+            this.userController.addJobPost(req.body, res);
+        });
         app.route('/users/authenticate')
             .post((req, res) => {
             this.userController.getUserByEmail(req, res);
@@ -62,6 +66,10 @@ class Routes {
         app.route('/users/search')
             .post((req, res) => {
             this.userController.getMatchingUsers(req, res);
+        });
+        app.route('/users/searchJobs')
+            .post((req, res) => {
+            this.userController.getMatchingJobs(req, res);
         });
         app.route('/users')
             .get((req, res) => {
