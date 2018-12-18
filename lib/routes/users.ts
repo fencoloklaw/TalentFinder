@@ -16,9 +16,9 @@ export class Routes {
             res.send('Invalid Endpoint');
         });
 
-        app.get('*', (req, res) => {
-            res.sendFile(path.join(__dirname, '../public/index.html'));
-        });
+        // app.get('*', (req, res) => {
+        //     res.sendFile(path.join(__dirname, '../public/index.html'));
+        // });
 
         app.route('/users/register')
             .post((req: Request, res: Response) => {
@@ -82,11 +82,16 @@ export class Routes {
                 this.userController.getMatchingJobs(req, res);
             });
 
-        app.route('/users')
+        // app.route('/users')
+        //     .get((req: Request, res: Response) => {
+        //         res.status(200).send({
+        //             message: 'GET request successfulll!!!!'
+        //         })
+        //     });
+
+        app.route('/users/recommendations')
             .get((req: Request, res: Response) => {
-                res.status(200).send({
-                    message: 'GET request successfulll!!!!'
-                })
-            })
+                this.userController.getRecommendedResults(req, res);
+            });
     }
 }
