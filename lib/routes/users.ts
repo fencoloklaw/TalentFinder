@@ -90,7 +90,7 @@ export class Routes {
         //     });
 
         app.route('/users/recommendations')
-            .get((req: Request, res: Response) => {
+            .post((req: Request, res: Response) => {
                 this.userController.getRecommendedResults(req, res);
             });
     }

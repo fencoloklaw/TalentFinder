@@ -93,28 +93,32 @@ export class UserController {
 
     public getRecommendedResults (req: Request, res: Response){
         let query = {"skill": new RegExp(req.body.skillInput, "i")};
-
         User.distinct("skill", query,
             (err, results) => {
                 if(err){
                     return res.status(500).send(err);
                 }
                 if (!results) {
-                    return res.json({success: false, msg: 'No Suggestions'});
+                    return res.status(200).json({success: false, msg: 'No Suggestions'});
                 }
                 else {
                     let s = results.join();
                     var array = s.split(',');
-                    var arrayList = "";
+                    var str = "";
                     for(let i = 0; i<array.length; i++){
                         if(array[i].includes(req.body.skillInput)){
-                            arrayList.concat(array[i]);
+                            str+=array[i] + ",";
                         }
                     }
-                    console.log(arrayList);
+                    // this.removeString(arrayList);
+                    var newStr = str.substring(0, str.length-1);
+                    var arrayList = newStr.split(',');
+                    var uniqueArray = arrayList.filter(function(item, pos) {
+                        return arrayList.indexOf(item) == pos;
+                    });
                     return res.status(200).json({
                         success: true,
-                        documents: arrayList
+                        documents: uniqueArray
                     });
                 }
             })
@@ -253,5 +257,5 @@ export class UserController {
         return new Strategy(params, (req, payload: any, done) => {
             this.getUserById(req, done);
         });
-    }
+    };
 }

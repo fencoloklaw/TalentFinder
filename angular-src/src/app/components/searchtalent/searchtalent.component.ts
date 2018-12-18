@@ -22,6 +22,7 @@ export class SearchtalentComponent implements OnInit {
     numberOfPages: Number;
     currentPage: any;
     profile: any;
+    relatedSkills: any;
     constructor(private router: Router,
                 private validateService: ValidateService,
                 private authService: AuthService,
@@ -79,6 +80,11 @@ export class SearchtalentComponent implements OnInit {
         else {
             this.toasterService.warning('Where field has no value');
         }
+        this.searchService.getRelatedSkills(search).subscribe(res => {
+            if (res.success) {
+                this.relatedSkills = res.documents;
+            }
+        });
     }
 
     onChangePage() {
@@ -112,7 +118,7 @@ export class SearchtalentComponent implements OnInit {
         this.profile = "";
     }
 
-    findLocation():void {
+    findLocation(): void {
         this.searchService.getAddress().subscribe(res => {
             if(res){
                 this.whereInput = res.city;
@@ -122,5 +128,10 @@ export class SearchtalentComponent implements OnInit {
                 return "";
             }
         });
+    }
+
+    changeSearch(skill: string): void {
+        this.skillInput = skill;
+        this.onSearchSubmit();
     }
 }

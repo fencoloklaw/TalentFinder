@@ -77,7 +77,7 @@ class Routes {
         //         })
         //     });
         app.route('/users/recommendations')
-            .get((req, res) => {
+            .post((req, res) => {
             this.userController.getRecommendedResults(req, res);
         });
     }

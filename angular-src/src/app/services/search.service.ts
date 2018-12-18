@@ -22,9 +22,9 @@ export class SearchService {
         return this.http.post(environment.serverUrl + '/users/searchJobs', search, {headers: headers});
     }
 
-    getRecommendedJobs(): Observable<any>{
+    getRelatedSkills(search): Observable<any> {
         let headers = new HttpHeaders({'Content-Type':'application/json'});
-        return this.http.post(environment.serverUrl + '/users/search', '', {headers: headers});
+        return this.http.post(environment.serverUrl + '/users/recommendations', search, {headers: headers});
     }
 
     getAddress() : Observable<any>{
