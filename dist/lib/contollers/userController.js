@@ -75,10 +75,6 @@ class UserController {
         });
     }
     getMatchingJobs(req, res) {
-        // let query = {
-        //     $and: {$or:[{"expertise": new RegExp(req.body.whatInput, "i")},{"jobDescription": new RegExp(req.body.whatInput, "i")}]},
-        // {$or:["location": new RegExp(req.body.whereInput, "i")}]}},
-        // }
         let query = {
             $and: [
                 { $or: [{ "expertise": new RegExp(req.body.whatInput, "i") }, { "jobDescription": new RegExp(req.body.whatInput, "i") }] },
@@ -96,6 +92,32 @@ class UserController {
                 return res.status(200).json({
                     success: true,
                     documents: jobPosts
+                });
+            }
+        });
+    }
+    getRecommendedResults(req, res) {
+        let query = { "skill": new RegExp(req.body.skillInput, "i") };
+        User.distinct("skill", query, (err, results) => {
+            if (err) {
+                return res.status(500).send(err);
+            }
+            if (!results) {
+                return res.json({ success: false, msg: 'No Suggestions' });
+            }
+            else {
+                let s = results.join();
+                var array = s.split(',');
+                var arrayList = "";
+                for (let i = 0; i < array.length; i++) {
+                    if (array[i].includes(req.body.skillInput)) {
+                        arrayList.concat(array[i]);
+                    }
+                }
+                console.log(arrayList);
+                return res.status(200).json({
+                    success: true,
+                    documents: arrayList
                 });
             }
         });

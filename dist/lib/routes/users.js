@@ -3,7 +3,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const userController_1 = require("../contollers/userController");
 const passport = require("passport");
 const database_1 = require("../../config/database");
-const path = require("path");
 class Routes {
     constructor() {
         this.userController = new userController_1.UserController();
@@ -13,9 +12,9 @@ class Routes {
         app.get('/', (req, res) => {
             res.send('Invalid Endpoint');
         });
-        app.get('*', (req, res) => {
-            res.sendFile(path.join(__dirname, '../public/index.html'));
-        });
+        // app.get('*', (req, res) => {
+        //     res.sendFile(path.join(__dirname, '../public/index.html'));
+        // });
         app.route('/users/register')
             .post((req, res) => {
             this.userController.addUser(req.body, res);
@@ -71,11 +70,15 @@ class Routes {
             .post((req, res) => {
             this.userController.getMatchingJobs(req, res);
         });
-        app.route('/users')
+        // app.route('/users')
+        //     .get((req: Request, res: Response) => {
+        //         res.status(200).send({
+        //             message: 'GET request successfulll!!!!'
+        //         })
+        //     });
+        app.route('/users/recommendations')
             .get((req, res) => {
-            res.status(200).send({
-                message: 'GET request successfulll!!!!'
-            });
+            this.userController.getRecommendedResults(req, res);
         });
     }
 }
