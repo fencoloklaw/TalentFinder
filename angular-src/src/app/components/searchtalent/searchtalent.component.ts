@@ -80,11 +80,7 @@ export class SearchtalentComponent implements OnInit {
         else {
             this.toasterService.warning('Where field has no value');
         }
-        this.searchService.getRelatedSkills(search).subscribe(res => {
-            if (res.success) {
-                this.relatedSkills = res.documents;
-            }
-        });
+        this.getRelatedResults(search);
     }
 
     onChangePage() {
@@ -130,6 +126,13 @@ export class SearchtalentComponent implements OnInit {
         });
     }
 
+    getRelatedResults(search): void {
+        this.searchService.getRelatedSkills(search).subscribe(res => {
+            if (res.success) {
+                this.relatedSkills = res.documents;
+            }
+        });
+    }
     changeSearch(skill: string): void {
         this.skillInput = skill;
         this.onSearchSubmit();

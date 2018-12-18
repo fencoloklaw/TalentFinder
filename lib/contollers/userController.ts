@@ -107,7 +107,9 @@ export class UserController {
                     var str = "";
                     for(let i = 0; i<array.length; i++){
                         if(array[i].includes(req.body.skillInput)){
-                            str+=array[i] + ",";
+                            if(array[i]!==(req.body.skillInput)) {
+                                str += array[i].trim() + ",";
+                            }
                         }
                     }
                     // this.removeString(arrayList);

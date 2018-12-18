@@ -1600,11 +1600,7 @@ var SearchtalentComponent = /** @class */ (function () {
         else {
             this.toasterService.warning('Where field has no value');
         }
-        this.searchService.getRelatedSkills(search).subscribe(function (res) {
-            if (res.success) {
-                _this.relatedSkills = res.documents;
-            }
-        });
+        this.getRelatedResults(search);
     };
     SearchtalentComponent.prototype.onChangePage = function () {
         if (this.currentPage < this.numberOfPages) {
@@ -1642,6 +1638,14 @@ var SearchtalentComponent = /** @class */ (function () {
             }
             else {
                 return "";
+            }
+        });
+    };
+    SearchtalentComponent.prototype.getRelatedResults = function (search) {
+        var _this = this;
+        this.searchService.getRelatedSkills(search).subscribe(function (res) {
+            if (res.success) {
+                _this.relatedSkills = res.documents;
             }
         });
     };
