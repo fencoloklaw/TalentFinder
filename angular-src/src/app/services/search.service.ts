@@ -27,11 +27,11 @@ export class SearchService {
         return this.http.post(environment.serverUrl + '/users/recommendations', search, {headers: headers});
     }
 
-    getAddress() : Observable<any>{
+    getAddress() : Observable<any> {
         return this.http.get('https://ipinfo.io/geo');
     }
 
-    setAddress(res : any){
+    setAddress(res : any) {
         this.city = res.city;
         this.region = res.region;
     }

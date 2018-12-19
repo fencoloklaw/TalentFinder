@@ -8,6 +8,8 @@ import { UserController } from "./contollers/userController";
 import * as path from "path";
 import * as passport from "passport";
 
+require('./config/passport');
+
 class App {
     public userController: UserController = new UserController();
     public app: express.Application;

@@ -13,8 +13,8 @@ export class AuthService{
     constructor(private http: HttpClient) {
     }
 
-    tokenGetter(){
-        return localStorage.getItem('access_token');
+    tokenGetter() {
+        return "Bearer " + localStorage.getItem('access_token');
     }
 
     registerUser(user): Observable<any> {
@@ -43,7 +43,7 @@ export class AuthService{
 
     updateProfile(user):Observable<any>{
         this.loadToken();
-        let headers = new HttpHeaders().set('Authorization', this.tokenGetter());
+        let headers = new HttpHeaders().set('Authorization',this.tokenGetter());
         return this.http.put(environment.serverUrl + '/users/updateProfile',  user,{headers});
     }
 

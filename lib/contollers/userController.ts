@@ -4,7 +4,7 @@ import {IUser, UserSchema} from '../models/userModel';
 import {IJobPost, JobPostSchema} from '../models/jobPostModel';
 import { Request, Response } from 'express';
 import * as jwt from 'jsonwebtoken';
-import {DatabaseConfig} from "../../config/database";
+import {DatabaseConfig} from "../config/database";
 import {ExtractJwt, Strategy} from "passport-jwt";
 import * as passport from "passport";
 

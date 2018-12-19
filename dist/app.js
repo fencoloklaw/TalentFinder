@@ -9,6 +9,7 @@ const cors = require("cors");
 const userController_1 = require("./contollers/userController");
 const path = require("path");
 const passport = require("passport");
+require('./config/passport');
 class App {
     constructor() {
         this.userController = new userController_1.UserController();

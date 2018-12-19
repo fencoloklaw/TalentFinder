@@ -1757,7 +1757,7 @@ var AuthService = /** @class */ (function () {
         this.jwtHelper = new _auth0_angular_jwt__WEBPACK_IMPORTED_MODULE_2__["JwtHelperService"]();
     }
     AuthService.prototype.tokenGetter = function () {
-        return localStorage.getItem('access_token');
+        return "Bearer " + localStorage.getItem('access_token');
     };
     AuthService.prototype.registerUser = function (user) {
         return this.http.post(_environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].serverUrl + '/users/register', user);
