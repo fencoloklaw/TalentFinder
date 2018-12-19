@@ -14,7 +14,7 @@ export class AuthService{
     }
 
     tokenGetter() {
-        return "Bearer " + localStorage.getItem('access_token');
+        return localStorage.getItem('access_token');
     }
 
     registerUser(user): Observable<any> {
@@ -37,13 +37,13 @@ export class AuthService{
 
     getProfile():Observable<any> {
         this.loadToken();
-        let headers = new HttpHeaders().set('Authorization', this.tokenGetter());
+        let headers = new HttpHeaders().set('Authorization', 'Bearer ' +  this.tokenGetter());
         return this.http.get(environment.serverUrl + '/users/profile', {headers});
     }
 
     updateProfile(user):Observable<any>{
         this.loadToken();
-        let headers = new HttpHeaders().set('Authorization',this.tokenGetter());
+        let headers = new HttpHeaders().set('Authorization', 'Bearer ' + this.tokenGetter());
         return this.http.put(environment.serverUrl + '/users/updateProfile',  user,{headers});
     }
 

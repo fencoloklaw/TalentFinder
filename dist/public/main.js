@@ -1757,7 +1757,7 @@ var AuthService = /** @class */ (function () {
         this.jwtHelper = new _auth0_angular_jwt__WEBPACK_IMPORTED_MODULE_2__["JwtHelperService"]();
     }
     AuthService.prototype.tokenGetter = function () {
-        return "Bearer " + localStorage.getItem('access_token');
+        return localStorage.getItem('access_token');
     };
     AuthService.prototype.registerUser = function (user) {
         return this.http.post(_environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].serverUrl + '/users/register', user);
@@ -1776,12 +1776,12 @@ var AuthService = /** @class */ (function () {
     };
     AuthService.prototype.getProfile = function () {
         this.loadToken();
-        var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]().set('Authorization', this.tokenGetter());
+        var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]().set('Authorization', 'Bearer ' + this.tokenGetter());
         return this.http.get(_environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].serverUrl + '/users/profile', { headers: headers });
     };
     AuthService.prototype.updateProfile = function (user) {
         this.loadToken();
-        var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]().set('Authorization', this.tokenGetter());
+        var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]().set('Authorization', 'Bearer ' + this.tokenGetter());
         return this.http.put(_environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].serverUrl + '/users/updateProfile', user, { headers: headers });
     };
     AuthService.prototype.loadToken = function () {
