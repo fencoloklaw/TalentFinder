@@ -5,7 +5,7 @@ import {JwtHelperService} from "@auth0/angular-jwt";
 import {environment} from "../../environments/environment";
 
 @Injectable()
-export class AuthService{
+export class AuthService {
     authToken: any;
     user: any;
     jwtHelper: JwtHelperService = new JwtHelperService();
@@ -24,27 +24,27 @@ export class AuthService{
         return this.http.post(environment.serverUrl + '/users/postjob', jobPost);
     }
 
-    authenticateUser(user):Observable<any> {
+    authenticateUser(user): Observable<any> {
         return this.http.post(environment.serverUrl + '/users/authenticate', user);
     }
 
     storeUserData(token, user) {
         localStorage.setItem('access_token', token);
-        localStorage.setItem('user', JSON.stringify(user)); //local storage must be string
+        localStorage.setItem('user', JSON.stringify(user));
         this.authToken = token;
         this.user = user;
     }
 
-    getProfile():Observable<any> {
+    getProfile(): Observable<any> {
         this.loadToken();
-        let headers = new HttpHeaders().set('Authorization', 'Bearer ' +  this.tokenGetter());
+        const headers = new HttpHeaders().set('Authorization', 'Bearer ' +  this.tokenGetter());
         return this.http.get(environment.serverUrl + '/users/profile', {headers});
     }
 
-    updateProfile(user):Observable<any>{
+    updateProfile(user): Observable<any> {
         this.loadToken();
-        let headers = new HttpHeaders().set('Authorization', 'Bearer ' + this.tokenGetter());
-        return this.http.put(environment.serverUrl + '/users/updateProfile',  user,{headers});
+        const headers = new HttpHeaders().set('Authorization', 'Bearer ' + this.tokenGetter());
+        return this.http.put(environment.serverUrl + '/users/updateProfile',  user, {headers});
     }
 
     loadToken() {

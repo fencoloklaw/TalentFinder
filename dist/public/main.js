@@ -1770,7 +1770,7 @@ var AuthService = /** @class */ (function () {
     };
     AuthService.prototype.storeUserData = function (token, user) {
         localStorage.setItem('access_token', token);
-        localStorage.setItem('user', JSON.stringify(user)); //local storage must be string
+        localStorage.setItem('user', JSON.stringify(user));
         this.authToken = token;
         this.user = user;
     };
