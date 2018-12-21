@@ -580,8 +580,8 @@ if(false) {}
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\fenco\IdeaProjects\TalentFinder\angular-src\src\styles.css */"./src/styles.css");
-module.exports = __webpack_require__(/*! C:\Users\fenco\IdeaProjects\TalentFinder\angular-src\node_modules\ngx-toastr\toastr.css */"./node_modules/ngx-toastr/toastr.css");
+__webpack_require__(/*! C:\workspace\TalentFinder\angular-src\src\styles.css */"./src/styles.css");
+module.exports = __webpack_require__(/*! C:\workspace\TalentFinder\angular-src\node_modules\ngx-toastr\toastr.css */"./node_modules/ngx-toastr/toastr.css");
 
 
 /***/ })

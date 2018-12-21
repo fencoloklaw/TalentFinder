@@ -28,7 +28,7 @@ class App {
         this.app.use(bodyParser.json());
         //support application/x-www-form-urlencoded post data
         // this.app.use(bodyParser.urlencoded({ extended: false }));
-        this.app.use(express.static(path.join(__dirname, '../public')));
+        this.app.use(express.static(path.join(__dirname, './public')));
         this.app.use(cors());
         // this.app.use(this.userController.initialize());
         this.app.use(passport.initialize());
