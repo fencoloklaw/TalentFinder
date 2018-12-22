@@ -33,7 +33,6 @@ export class AuthService {
         localStorage.setItem('user', JSON.stringify(user));
         this.authToken = token;
         this.user = user;
-        console.log(token + " " + user);
     }
 
     getProfile(): Observable<any> {

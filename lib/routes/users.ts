@@ -38,39 +38,11 @@ export class Routes {
         app.route('/users/profile')
             .get(passport.authenticate('jwt', { session: false }), (req, res) => {
                res.json({user: req.user});
-                // console.log("hello");
-                // res.json({req});
             });
-                // passport.authenticate('jwt', {session: false}), (req: any, res: Response) => {
-                // res.json({user: req.user});
-            // });
-
-        // app.route('/updateProfile')
-        //     .put(passport.authenticate('jwt', {session: false}), (req: Request, res: Response) => {
-        //         this.userController.updateUser(req, (err, data)=>{
-        //             if(err) throw err;
-        //             res.json({user:data});
-        //         });
-        //     });
         app.route('/users/updateProfile')
             .put(passport.authenticate('jwt', {session: false}), (req: Request, res: Response) => {
                 this.userController.updateUser(req, res);
             });
-        // app.route('/search')
-        //     .post((req: Request, res: Response, next: NextFunction) => {
-        //         this.userController.getMatchingUsers(req, (err, data) => {
-        //             if (err) {
-        //                 res.status(500).send(err);
-        //             }
-        //             if (!data) {
-        //                 return res.json({success: false, msg: 'User not found'});
-        //             }
-        //             res.json({
-        //                 success: true,
-        //                 documents: data
-        //             });
-        //         });
-        //     });
 
         app.route('/users/search')
             .post((req: Request, res: Response) => {
@@ -81,13 +53,6 @@ export class Routes {
             .post((req: Request, res: Response) => {
                 this.userController.getMatchingJobs(req, res);
             });
-
-        // app.route('/users')
-        //     .get((req: Request, res: Response) => {
-        //         res.status(200).send({
-        //             message: 'GET request successfulll!!!!'
-        //         })
-        //     });
 
         app.route('/users/recommendations')
             .post((req: Request, res: Response) => {
