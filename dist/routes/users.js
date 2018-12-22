@@ -10,12 +10,6 @@ class Routes {
         this.config = new database_1.DatabaseConfig();
     }
     routes(app) {
-        app.get('/', (req, res) => {
-            res.send('Invalid Endpoint');
-        });
-        app.get('*', (req, res) => {
-            res.sendFile(path.join(__dirname, '../public/index.html'));
-        });
         app.route('/users/register')
             .post((req, res) => {
             this.userController.addUser(req.body, res);
@@ -47,6 +41,12 @@ class Routes {
         app.route('/users/recommendations')
             .post((req, res) => {
             this.userController.getRecommendedResults(req, res);
+        });
+        app.get('/', (req, res) => {
+            res.send('Invalid Endpoint');
+        });
+        app.get('*', (req, res) => {
+            res.sendFile(path.join(__dirname, '../public/index.html'));
         });
     }
 }

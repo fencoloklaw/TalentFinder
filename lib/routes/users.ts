@@ -11,15 +11,6 @@ export class Routes {
     public config: DatabaseConfig = new DatabaseConfig();
 
     public routes(app): void {
-
-        app.get('/', (req, res) => {
-            res.send('Invalid Endpoint');
-        });
-
-        app.get('*', (req, res) => {
-            res.sendFile(path.join(__dirname, '../public/index.html'));
-        });
-
         app.route('/users/register')
             .post((req: Request, res: Response) => {
             this.userController.addUser(req.body, res);
@@ -58,5 +49,13 @@ export class Routes {
             .post((req: Request, res: Response) => {
                 this.userController.getRecommendedResults(req, res);
             });
+
+        app.get('/', (req, res) => {
+            res.send('Invalid Endpoint');
+        });
+
+        app.get('*', (req, res) => {
+            res.sendFile(path.join(__dirname, '../public/index.html'));
+        });
     }
 }
