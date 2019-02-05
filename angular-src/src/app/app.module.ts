@@ -79,7 +79,7 @@ const appRoutes: Routes = [
         SearchjobsComponent,
         FindJobsComponent,
         CompanyProfileComponent,
-        MyJobPostsComponent,
+        MyJobPostsComponent
     ],
     imports: [
         BrowserModule,

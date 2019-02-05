@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {AuthService} from '../../services/auth.service';
 import {Router} from '@angular/router';
 import {ToasterService} from "../../services/toaster.service";
+import {FileUploader} from "ng2-file-upload";
 
 @Component({
     selector: 'app-profile',
@@ -10,6 +11,7 @@ import {ToasterService} from "../../services/toaster.service";
 })
 export class ProfileComponent implements OnInit {
     _id : String;
+    avatar: String = "uploads/profile_image.png";
     firstName: String;
     lastName: String;
     email: String;
@@ -22,6 +24,8 @@ export class ProfileComponent implements OnInit {
     certificates: String;
     awards: String;
 
+    selectedFile: File;
+
     constructor(private authService: AuthService,
                 private router: Router,
                 private toasterService: ToasterService
@@ -31,6 +35,9 @@ export class ProfileComponent implements OnInit {
     ngOnInit() {
         this.authService.getProfile().subscribe(profile => {
                 this._id = profile.user._id;
+                if(profile.user.avatar.length > 0) {
+                    this.avatar = "uploads/" + profile.user.avatar;
+                }
                 this.firstName = profile.user.firstName;
                 this.lastName = profile.user.lastName;
                 this.email = profile.user.email;
@@ -47,6 +54,25 @@ export class ProfileComponent implements OnInit {
                 console.log(err);
                 return false;
             });
+    }
+
+    onFileChanged(event) {
+        this.selectedFile = event.target.files[0];
+    }
+
+    onUpdatePicture(){
+        let uploadData = new FormData();
+        uploadData.append('myFile', this.selectedFile, this._id.toString());
+        this.authService.uploadPicture(uploadData).subscribe(data => {
+            if(data.err){
+                this.toasterService.error('Error');
+            }
+            else{
+                this.avatar = "uploads/" + data.filename;
+                this.toasterService.success('Updated Profile Picture');
+            }
+        });
+
     }
 
     onUpdateProfile() {

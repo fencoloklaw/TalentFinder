@@ -8,6 +8,7 @@ const jwt = require("jsonwebtoken");
 const database_1 = require("../config/database");
 const passport_jwt_1 = require("passport-jwt");
 const passport = require("passport");
+const fs = require("fs");
 const User = mongoose.model('User', userModel_1.UserSchema);
 const JobPost = mongoose.model('JobPost', jobPostModel_1.JobPostSchema);
 class UserController {
@@ -26,6 +27,9 @@ class UserController {
                 this.getUserById(req, done);
             });
         };
+    }
+    randomController() {
+        console.log("here");
     }
     getUserById(id, res) {
         User.findById(id, (err, user) => {
@@ -138,6 +142,7 @@ class UserController {
                 else {
                     newUser.password = hash;
                     let saveUser = new User({
+                        avatar: "",
                         email: newUser.email,
                         firstName: newUser.firstName,
                         lastName: newUser.lastName,
@@ -222,6 +227,7 @@ class UserController {
                 throw res.status(500).send(err);
             }
             if (oldUser) {
+                oldUser.avatar = req.body.avatar;
                 oldUser.firstName = req.body.firstName;
                 oldUser.lastName = req.body.lastName;
                 oldUser.skill = req.body.skill;
@@ -240,6 +246,31 @@ class UserController {
                         res.status(200).json({
                             user: user
                         });
+                    }
+                });
+            }
+        });
+    }
+    updateUserAvatar(req, filename, res) {
+        User.findById(req.file['originalname'], (err, oldUser) => {
+            if (err) {
+                throw res.status(500).send(err);
+            }
+            if (oldUser) {
+                if (oldUser.avatar.length > 0) {
+                    fs.unlink(oldUser.avatar, (err) => {
+                    });
+                }
+                oldUser.avatar = filename;
+                oldUser.save(res, (err, user) => {
+                    if (err) {
+                        throw res.status(500).send(err);
+                    }
+                    if (user) {
+                        const data = {
+                            filename: req.file.filename
+                        };
+                        return res.status(200).send(data);
                     }
                 });
             }

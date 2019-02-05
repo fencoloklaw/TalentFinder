@@ -5,7 +5,13 @@
         </h2>
         <div class="row mb-3">
             <div class="col-3">
-                <img class="img-thumbnail" src="http://i0.kym-cdn.com/photos/images/newsfeed/000/581/296/c09.jpg">
+                <form enctype="multipart/form-data" (submit)="onUpdatePicture()">
+                    <img class="img-thumbnail" [src]="avatar" alt="Profile Picture">
+                    <input type="file" (change)="onFileChanged($event)" #fileInput>
+                    <button type="submit">Upload!</button>
+                    <!--<input class="btn" type="submit" id="imgSubmit" value="Value">-->
+                </form>
+                <!--<img class="img-thumbnail" src="http://i0.kym-cdn.com/photos/images/newsfeed/000/581/296/c09.jpg">-->
             </div>
             <div class="col-6">
                 <div class="row mb-3">

@@ -7,6 +7,7 @@ import * as jwt from 'jsonwebtoken';
 import {DatabaseConfig} from "../config/database";
 import {ExtractJwt, Strategy} from "passport-jwt";
 import * as passport from "passport";
+import * as fs from 'fs';
 
 const User = mongoose.model<IUser>('User', UserSchema);
 const JobPost = mongoose.model<IJobPost>('JobPost', JobPostSchema);
@@ -14,6 +15,10 @@ const JobPost = mongoose.model<IJobPost>('JobPost', JobPostSchema);
 export class UserController {
 
     public config: DatabaseConfig = new DatabaseConfig();
+
+    public randomController() {
+        console.log("here");
+    }
 
     public getUserById (id: Request, res: Response) {
         User.findById(id, (err, user) => {
@@ -134,6 +139,7 @@ export class UserController {
                } else {
                    newUser.password = hash;
                    let saveUser = new User({
+                       avatar: "",
                        email: newUser.email,
                        firstName: newUser.firstName,
                        lastName: newUser.lastName,
@@ -221,6 +227,7 @@ export class UserController {
                 throw res.status(500).send(err);
             }
             if(oldUser) {
+                oldUser.avatar = req.body.avatar;
                 oldUser.firstName = req.body.firstName;
                 oldUser.lastName = req.body.lastName;
                 oldUser.skill = req.body.skill;
@@ -239,6 +246,33 @@ export class UserController {
                         res.status(200).json({
                             user:user
                         });
+                    }
+                });
+            }
+        });
+    }
+
+    public updateUserAvatar (req: any, filename: any, res: any){
+        User.findById(req.file['originalname'], (err, oldUser:any) => {
+            if(err) {
+                throw res.status(500).send(err);
+            }
+            if(oldUser) {
+                if(oldUser.avatar.length>0){
+                    fs.unlink(oldUser.avatar, (err) => {
+                    });
+                }
+                oldUser.avatar = filename;
+                oldUser.save(res, (err, user) => {
+                    if(err) {
+                        throw res.status(500).send(err);
+                    }
+                    if(user){
+                        const data =
+                        {
+                            filename: req.file.filename
+                        };
+                        return res.status(200).send(data);
                     }
                 });
             }

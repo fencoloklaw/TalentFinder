@@ -4,6 +4,7 @@ import * as mongoose from 'mongoose';
 const Schema = mongoose.Schema;
 
 export interface IUser extends mongoose.Document {
+    avatar: string;
     firstName: string;
     email: string;
     lastName: string;
@@ -19,6 +20,10 @@ export interface IUser extends mongoose.Document {
 }
 
 export var UserSchema = new Schema ({
+    avatar: {
+        type: String,
+        required: false
+    },
     firstName: {
         type: String,
         required: false

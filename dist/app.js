@@ -24,10 +24,12 @@ class App {
         // support application/json type post data
         this.app.use(bodyParser.json());
         //support application/x-www-form-urlencoded post data
-        // this.app.use(bodyParser.urlencoded({ extended: false }));
+        this.app.use(bodyParser.urlencoded({ extended: true }));
+        // this.app.post("/upload", multer({dest: "./uploads/"}).array("uploads", 12), function(req, res) {
+        //     res.send(req);
+        // });
         this.app.use(express.static(path.join(__dirname, '/public')));
         this.app.use(cors());
-        // this.app.use(this.userController.initialize());
         this.app.use(passport.initialize());
     }
     mongoSetup() {

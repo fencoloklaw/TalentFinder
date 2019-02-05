@@ -13,6 +13,10 @@ export class AuthService {
     constructor(private http: HttpClient) {
     }
 
+    uploadPicture(image): Observable<any>{
+        return this.http.post(environment.serverUrl + '/users/upload', image);
+    }
+
     tokenGetter() {
         return localStorage.getItem('access_token');
     }
@@ -39,6 +43,12 @@ export class AuthService {
         this.loadToken();
         const headers = new HttpHeaders().set('Authorization', this.tokenGetter());
         return this.http.get(environment.serverUrl + '/users/profile', {headers});
+    }
+
+    getProfilePicture(avatar): Observable<any> {
+        this.loadToken();
+        const headers = new HttpHeaders().set('Authorization', this.tokenGetter());
+        return this.http.put(environment.serverUrl + '/users/profilePicture', avatar, {headers});
     }
 
     updateProfile(user): Observable<any> {

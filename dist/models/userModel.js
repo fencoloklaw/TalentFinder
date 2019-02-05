@@ -4,6 +4,10 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 exports.UserSchema = new Schema({
+    avatar: {
+        type: String,
+        required: false
+    },
     firstName: {
         type: String,
         required: false
